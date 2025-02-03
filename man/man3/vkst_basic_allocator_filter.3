@@ -1,0 +1,51 @@
+.TH "vkst::basic_allocator_filter" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::basic_allocator_filter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstAllocatorFilter\&.hpp>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBon_pre_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBon_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBon_pre_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBon_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Definiert in Zeile \fB14\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "\fBvoid\fP vkst::basic_allocator_filter::on_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB19\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SS "\fBvoid\fP vkst::basic_allocator_filter::on_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB30\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SS "\fBbool\fP vkst::basic_allocator_filter::on_pre_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB16\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SS "\fBbool\fP vkst::basic_allocator_filter::on_pre_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB29\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

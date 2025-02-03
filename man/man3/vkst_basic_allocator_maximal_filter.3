@@ -1,0 +1,84 @@
+.TH "vkst::basic_allocator_maximal_filter< TMaxAlloc >" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::basic_allocator_maximal_filter< TMaxAlloc >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstAllocatorMaximalFilter\&.hpp>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBon_pre_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBon_pre_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBon_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBon_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fBget_left\fP ()"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fBget_current\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBis_full\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBis_empty\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+
+.SS "template<\fBsize_t\fP TMaxAlloc>
+.br
+class vkst::basic_allocator_maximal_filter< TMaxAlloc >"
+.PP
+Definiert in Zeile \fB9\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBsize_t\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::get_current ()\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB18\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBsize_t\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::get_left ()\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB17\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::is_empty ()\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB21\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::is_full ()\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB20\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBvoid\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB14\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBvoid\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB15\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_pre_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB11\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_pre_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB12\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

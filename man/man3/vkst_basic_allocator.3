@@ -1,0 +1,271 @@
+.TH "vkst::basic_allocator< TAllocator, TFilter >" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::basic_allocator< TAllocator, TFilter >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstAllocatorBase\&.hpp>\fP
+.SS "Öffentliche Typen"
+
+.in +1c
+.ti -1c
+.RI "\fBusing\fP \fBallocator_category\fP = \fBtypename\fP TAllocator::allocator_category"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBis_thread_safe\fP = \fBtypename\fP TAllocator::is_thread_safe"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBfilter_type\fP = \fBTFilter\fP"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBvalue_type\fP = \fBvoid\fP"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBpointer\fP = \fBvoid\fP *"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBconst_pointer\fP = \fBconst\fP \fBvoid\fP *"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBdifference_type\fP = std::ptrdiff_t"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBsize_type\fP = \fBsize_t\fP"
+.br
+.in -1c
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBbasic_allocator\fP () \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "\fBpointer\fP \fBallocate\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.br
+.RI "\fBmalloc()\fP a buffer in a given TAllocator and cheak with the given TFilter is this okay to alloc "
+.ti -1c
+.RI "\fBpointer\fP \fBallocate\fP (\fBsize_t\fP \fBsize\fP)"
+.br
+.RI "\fBmalloc()\fP a buffer in a given TAllocator and cheak with the given TFilter is this okay to alloc "
+.ti -1c
+.RI "\fBpointer\fP \fBallocate\fP (\fBsize_t\fP \fBcount\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP=0)"
+.br
+.RI "\fBmalloc()\fP a buffer in a given TAllocator and cheak with the given TFilter is this okay to alloc "
+.ti -1c
+.RI "\fBvoid\fP \fBdeallocate\fP (\fBpointer\fP \fBaddress\fP, \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
+.br
+.RI "\fBfree()\fP a buffer in a given heap\&. "
+.ti -1c
+.RI "\fBvoid\fP \fBdeallocate\fP (\fBpointer\fP \fBaddress\fP, \fBsize_t\fP \fBcount\fP, \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
+.br
+.RI "\fBfree()\fP a buffer in a given heap\&. "
+.ti -1c
+.RI "template<\fBclass\fP \fBType\fP , \fBsize_t\fP alignment, typename\&.\&.\&. Args> \fBType\fP * \fBconstruct\fP (\fBArgs\fP &&\&.\&.\&. \fBargs\fP)"
+.br
+.RI "Construct a object from allocated impl\&. "
+.ti -1c
+.RI "template<\fBclass\fP \fBType\fP > \fBvoid\fP \fBdestroy\fP (\fBType\fP *\fBaddress\fP) \fBnoexcept\fP"
+.br
+.RI "Deconstruct a object (call deconstructor) and free the memory\&. "
+.ti -1c
+.RI "\fBsize_t\fP \fBget_max_alocator_size\fP () \fBconst\fP \fBnoexcept\fP"
+.br
+.RI "Get the maximal size to allocate\&. "
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+
+.SS "template<\fBclass\fP \fBTAllocator\fP, \fBclass\fP \fBTFilter\fP = basic_allocator_filter>
+.br
+class vkst::basic_allocator< TAllocator, TFilter >"The basic allocater for all allocator impl in this library\&. 
+.PP
+Definiert in Zeile \fB16\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::allocator_category =  \fBtypename\fP TAllocator::allocator_category"
+
+.PP
+Definiert in Zeile \fB18\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::const_pointer =  \fBconst\fP \fBvoid\fP*"
+
+.PP
+Definiert in Zeile \fB24\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::difference_type =  std::ptrdiff_t"
+
+.PP
+Definiert in Zeile \fB25\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::filter_type =  \fBTFilter\fP"
+
+.PP
+Definiert in Zeile \fB20\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::is_thread_safe =  \fBtypename\fP TAllocator::is_thread_safe"
+
+.PP
+Definiert in Zeile \fB19\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::pointer =  \fBvoid\fP*"
+
+.PP
+Definiert in Zeile \fB23\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::size_type =  \fBsize_t\fP"
+
+.PP
+Definiert in Zeile \fB26\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBusing\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::value_type =  \fBvoid\fP"
+
+.PP
+Definiert in Zeile \fB22\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::basic_allocator ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB28\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBpointer\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::allocate (\fBsize_t\fP count, \fBsize_t\fP size, \fBsize_t\fP alignment = \fC0\fP)\fC [inline]\fP"
+
+.PP
+\fBmalloc()\fP a buffer in a given TAllocator and cheak with the given TFilter is this okay to alloc 
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the Type 
+.br
+\fIcount\fP The count of the array 
+.br
+\fIalignment\fP 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Pointer to new memory, or NULL if allocation fails\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB66\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBpointer\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::allocate (\fBsize_t\fP size)\fC [inline]\fP"
+
+.PP
+\fBmalloc()\fP a buffer in a given TAllocator and cheak with the given TFilter is this okay to alloc 
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP Size of desired buffer\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Pointer to new memory, or NULL if allocation fails\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB54\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBpointer\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::allocate (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+
+.PP
+\fBmalloc()\fP a buffer in a given TAllocator and cheak with the given TFilter is this okay to alloc 
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP Size of desired buffer\&. 
+.br
+\fIalignment\fP 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Pointer to new memory, or NULL if allocation fails\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB37\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> template<\fBclass\fP \fBType\fP , \fBsize_t\fP alignment, typename\&.\&.\&. Args> \fBType\fP * \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::construct (\fBArgs\fP &&\&.\&.\&. args)\fC [inline]\fP"
+
+.PP
+Construct a object from allocated impl\&. 
+.PP
+\fBTemplate-Parameter\fP
+.RS 4
+\fIType\fP The type of the object\&. 
+.br
+\fIArgs\fP The arguments for the constructer of the object\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB104\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBvoid\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::deallocate (\fBpointer\fP address, \fBsize_t\fP count, \fBsize_t\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+\fBfree()\fP a buffer in a given heap\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIaddress\fP The address to free 
+.br
+\fIcount\fP The count of the array 
+.br
+\fIsize\fP The size of the Type 
+.br
+\fIalignment\fP 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB90\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBvoid\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::deallocate (\fBpointer\fP address, \fBsize_t\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+\fBfree()\fP a buffer in a given heap\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIaddress\fP The address to free\&. 
+.br
+\fIsize\fP The size of the Type 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB76\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> template<\fBclass\fP \fBType\fP > \fBvoid\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::destroy (\fBType\fP * address)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Deconstruct a object (call deconstructor) and free the memory\&. 
+.PP
+\fBTemplate-Parameter\fP
+.RS 4
+\fIType\fP The type of the object\&. 
+.RE
+.PP
+\fBParameter\fP
+.RS 4
+\fIaddress\fP The pointer of the object to be deconstruct\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB118\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAllocator\fP , \fBclass\fP \fBTFilter\fP  = basic_allocator_filter> \fBsize_t\fP \fBvkst::basic_allocator\fP< \fBTAllocator\fP, \fBTFilter\fP >::get_max_alocator_size () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Get the maximal size to allocate\&. 
+.PP
+\fBRückgabe\fP
+.RS 4
+The maximal size to allocate\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB130\fP der Datei \fBvkstAllocatorBase\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

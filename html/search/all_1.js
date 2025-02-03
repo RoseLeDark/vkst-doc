@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['acknowledgments_0',['Acknowledgments',['../d0/d30/md_README.html#acknowledgments',1,'']]],
+  ['alig_5foffset_1',['alig_offset',['../d1/dbb/namespacevkst.html#ac1e2a03029d7737e17fd73e89d0c049a',1,'vkst']]],
+  ['align_5fdown_2',['align_down',['../d1/dbb/namespacevkst.html#adbd73936cb35cfe4d7b5dd40579449bc',1,'vkst']]],
+  ['align_5fdown_5fptr_3',['align_down_ptr',['../d1/dbb/namespacevkst.html#a756eded2aff126aea5b2a6b6a26cd773',1,'vkst']]],
+  ['align_5fup_4',['align_up',['../d1/dbb/namespacevkst.html#abae31619e5ecf372423d2fac6f5e0fd3',1,'vkst']]],
+  ['align_5fup_5fptr_5',['align_up_ptr',['../d1/dbb/namespacevkst.html#af97730a5baa6b4c95c33c61e72de05da',1,'vkst']]],
+  ['aligned_5fas_6',['aligned_as',['../de/d3d/structvkst_1_1aligned__as.html',1,'vkst']]],
+  ['alignment_5ffor_7',['alignment_for',['../d1/dbb/namespacevkst.html#ab49eb9a11c944f46342358353cfdb42e',1,'vkst']]],
+  ['alignment_5fof_8',['alignment_of',['../df/df3/structvkst_1_1alignment__of.html',1,'vkst']]],
+  ['alignment_5fof_3c_20void_20_3e_9',['alignment_of&lt; void &gt;',['../d3/dfa/structvkst_1_1alignment__of_3_01void_01_4.html',1,'vkst']]],
+  ['alignment_5fof_3c_20void_20const_20_3e_10',['alignment_of&lt; void const &gt;',['../d3/dda/structvkst_1_1alignment__of_3_01void_01const_01_4.html',1,'vkst']]],
+  ['alignment_5fof_3c_20void_20const_20volatile_20_3e_11',['alignment_of&lt; void const volatile &gt;',['../de/d2e/structvkst_1_1alignment__of_3_01void_01const_01volatile_01_4.html',1,'vkst']]],
+  ['alignment_5fof_3c_20void_20volatile_20_3e_12',['alignment_of&lt; void volatile &gt;',['../da/dd3/structvkst_1_1alignment__of_3_01void_01volatile_01_4.html',1,'vkst']]],
+  ['alignof_5fhelper_13',['alignof_helper',['../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html',1,'vkst::internal']]],
+  ['allocate_14',['allocate',['../d9/d40/classvkst_1_1basic__allocator.html#aa51f1bb4121c71722c2c39bcb8758a76',1,'vkst::basic_allocator::allocate()'],['../d1/dbb/namespacevkst.html#abce73cc91e6b041988baaa578bbe575b',1,'vkst::allocate(const TAlloC &amp;alloc, size_t size, size_t alignment, vkst::nodeleter_allocator_tag)'],['../d1/dbb/namespacevkst.html#aa6dddc315852c06ddcbf1f6f5137071a',1,'vkst::allocate(const TAlloC &amp;alloc, size_t size, size_t alignment, vkst::std_allocator_tag)'],['../d9/d40/classvkst_1_1basic__allocator.html#af06217c996f091b8542e3760c38ed076',1,'vkst::basic_allocator::allocate(size_t size, size_t alignment)'],['../d9/d40/classvkst_1_1basic__allocator.html#a7daee3f64dd321f081a37a55298a6e32',1,'vkst::basic_allocator::allocate(size_t count, size_t size, size_t alignment=0)'],['../df/d7a/classvkst_1_1basic__malloc__allocator.html#a55ef28ba8d2552f75b4019a8f003652d',1,'vkst::basic_malloc_allocator::allocate()']]],
+  ['allocate_5farray_15',['allocate_array',['../d5/dd8/classvkst_1_1allocator__traits.html#aa7a131484bb1f709dfd9b7d50aefcc3b',1,'vkst::allocator_traits']]],
+  ['allocate_5fnode_16',['allocate_node',['../d5/dd8/classvkst_1_1allocator__traits.html#ab678ba240ebbdb3935ea59577f10f96c',1,'vkst::allocator_traits']]],
+  ['allocator_17',['allocator',['../dc/d45/classvkst_1_1buffer.html#a727f7adbf3bb681ecec812d451c77825',1,'vkst::buffer']]],
+  ['allocator_5fcategory_18',['allocator_category',['../df/d7a/classvkst_1_1basic__malloc__allocator.html#a7f202e45160a15fcd419d59113234871',1,'vkst::basic_malloc_allocator::allocator_category'],['../d9/d40/classvkst_1_1basic__allocator.html#a36fd97b14f1b04a498a59fb1d9dc42fa',1,'vkst::basic_allocator::allocator_category'],['../dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#aa99ccb1b3a2bdc4cb3a22a7d28bae83d',1,'vkst::internal::allocator_traits::allocator_category']]],
+  ['allocator_5ftraits_19',['allocator_traits',['../dd/d2c/structvkst_1_1internal_1_1allocator__traits.html',1,'vkst::internal::allocator_traits&lt; TAlloC &gt;'],['../d5/dd8/classvkst_1_1allocator__traits.html',1,'vkst::allocator_traits&lt; TAllocator &gt;']]],
+  ['allocator_5ftype_20',['allocator_type',['../d5/dd8/classvkst_1_1allocator__traits.html#a51dc8d60e4cde22300c14dc7bb636333',1,'vkst::allocator_traits::allocator_type'],['../dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#afa4bfa620f77d98285be68b53b3f0149',1,'vkst::internal::allocator_traits::allocator_type']]],
+  ['and_20install_21',['Build and Install',['../d0/d30/md_README.html#build-and-install',1,'']]],
+  ['and_20opencl_20data_20management_20library_22',['libvkst - Vulkan and OpenCL Data Management Library',['../d0/d30/md_README.html',1,'']]],
+  ['append_23',['append',['../dc/d45/classvkst_1_1buffer.html#ae2d0554c84fa161e3f0fd32a8b4f7888',1,'vkst::buffer::append(const self_type &amp;refBuffer)'],['../dc/d45/classvkst_1_1buffer.html#a24c42eed83b3b4fb5ddb61c5c7269899',1,'vkst::buffer::append(value_type value)'],['../dc/d45/classvkst_1_1buffer.html#a6cc33e0902be5933295e024d5b68c792',1,'vkst::buffer::append(const_pointer pBuffer, std::size_t sBufferSize)']]],
+  ['assign_24',['assign',['../dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668',1,'vkst::buffer']]]
+];

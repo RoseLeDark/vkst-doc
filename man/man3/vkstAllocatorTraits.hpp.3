@@ -1,0 +1,68 @@
+.TH "include/Allocator/vkstAllocatorTraits.hpp" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Allocator/vkstAllocatorTraits.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <type_traits>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include '\&.\&./vkstAlignment\&.hpp'\fP
+.br
+
+.SS "Datenstrukturen"
+
+.in +1c
+.ti -1c
+.RI "struct \fBvkst::std_allocator_tag\fP"
+.br
+.ti -1c
+.RI "struct \fBvkst::nodeleter_allocator_tag\fP"
+.br
+.ti -1c
+.RI "struct \fBvkst::internal::allocator_traits< TAlloC >\fP"
+.br
+.ti -1c
+.RI "struct \fBvkst::is_thread_safe_allocator< TAlloC >\fP"
+.br
+.ti -1c
+.RI "class \fBvkst::allocator_traits< TAllocator >\fP"
+.br
+.RI "The default specialization of the \fBallocator_traits\fP for a allocator\&. Any specialization must provide the same interface\&. "
+.in -1c
+.SS "Namensbereiche"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBvkst\fP"
+.br
+.ti -1c
+.RI "namespace \fBvkst::internal\fP"
+.br
+.in -1c
+.SS "Funktionen"
+
+.in +1c
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::allocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::std_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::allocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::deallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::std_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::deallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.br
+.in -1c
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

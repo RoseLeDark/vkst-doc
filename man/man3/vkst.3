@@ -1,0 +1,320 @@
+.TH "vkst" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namensbereiche"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBinternal\fP"
+.br
+.in -1c
+.SS "Datenstrukturen"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaligned_as\fP"
+.br
+.ti -1c
+.RI "struct \fBalignment_of\fP"
+.br
+.ti -1c
+.RI "struct \fBalignment_of< void >\fP"
+.br
+.ti -1c
+.RI "struct \fBalignment_of< void const >\fP"
+.br
+.ti -1c
+.RI "struct \fBalignment_of< void const volatile >\fP"
+.br
+.ti -1c
+.RI "struct \fBalignment_of< void volatile >\fP"
+.br
+.ti -1c
+.RI "class \fBallocator_traits\fP"
+.br
+.RI "The default specialization of the \fBallocator_traits\fP for a allocator\&. Any specialization must provide the same interface\&. "
+.ti -1c
+.RI "class \fBbasic_allocator\fP"
+.br
+.ti -1c
+.RI "class \fBbasic_allocator_filter\fP"
+.br
+.ti -1c
+.RI "class \fBbasic_allocator_maximal_filter\fP"
+.br
+.ti -1c
+.RI "class \fBbasic_malloc_allocator\fP"
+.br
+.ti -1c
+.RI "class \fBbuffer\fP"
+.br
+.ti -1c
+.RI "struct \fBchar_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBchar_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBdouble_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBdouble_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBint_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBint_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned1 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned16 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned2 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned32 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned4 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned64 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_pod< internal::aligned8 >\fP"
+.br
+.ti -1c
+.RI "struct \fBis_thread_safe_allocator\fP"
+.br
+.ti -1c
+.RI "class \fBlogging\fP"
+.br
+.ti -1c
+.RI "struct \fBlong_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBlong_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBlong_double_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBlong_double_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBlong_long_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBlong_long_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBnodeleter_allocator_tag\fP"
+.br
+.ti -1c
+.RI "class \fBopencl_buffer\fP"
+.br
+.ti -1c
+.RI "struct \fBshort_alignment\fP"
+.br
+.ti -1c
+.RI "struct \fBshort_alignment< Target, false >\fP"
+.br
+.ti -1c
+.RI "struct \fBstd_allocator_tag\fP"
+.br
+.in -1c
+.SS "Typdefinitionen"
+
+.in +1c
+.ti -1c
+.RI "template<\fBclass\fP \fBTFilter\fP > \fBusing\fP \fBmalloc_allocator\fP = \fBbasic_allocator\fP< \fBbasic_malloc_allocator\fP, \fBTFilter\fP >"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBmax_align_t\fP = \fBuintptr_t\fP"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBdefault_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_maximal_filter\fP< \fBLIBVKST_CONFIG_MAX_MEMORY_USE\fP > >"
+.br
+.in -1c
+.SS "Aufzählungen"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBlogging_level\fP { \fBDebug\fP = 0, \fBInfo\fP, \fBWarn\fP, \fBError\fP, \fBCritical\fP }"
+.br
+.in -1c
+.SS "Funktionen"
+
+.in +1c
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::std_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBdeallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::std_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBdeallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fBnlz_base\fP (\fBuint64_t\fP x)"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fBnlz\fP (\fBuint64_t\fP x)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBbool\fP \fBis_aligned\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBis_aligned\fP (\fBconst\fP \fBvolatile\fP \fBvoid\fP *\fBp\fP, \fBsize_t\fP \fBa\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP \fBalign_up\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "template<\fBclass\fP pointer > pointer \fBalign_up_ptr\fP (pointer \fBp\fP, \fBsize_t\fP \fBa\fP)"
+.br
+.ti -1c
+.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP \fBalign_down\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "template<\fBclass\fP pointer > pointer \fBalign_down_ptr\fP (pointer \fBp\fP, \fBsize_t\fP \fBa\fP)"
+.br
+.ti -1c
+.RI "\fBconstexpr\fP \fBbool\fP \fBis_aligvalid\fP (\fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
+.br
+.RI "is a valid alignment, i\&.e\&. a power of two not zero "
+.ti -1c
+.RI "\fBsize_t\fP \fBalig_offset\fP (\fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "\fBsize_t\fP \fBalignment_for\fP (\fBconst\fP \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
+.br
+.in -1c
+.SS "Variablen"
+
+.in +1c
+.ti -1c
+.RI "\fBconstexpr\fP \fBsize_t\fP \fBmax_alignment\fP = \fBalignof\fP(\fBmax_align_t\fP)"
+.br
+.in -1c
+.SH "Dokumentation der benutzerdefinierten Typen"
+.PP 
+.SS "\fBusing\fP \fBvkst::default_allocator\fP = \fBtypedef\fP \fBmalloc_allocator\fP<\fBbasic_allocator_maximal_filter\fP<\fBLIBVKST_CONFIG_MAX_MEMORY_USE\fP> >"
+
+.PP
+Definiert in Zeile \fB13\fP der Datei \fBvkstAllocator\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTFilter\fP > \fBusing\fP \fBvkst::malloc_allocator\fP = \fBtypedef\fP \fBbasic_allocator\fP<\fBbasic_malloc_allocator\fP, \fBTFilter\fP>"
+
+.PP
+Definiert in Zeile \fB36\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "\fBusing\fP \fBvkst::max_align_t\fP = \fBtypedef\fP \fBuintptr_t\fP"
+
+.PP
+Definiert in Zeile \fB13\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Dokumentation der Aufzählungstypen"
+.PP 
+.SS "\fBenum\fP \fBclass\fP \fBvkst::logging_level\fP\fC [strong]\fP"
+
+.PP
+\fBAufzählungswerte\fP
+.in +1c
+.TP
+\fB\fIDebug \fP\fP
+.TP
+\fB\fIInfo \fP\fP
+.TP
+\fB\fIWarn \fP\fP
+.TP
+\fB\fIError \fP\fP
+.TP
+\fB\fICritical \fP\fP
+.PP
+Definiert in Zeile \fB19\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SH "Dokumentation der Funktionen"
+.PP 
+.SS "\fBsize_t\fP vkst::alig_offset (\fBvoid\fP * address, \fBsize_t\fP alignment)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB168\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP vkst::align_down (\fBintegral\fP x, \fBsize_t\fP a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB151\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<\fBclass\fP pointer > pointer vkst::align_down_ptr (pointer p, \fBsize_t\fP a)"
+
+.PP
+Definiert in Zeile \fB155\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP vkst::align_up (\fBintegral\fP x, \fBsize_t\fP a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB142\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<\fBclass\fP pointer > pointer vkst::align_up_ptr (pointer p, \fBsize_t\fP a)"
+
+.PP
+Definiert in Zeile \fB146\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "\fBsize_t\fP vkst::alignment_for (\fBconst\fP \fBsize_t\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::allocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBsize_t\fP size, \fBsize_t\fP alignment, \fBvkst::nodeleter_allocator_tag\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB42\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::allocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBsize_t\fP size, \fBsize_t\fP alignment, \fBvkst::std_allocator_tag\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB36\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::deallocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBvoid\fP * address, \fBsize_t\fP size, \fBvkst::nodeleter_allocator_tag\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB53\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::deallocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBvoid\fP * address, \fBsize_t\fP size, \fBvkst::std_allocator_tag\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB47\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "\fBbool\fP vkst::is_aligned (\fBconst\fP \fBvolatile\fP \fBvoid\fP * p, \fBsize_t\fP a)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB137\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBbool\fP vkst::is_aligned (\fBintegral\fP x, \fBsize_t\fP a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB134\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "\fBconstexpr\fP \fBbool\fP vkst::is_aligvalid (\fBsize_t\fP alignment)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+is a valid alignment, i\&.e\&. a power of two not zero 
+.PP
+Definiert in Zeile \fB163\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "\fBsize_t\fP vkst::nlz (\fBuint64_t\fP x)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB20\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "\fBsize_t\fP vkst::nlz_base (\fBuint64_t\fP x)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB16\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Variablen-Dokumentation"
+.PP 
+.SS "\fBconstexpr\fP \fBsize_t\fP vkst::max_alignment = \fBalignof\fP(\fBmax_align_t\fP)\fC [constexpr]\fP"
+
+.PP
+Definiert in Zeile \fB14\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

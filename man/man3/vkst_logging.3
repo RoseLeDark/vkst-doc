@@ -1,0 +1,154 @@
+.TH "vkst::logging" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::logging
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstLogging\&.hpp>\fP
+.SS "Öffentliche Typen"
+
+.in +1c
+.ti -1c
+.RI "\fBusing\fP \fBself_type\fP = \fBlogging\fP"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBstream_type\fP = std::ostream *"
+.br
+.in -1c
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBlogging\fP (\fBself_type\fP &&\fBother\fP)=\fBdelete\fP"
+.br
+.ti -1c
+.RI "\fBlogging\fP (\fBconst\fP \fBself_type\fP &)=\fBdelete\fP"
+.br
+.ti -1c
+.RI "\fBlogging_level\fP \fBget_level\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_level\fP (\fBlogging_level\fP \fBlevel\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBreset\fP (\fBstream_type\fP \fBstream\fP, \fBbool\fP \fBowner\fP=\fBfalse\fP)"
+.br
+.ti -1c
+.RI "\fBstream_type\fP \fBrelease\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBdebug\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBinfo\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBwarn\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBerror\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBcritical\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.br
+.in -1c
+.SS "Öffentliche, statische Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBstatic\fP \fBlogging\fP & \fBinstance\fP ()"
+.br
+.in -1c
+.SS "Geschützte Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBlogging\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBlog\fP (\fBlogging_level\fP \fBlevel\fP, \fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP, \fBconst\fP std::string &\fBfunc\fP)"
+.br
+.ti -1c
+.RI "std::string \fBextract_filename\fP (\fBconst\fP std::string &\fBfilePath\fP)"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Definiert in Zeile \fB41\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "\fBusing\fP \fBvkst::logging::self_type\fP =  \fBlogging\fP"
+
+.PP
+Definiert in Zeile \fB65\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBusing\fP \fBvkst::logging::stream_type\fP =  std::ostream*"
+
+.PP
+Definiert in Zeile \fB66\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "vkst::logging::logging ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definiert in Zeile \fB43\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "vkst::logging::logging (\fBself_type\fP && other)\fC [delete]\fP"
+
+.SS "vkst::logging::logging (\fBconst\fP \fBself_type\fP &)\fC [delete]\fP"
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "\fBvoid\fP vkst::logging::critical (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB89\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBvoid\fP vkst::logging::debug (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB77\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBvoid\fP vkst::logging::error (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB86\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "std::string logging::extract_filename (\fBconst\fP std::string & filePath)\fC [protected]\fP"
+
+.PP
+Definiert in Zeile \fB28\fP der Datei \fBvkstLogging\&.cpp\fP\&.
+.SS "\fBlogging_level\fP vkst::logging::get_level ()\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB71\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBvoid\fP vkst::logging::info (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB80\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBstatic\fP \fBlogging\fP & vkst::logging::instance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definiert in Zeile \fB50\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBvoid\fP logging::log (\fBlogging_level\fP level, \fBconst\fP std::string & msg, \fBconst\fP std::string & file, \fBconst\fP std::string & func)\fC [protected]\fP"
+
+.PP
+Definiert in Zeile \fB10\fP der Datei \fBvkstLogging\&.cpp\fP\&.
+.SS "\fBlogging::stream_type\fP logging::release ()"
+
+.PP
+Definiert in Zeile \fB41\fP der Datei \fBvkstLogging\&.cpp\fP\&.
+.SS "\fBvoid\fP logging::reset (\fBstream_type\fP stream, \fBbool\fP owner = \fC\fBfalse\fP\fP)"
+
+.PP
+Definiert in Zeile \fB33\fP der Datei \fBvkstLogging\&.cpp\fP\&.
+.SS "\fBvoid\fP vkst::logging::set_level (\fBlogging_level\fP level)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB72\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "\fBvoid\fP vkst::logging::warn (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB83\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

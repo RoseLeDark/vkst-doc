@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="libvkst />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Vulkan and OpenCL Data Management Library" />
+<meta property="og:url" content="https://github.com/RoseLeDark/vkst" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="libvkst />
+<meta name="twitter:description" content="Vulkan and OpenCL Data Management Library" />
+<!-- END twitter metadata -->
+<title>vkbst: include/vkstLogging.hpp-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="../../toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../vkst.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/RoseLeDark/vkst" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">vkbst
+   </div>
+   <div id="projectbrief">Source Code Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part --><!-- Erzeugt von Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d4/d45/vkstLogging_8hpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Datenstrukturen</a> &#124;
+<a href="#namespaces">Namensbereiche</a> &#124;
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#enum-members">Aufzählungen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle"><div class="title">vkstLogging.hpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für vkstLogging.hpp:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8a/vkstLogging_8hpp__incl.svg" width="251" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/da0/vkstLogging_8hpp__dep__incl.svg" width="423" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="../../d4/d45/vkstLogging_8hpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Datenstrukturen</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d02/classvkst_1_1logging.html">vkst::logging</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namensbereiche</h2></td></tr>
+<tr class="memitem:d1/dbb/namespacevkst" id="r_d1/dbb/namespacevkst"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbb/namespacevkst.html">vkst</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/db8/namespacevkst_1_1internal" id="r_d0/db8/namespacevkst_1_1internal"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db8/namespacevkst_1_1internal.html">vkst::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a7331b1b103c28dcdf91bca1b804c58db" id="r_a7331b1b103c28dcdf91bca1b804c58db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html#a7331b1b103c28dcdf91bca1b804c58db">LIBVKST_CONFIG_LOGGING_WARN_LEVEL</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a7331b1b103c28dcdf91bca1b804c58db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6144e0ac64da2b50648925fa9108df" id="r_a0a6144e0ac64da2b50648925fa9108df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html#a0a6144e0ac64da2b50648925fa9108df">VKST_LOG_DEBUG</a>(MSG)&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().debug(MSG, (__FILE__), __builtin_FUNCTION())</td></tr>
+<tr class="separator:a0a6144e0ac64da2b50648925fa9108df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e9528995cb17c1f093602e92161e84" id="r_a41e9528995cb17c1f093602e92161e84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html#a41e9528995cb17c1f093602e92161e84">VKST_LOG_INFO</a>(MSG)&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().info(MSG, (__FILE__), __builtin_FUNCTION())</td></tr>
+<tr class="separator:a41e9528995cb17c1f093602e92161e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13352cf167ee60d61b2023fd19e0921b" id="r_a13352cf167ee60d61b2023fd19e0921b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html#a13352cf167ee60d61b2023fd19e0921b">VKST_LOG_WARN</a>(MSG)&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().warn(MSG, (__FILE__), __builtin_FUNCTION())</td></tr>
+<tr class="separator:a13352cf167ee60d61b2023fd19e0921b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412b070ca569121e12ebf20dedf2635d" id="r_a412b070ca569121e12ebf20dedf2635d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html#a412b070ca569121e12ebf20dedf2635d">VKST_LOG_ERROR</a>(MSG)&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().error(MSG, (__FILE__), __builtin_FUNCTION())</td></tr>
+<tr class="separator:a412b070ca569121e12ebf20dedf2635d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bdd1595f0652f4cb7d9f31a2d403ae" id="r_a78bdd1595f0652f4cb7d9f31a2d403ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html#a78bdd1595f0652f4cb7d9f31a2d403ae">VKST_LOG_CRITICAL</a>(MSG)&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().critical(MSG, (__FILE__), __builtin_FUNCTION())</td></tr>
+<tr class="separator:a78bdd1595f0652f4cb7d9f31a2d403ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr class="memitem:ac7e3003a6bfa38dd5d33ba1176f8e3a8" id="r_ac7e3003a6bfa38dd5d33ba1176f8e3a8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8">vkst::logging_level</a> { <br />
+&#160;&#160;<a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8aa603905470e2a5b8c13e96b579ef0dba">vkst::Debug</a> = 0
+, <a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8a4059b0251f66a18cb56f544728796875">vkst::Info</a>
+, <a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8a56525ae64d370c0b448ac0d60710ef17">vkst::Warn</a>
+, <a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8a902b0d55fddef6f8d651fe1035b7d4bd">vkst::Error</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8a278d01e5af56273bae1bb99a98b370cd">vkst::Critical</a>
+<br />
+ }</td></tr>
+<tr class="separator:ac7e3003a6bfa38dd5d33ba1176f8e3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a795d85f12095aadbb355925aff18f15a" id="r_a795d85f12095aadbb355925aff18f15a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db8/namespacevkst_1_1internal.html#a795d85f12095aadbb355925aff18f15a">vkst::internal::level2string</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#ac7e3003a6bfa38dd5d33ba1176f8e3a8">logging_level</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">level</a>)</td></tr>
+<tr class="separator:a795d85f12095aadbb355925aff18f15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a id="a7331b1b103c28dcdf91bca1b804c58db" name="a7331b1b103c28dcdf91bca1b804c58db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7331b1b103c28dcdf91bca1b804c58db">&#9670;&#160;</a></span>LIBVKST_CONFIG_LOGGING_WARN_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIBVKST_CONFIG_LOGGING_WARN_LEVEL&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html#l00009">9</a> der Datei <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html">vkstLogging.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a78bdd1595f0652f4cb7d9f31a2d403ae" name="a78bdd1595f0652f4cb7d9f31a2d403ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78bdd1595f0652f4cb7d9f31a2d403ae">&#9670;&#160;</a></span>VKST_LOG_CRITICAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VKST_LOG_CRITICAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MSG</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().critical(MSG, (__FILE__), __builtin_FUNCTION())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html#l00016">16</a> der Datei <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html">vkstLogging.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a6144e0ac64da2b50648925fa9108df" name="a0a6144e0ac64da2b50648925fa9108df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6144e0ac64da2b50648925fa9108df">&#9670;&#160;</a></span>VKST_LOG_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VKST_LOG_DEBUG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MSG</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().debug(MSG, (__FILE__), __builtin_FUNCTION())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html#l00012">12</a> der Datei <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html">vkstLogging.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a412b070ca569121e12ebf20dedf2635d" name="a412b070ca569121e12ebf20dedf2635d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412b070ca569121e12ebf20dedf2635d">&#9670;&#160;</a></span>VKST_LOG_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VKST_LOG_ERROR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MSG</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().error(MSG, (__FILE__), __builtin_FUNCTION())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html#l00015">15</a> der Datei <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html">vkstLogging.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a41e9528995cb17c1f093602e92161e84" name="a41e9528995cb17c1f093602e92161e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e9528995cb17c1f093602e92161e84">&#9670;&#160;</a></span>VKST_LOG_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VKST_LOG_INFO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MSG</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().info(MSG, (__FILE__), __builtin_FUNCTION())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html#l00013">13</a> der Datei <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html">vkstLogging.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a13352cf167ee60d61b2023fd19e0921b" name="a13352cf167ee60d61b2023fd19e0921b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13352cf167ee60d61b2023fd19e0921b">&#9670;&#160;</a></span>VKST_LOG_WARN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VKST_LOG_WARN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">MSG</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="../../d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging::instance</a>().warn(MSG, (__FILE__), __builtin_FUNCTION())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html#l00014">14</a> der Datei <a class="el" href="../../d4/d45/vkstLogging_8hpp_source.html">vkstLogging.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d4/d45/vkstLogging_8hpp.html">vkstLogging.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

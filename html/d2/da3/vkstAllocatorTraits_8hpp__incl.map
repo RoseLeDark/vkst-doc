@@ -1,0 +1,22 @@
+<map id="include/Allocator/vkstAllocatorTraits.hpp" name="include/Allocator/vkstAllocatorTraits.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,5,271,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,67,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,48,69,89,67,84,138,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="111,167,193,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,47,143,69,132,94,130,109,131,125,141,154,136,155,126,126,124,109,127,93,138,66,153,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="142,93,202,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,46,175,79,169,79,169,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="227,93,296,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="195,44,240,82,236,86,192,48"/>
+<area shape="rect" id="Node000006" href="$d0/d1f/vkstAlignment_8hpp.html" title=" " alt="" coords="321,93,463,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="226,43,348,86,346,91,224,48"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="354,121,205,165,203,160,353,116"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="220,167,289,192"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="371,121,290,163,288,158,369,116"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="314,167,379,192"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="387,120,364,157,359,154,382,118"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="404,167,468,192"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="402,118,424,154,419,156,397,120"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="493,167,571,192"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="416,116,498,158,496,163,413,121"/>
+</map>

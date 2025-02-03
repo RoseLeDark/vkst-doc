@@ -1,0 +1,95 @@
+.TH "md_README" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_README \- libvkst - Vulkan and OpenCL Data Management Library 
+.PP
+ libvkst is a C++ library designed to handle data management between RAM and GPU using Vulkan and OpenCL\&. It aims to provide a flexible and efficient way to move, compress, and process data on modern GPUs, similar to DirectStorage, but with more versatility in terms of data sources and applications\&.
+.SH "Features"
+.PP
+.IP "\(bu" 2
+\fBUnified Buffer Management\fP: Support for various data types including integers, characters, files, graphics, textures, etc\&.
+.IP "\(bu" 2
+\fBData Transfer\fP: Efficient transfer of data between RAM and GPU using Vulkan\&.
+.IP "\(bu" 2
+\fBCompression\fP: Integration of GPU-based compression and decompression algorithms to minimize data transfer overhead\&.
+.IP "\(bu" 2
+\fBCompute Capabilities\fP: Use OpenCL for specific mathematical and computational tasks on the GPU\&.
+.IP "\(bu" 2
+\fBIntermediate Storage\fP: Ability to offload data to GPU memory as intermediate storage using Vulkan\&.
+.PP
+.SH "Installation"
+.PP
+.SS "Prerequisites"
+.IP "\(bu" 2
+Ubuntu
+.IP "\(bu" 2
+Vulkan SDK
+.IP "\(bu" 2
+OpenCL SDK
+.IP "\(bu" 2
+CMake
+.PP
+.SS "Build and Install"
+.IP "1." 4
+Clone the repository: 
+.PP
+.nf
+git clone https://github\&.com/yourusername/libvkst\&.git
+cd libvkst
+
+.fi
+.PP
+
+.IP "2." 4
+Create a build directory and navigate to it: 
+.PP
+.nf
+mkdir build
+cd build
+
+.fi
+.PP
+
+.IP "3." 4
+Configure the project with CMake\&. Use the following options to choose the license:
+.IP "  \(bu" 4
+\fC-DUSE_EUPL=ON\fP for EUPL license (default)
+.IP "  \(bu" 4
+\fC-DUSE_EUPL=OFF\fP for GPL license 
+.PP
+.nf
+cmake \-DBUILD_SHARED_LIBS=ON \-DUSE_EUPL=ON \&.\&.
+
+.fi
+.PP
+
+.PP
+
+.IP "4." 4
+Build and install the library: 
+.PP
+.nf
+make
+sudo make install
+
+.fi
+.PP
+
+.PP
+.SH "Usage"
+.PP
+.SH "License"
+.PP
+This project is licensed under either EUPL or GPL, based on the build configuration\&.
+.IP "\(bu" 2
+EUPL License: European Union Public License
+.IP "\(bu" 2
+GPL License: GNU General Public License
+.PP
+.SH "Contributing"
+.PP
+Contributions are welcome! Please fork the repository and submit pull requests\&.
+.SH "Acknowledgments"
+.PP
+Special thanks to the open-source community and all contributors\&. 

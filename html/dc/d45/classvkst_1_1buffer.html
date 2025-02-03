@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="libvkst />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Vulkan and OpenCL Data Management Library" />
+<meta property="og:url" content="https://github.com/RoseLeDark/vkst" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="libvkst />
+<meta name="twitter:description" content="Vulkan and OpenCL Data Management Library" />
+<!-- END twitter metadata -->
+<title>vkbst: vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt; Template-Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="../../toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../vkst.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/RoseLeDark/vkst" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">vkbst
+   </div>
+   <div id="projectbrief">Source Code Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part --><!-- Erzeugt von Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dc/d45/classvkst_1_1buffer.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Öffentliche Typen</a> &#124;
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pro-attribs">Geschützte Attribute</a>  </div>
+  <div class="headertitle"><div class="title">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt; Template-Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d24/classvkst_1_1buffer__inherit__graph.svg" width="583" height="131"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<div class="dynheader">
+Zusammengehörigkeiten von vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/de8/classvkst_1_1buffer__coll__graph.svg" width="318" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:a81682882f6b7435bffa8f602c0132402" id="r_a81682882f6b7435bffa8f602c0132402"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> = <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;</td></tr>
+<tr class="separator:a81682882f6b7435bffa8f602c0132402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0a77b95e6ba0344d8d2ad492a45413" id="r_aac0a77b95e6ba0344d8d2ad492a45413"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> __attribute__((<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">__vector_size__</a>(<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>), <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">__aligned__</a>(<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>)))</td></tr>
+<tr class="separator:aac0a77b95e6ba0344d8d2ad492a45413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727f7adbf3bb681ecec812d451c77825" id="r_a727f7adbf3bb681ecec812d451c77825"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a727f7adbf3bb681ecec812d451c77825">allocator</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a></td></tr>
+<tr class="separator:a727f7adbf3bb681ecec812d451c77825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ab977e8ee55e2eff90928f2faec183" id="r_a97ab977e8ee55e2eff90928f2faec183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> = <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> *</td></tr>
+<tr class="separator:a97ab977e8ee55e2eff90928f2faec183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4437df263d574e8cbe6fe2012947cdd4" id="r_a4437df263d574e8cbe6fe2012947cdd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a4437df263d574e8cbe6fe2012947cdd4">reference</a> = <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> &amp;</td></tr>
+<tr class="separator:a4437df263d574e8cbe6fe2012947cdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b8d18160e1fac46b263724de9e93c9" id="r_a27b8d18160e1fac46b263724de9e93c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a></td></tr>
+<tr class="separator:a27b8d18160e1fac46b263724de9e93c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e841f80772839dc92890ec918e889d0" id="r_a8e841f80772839dc92890ec918e889d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a8e841f80772839dc92890ec918e889d0">const_reference</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> &amp;</td></tr>
+<tr class="separator:a8e841f80772839dc92890ec918e889d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bc5cb3beef56bd8070f8b06d691cf5" id="r_aa4bc5cb3beef56bd8070f8b06d691cf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> *</td></tr>
+<tr class="separator:aa4bc5cb3beef56bd8070f8b06d691cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78907ffe3b0248fb5f0cf2467b852fcd" id="r_a78907ffe3b0248fb5f0cf2467b852fcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a78907ffe3b0248fb5f0cf2467b852fcd">iterator_category</a> = std::random_access_iterator_tag</td></tr>
+<tr class="separator:a78907ffe3b0248fb5f0cf2467b852fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0489436f1aa4b18f3d1ae06722adfd" id="r_add0489436f1aa4b18f3d1ae06722adfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#add0489436f1aa4b18f3d1ae06722adfd">difference_type</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">ptrdiff_t</a></td></tr>
+<tr class="separator:add0489436f1aa4b18f3d1ae06722adfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0368367a7bacb2bf5132fb35a9300aff" id="r_a0368367a7bacb2bf5132fb35a9300aff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a0368367a7bacb2bf5132fb35a9300aff">iterator</a> = <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a></td></tr>
+<tr class="separator:a0368367a7bacb2bf5132fb35a9300aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af090038e3831ac48a8d3ba2eb47010cd" id="r_af090038e3831ac48a8d3ba2eb47010cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#af090038e3831ac48a8d3ba2eb47010cd">const_iterator</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> *</td></tr>
+<tr class="separator:af090038e3831ac48a8d3ba2eb47010cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a9027e21346ceab6ad4c5bbda2e7dee1a" id="r_a9027e21346ceab6ad4c5bbda2e7dee1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a9027e21346ceab6ad4c5bbda2e7dee1a">buffer</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:a9027e21346ceab6ad4c5bbda2e7dee1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consructs and allocates the Buffer.  <br /></td></tr>
+<tr class="separator:a9027e21346ceab6ad4c5bbda2e7dee1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3831d2a1b6d064579ba8c50172b7d1f" id="r_af3831d2a1b6d064579ba8c50172b7d1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#af3831d2a1b6d064579ba8c50172b7d1f">buffer</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>, <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:af3831d2a1b6d064579ba8c50172b7d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consructs the buffer from a given memory pointer.  <br /></td></tr>
+<tr class="separator:af3831d2a1b6d064579ba8c50172b7d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb66f56297759728e2c441b67e63924" id="r_adeb66f56297759728e2c441b67e63924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#adeb66f56297759728e2c441b67e63924">buffer</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>, <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:adeb66f56297759728e2c441b67e63924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consructs and allocates the Buffer. copies the contents of the supplied memory into the buffer.  <br /></td></tr>
+<tr class="separator:adeb66f56297759728e2c441b67e63924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b76c4fc55e95f43e77aa939a2fe96c6" id="r_a7b76c4fc55e95f43e77aa939a2fe96c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a7b76c4fc55e95f43e77aa939a2fe96c6">buffer</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">other</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a>=<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">delete</a></td></tr>
+<tr class="separator:a7b76c4fc55e95f43e77aa939a2fe96c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efafba7eae5665622b2297b6c2447d0" id="r_a3efafba7eae5665622b2297b6c2447d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a3efafba7eae5665622b2297b6c2447d0">operator=</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;)=<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">delete</a></td></tr>
+<tr class="separator:a3efafba7eae5665622b2297b6c2447d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae45b9e51e01bd1686897cda8f58308d8" id="r_ae45b9e51e01bd1686897cda8f58308d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#ae45b9e51e01bd1686897cda8f58308d8">operator=</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">volatile</a>=<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">delete</a></td></tr>
+<tr class="separator:ae45b9e51e01bd1686897cda8f58308d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a76cbedbb4b5e6bf90808dfcd73a95" id="r_ac3a76cbedbb4b5e6bf90808dfcd73a95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#ac3a76cbedbb4b5e6bf90808dfcd73a95">~buffer</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:ac3a76cbedbb4b5e6bf90808dfcd73a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstrut the buffer. Is allocated the memory by buffer, then deallocated it.  <br /></td></tr>
+<tr class="separator:ac3a76cbedbb4b5e6bf90808dfcd73a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca37d658000e214f7ac5222c7b9af54" id="r_a6ca37d658000e214f7ac5222c7b9af54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a6ca37d658000e214f7ac5222c7b9af54">copy</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>)</td></tr>
+<tr class="separator:a6ca37d658000e214f7ac5222c7b9af54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58e456fbf1b9bbad6c21deac53706e3" id="r_ab58e456fbf1b9bbad6c21deac53706e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a0368367a7bacb2bf5132fb35a9300aff">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#ab58e456fbf1b9bbad6c21deac53706e3">begin</a> ()</td></tr>
+<tr class="memdesc:ab58e456fbf1b9bbad6c21deac53706e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the iterator to the beginning of the buffer.  <br /></td></tr>
+<tr class="separator:ab58e456fbf1b9bbad6c21deac53706e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adddc4a1dfcc24a2372a9ca17ce1ba36f" id="r_adddc4a1dfcc24a2372a9ca17ce1ba36f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#af090038e3831ac48a8d3ba2eb47010cd">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#adddc4a1dfcc24a2372a9ca17ce1ba36f">begin</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a></td></tr>
+<tr class="memdesc:adddc4a1dfcc24a2372a9ca17ce1ba36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the iterator to the beginning of the buffer.  <br /></td></tr>
+<tr class="separator:adddc4a1dfcc24a2372a9ca17ce1ba36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0a7fb950a85aac8340e623245f7751" id="r_a4a0a7fb950a85aac8340e623245f7751"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a0368367a7bacb2bf5132fb35a9300aff">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a4a0a7fb950a85aac8340e623245f7751">end</a> ()</td></tr>
+<tr class="memdesc:a4a0a7fb950a85aac8340e623245f7751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the iterator to end of the buffer.  <br /></td></tr>
+<tr class="separator:a4a0a7fb950a85aac8340e623245f7751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2656bc1da96a3d973e0153c7868a51" id="r_a6d2656bc1da96a3d973e0153c7868a51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#af090038e3831ac48a8d3ba2eb47010cd">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a6d2656bc1da96a3d973e0153c7868a51">end</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a></td></tr>
+<tr class="memdesc:a6d2656bc1da96a3d973e0153c7868a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the iterator to end of the buffer.  <br /></td></tr>
+<tr class="separator:a6d2656bc1da96a3d973e0153c7868a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc33e0902be5933295e024d5b68c792" id="r_a6cc33e0902be5933295e024d5b68c792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a6cc33e0902be5933295e024d5b68c792">append</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">pBuffer</a>, std::size_t <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">sBufferSize</a>)</td></tr>
+<tr class="memdesc:a6cc33e0902be5933295e024d5b68c792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes this buffer and appends the given data.  <br /></td></tr>
+<tr class="separator:a6cc33e0902be5933295e024d5b68c792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c42eed83b3b4fb5ddb61c5c7269899" id="r_a24c42eed83b3b4fb5ddb61c5c7269899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a24c42eed83b3b4fb5ddb61c5c7269899">append</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">value</a>)</td></tr>
+<tr class="memdesc:a24c42eed83b3b4fb5ddb61c5c7269899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes this buffer and appends the given data.  <br /></td></tr>
+<tr class="separator:a24c42eed83b3b4fb5ddb61c5c7269899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d0554c84fa161e3f0fd32a8b4f7888" id="r_ae2d0554c84fa161e3f0fd32a8b4f7888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#ae2d0554c84fa161e3f0fd32a8b4f7888">append</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">refBuffer</a>)</td></tr>
+<tr class="memdesc:ae2d0554c84fa161e3f0fd32a8b4f7888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes this buffer and appends the given data.  <br /></td></tr>
+<tr class="separator:ae2d0554c84fa161e3f0fd32a8b4f7888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5a257418cb32b6418ac98e8bb1a197" id="r_a3c5a257418cb32b6418ac98e8bb1a197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a3c5a257418cb32b6418ac98e8bb1a197">resize</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">newSize</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bReserve</a>=<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">true</a>)</td></tr>
+<tr class="memdesc:a3c5a257418cb32b6418ac98e8bb1a197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the buffer capacity and size.  <br /></td></tr>
+<tr class="separator:a3c5a257418cb32b6418ac98e8bb1a197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee79eb1a2e7a735c67d04f9e7d4b011" id="r_a4ee79eb1a2e7a735c67d04f9e7d4b011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a4ee79eb1a2e7a735c67d04f9e7d4b011">change_size</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">newSize</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bReserve</a>=<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">true</a>)</td></tr>
+<tr class="memdesc:a4ee79eb1a2e7a735c67d04f9e7d4b011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the buffer size.  <br /></td></tr>
+<tr class="separator:a4ee79eb1a2e7a735c67d04f9e7d4b011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eda9bbc5cbcf6c51b02b74f220ab668" id="r_a6eda9bbc5cbcf6c51b02b74f220ab668"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668">assign</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">pBuffer</a>, <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>)</td></tr>
+<tr class="memdesc:a6eda9bbc5cbcf6c51b02b74f220ab668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the argument buffer to this buffer.  <br /></td></tr>
+<tr class="separator:a6eda9bbc5cbcf6c51b02b74f220ab668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1456df192fb5b1a3e887f0f7089f38" id="r_a6d1456df192fb5b1a3e887f0f7089f38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a6d1456df192fb5b1a3e887f0f7089f38">clear</a> ()</td></tr>
+<tr class="memdesc:a6d1456df192fb5b1a3e887f0f7089f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the used content.  <br /></td></tr>
+<tr class="separator:a6d1456df192fb5b1a3e887f0f7089f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72efaf4b725e15f2e43ed3ea590c6a82" id="r_a72efaf4b725e15f2e43ed3ea590c6a82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a72efaf4b725e15f2e43ed3ea590c6a82">is_equel</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a> &amp;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">other</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a></td></tr>
+<tr class="memdesc:a72efaf4b725e15f2e43ed3ea590c6a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the given buffer equel with this?  <br /></td></tr>
+<tr class="separator:a72efaf4b725e15f2e43ed3ea590c6a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a3471043d1dc0415b974d13dfccda5" id="r_ae4a3471043d1dc0415b974d13dfccda5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#ae4a3471043d1dc0415b974d13dfccda5">is_empty</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:ae4a3471043d1dc0415b974d13dfccda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the buffer empty?  <br /></td></tr>
+<tr class="separator:ae4a3471043d1dc0415b974d13dfccda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea597655cf3863497d7b5a8928a22ab" id="r_abea597655cf3863497d7b5a8928a22ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#abea597655cf3863497d7b5a8928a22ab">is_full</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:abea597655cf3863497d7b5a8928a22ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the buffer full?  <br /></td></tr>
+<tr class="separator:abea597655cf3863497d7b5a8928a22ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafa1444855e874d7e650b2747e31e86" id="r_afafa1444855e874d7e650b2747e31e86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#afafa1444855e874d7e650b2747e31e86">get_size</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:afafa1444855e874d7e650b2747e31e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the allocated memory size in elements.  <br /></td></tr>
+<tr class="separator:afafa1444855e874d7e650b2747e31e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb25e95f37708cf07247fa23d6da2ec7" id="r_acb25e95f37708cf07247fa23d6da2ec7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#acb25e95f37708cf07247fa23d6da2ec7">get_size_bytes</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:acb25e95f37708cf07247fa23d6da2ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the allocated memory size in bytes.  <br /></td></tr>
+<tr class="separator:acb25e95f37708cf07247fa23d6da2ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cff223dcdb833b6f886ecbcb9a2946c" id="r_a5cff223dcdb833b6f886ecbcb9a2946c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a5cff223dcdb833b6f886ecbcb9a2946c">get_used</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:a5cff223dcdb833b6f886ecbcb9a2946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used size of the buffer in elements.  <br /></td></tr>
+<tr class="separator:a5cff223dcdb833b6f886ecbcb9a2946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a6ff3888505403b03ddd1d8c9d8bc2" id="r_a21a6ff3888505403b03ddd1d8c9d8bc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a21a6ff3888505403b03ddd1d8c9d8bc2">get_used_bytes</a> () <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="memdesc:a21a6ff3888505403b03ddd1d8c9d8bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used size of the buffer in bytes.  <br /></td></tr>
+<tr class="separator:a21a6ff3888505403b03ddd1d8c9d8bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb1ccbe0f2997e3011eb2ea8fe4dbf8" id="r_abbb1ccbe0f2997e3011eb2ea8fe4dbf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#abbb1ccbe0f2997e3011eb2ea8fe4dbf8">operator==</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a> &amp;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">other</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a></td></tr>
+<tr class="memdesc:abbb1ccbe0f2997e3011eb2ea8fe4dbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare operator.  <br /></td></tr>
+<tr class="separator:abbb1ccbe0f2997e3011eb2ea8fe4dbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f88fae572ed900a448b235668bf65b" id="r_a78f88fae572ed900a448b235668bf65b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a78f88fae572ed900a448b235668bf65b">operator!=</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a> &amp;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">other</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a></td></tr>
+<tr class="memdesc:a78f88fae572ed900a448b235668bf65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not compare operator.  <br /></td></tr>
+<tr class="separator:a78f88fae572ed900a448b235668bf65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf2a56f6a53345938d8015de317d60a" id="r_addf2a56f6a53345938d8015de317d60a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a4437df263d574e8cbe6fe2012947cdd4">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#addf2a56f6a53345938d8015de317d60a">operator[]</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">index</a>)</td></tr>
+<tr class="separator:addf2a56f6a53345938d8015de317d60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec7c2df288ccd40a533a60314fee053" id="r_aeec7c2df288ccd40a533a60314fee053"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a8e841f80772839dc92890ec918e889d0">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aeec7c2df288ccd40a533a60314fee053">operator[]</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">index</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a></td></tr>
+<tr class="separator:aeec7c2df288ccd40a533a60314fee053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb04f2f66b023336a8bfe81f6f1c662e" id="r_aeb04f2f66b023336a8bfe81f6f1c662e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aeb04f2f66b023336a8bfe81f6f1c662e">operator=</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">other</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="separator:aeb04f2f66b023336a8bfe81f6f1c662e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0842e57bea3ba462fa469c845dad45f7" id="r_a0842e57bea3ba462fa469c845dad45f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a0842e57bea3ba462fa469c845dad45f7">operator=</a> (<a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">other</a>) <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">volatile</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">noexcept</a></td></tr>
+<tr class="separator:a0842e57bea3ba462fa469c845dad45f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Geschützte Attribute</h2></td></tr>
+<tr class="memitem:a9eb42d5d1ab724383c15259bf36ed901" id="r_a9eb42d5d1ab724383c15259bf36ed901"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a9eb42d5d1ab724383c15259bf36ed901">m_pRawBuffer</a></td></tr>
+<tr class="separator:a9eb42d5d1ab724383c15259bf36ed901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb424a93f5feb33defea9808f76ca15d" id="r_acb424a93f5feb33defea9808f76ca15d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#acb424a93f5feb33defea9808f76ca15d">m_sSize</a></td></tr>
+<tr class="separator:acb424a93f5feb33defea9808f76ca15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec72a436f0494d6ba0f961452723bbc2" id="r_aec72a436f0494d6ba0f961452723bbc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aec72a436f0494d6ba0f961452723bbc2">m_sUsed</a></td></tr>
+<tr class="separator:aec72a436f0494d6ba0f961452723bbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0c2442a1dfa1080968385c866a5c1b" id="r_a7b0c2442a1dfa1080968385c866a5c1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a7b0c2442a1dfa1080968385c866a5c1b">m_bOwnMem</a></td></tr>
+<tr class="separator:a7b0c2442a1dfa1080968385c866a5c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4057faf1a84e91e6599a880f0a4e8f01" id="r_a4057faf1a84e91e6599a880f0a4e8f01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a727f7adbf3bb681ecec812d451c77825">allocator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a4057faf1a84e91e6599a880f0a4e8f01">m_allocator</a></td></tr>
+<tr class="separator:a4057faf1a84e91e6599a880f0a4e8f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d417dadce37299dd557b9f25889d04" id="r_a17d417dadce37299dd557b9f25889d04"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a17d417dadce37299dd557b9f25889d04">m_is2Device</a></td></tr>
+<tr class="separator:a17d417dadce37299dd557b9f25889d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> = vkst::default_allocator&gt;<br />
+class vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</div>
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00012">12</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+</div><h2 class="groupheader">Dokumentation der benutzerdefinierten Datentypen</h2>
+<a id="a727f7adbf3bb681ecec812d451c77825" name="a727f7adbf3bb681ecec812d451c77825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a727f7adbf3bb681ecec812d451c77825">&#9670;&#160;</a></span>allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::allocator =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00016">16</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af090038e3831ac48a8d3ba2eb47010cd" name="af090038e3831ac48a8d3ba2eb47010cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af090038e3831ac48a8d3ba2eb47010cd">&#9670;&#160;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::const_iterator =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a>*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00027">27</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa4bc5cb3beef56bd8070f8b06d691cf5" name="aa4bc5cb3beef56bd8070f8b06d691cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4bc5cb3beef56bd8070f8b06d691cf5">&#9670;&#160;</a></span>const_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::const_pointer =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a>*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00022">22</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8e841f80772839dc92890ec918e889d0" name="a8e841f80772839dc92890ec918e889d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e841f80772839dc92890ec918e889d0">&#9670;&#160;</a></span>const_reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::const_reference =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a>&amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00021">21</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="add0489436f1aa4b18f3d1ae06722adfd" name="add0489436f1aa4b18f3d1ae06722adfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0489436f1aa4b18f3d1ae06722adfd">&#9670;&#160;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::difference_type =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">ptrdiff_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00025">25</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0368367a7bacb2bf5132fb35a9300aff" name="a0368367a7bacb2bf5132fb35a9300aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0368367a7bacb2bf5132fb35a9300aff">&#9670;&#160;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::iterator =  <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00026">26</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a78907ffe3b0248fb5f0cf2467b852fcd" name="a78907ffe3b0248fb5f0cf2467b852fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78907ffe3b0248fb5f0cf2467b852fcd">&#9670;&#160;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::iterator_category =  std::random_access_iterator_tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00024">24</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a97ab977e8ee55e2eff90928f2faec183" name="a97ab977e8ee55e2eff90928f2faec183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ab977e8ee55e2eff90928f2faec183">&#9670;&#160;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::pointer =  <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a>*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00017">17</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4437df263d574e8cbe6fe2012947cdd4" name="a4437df263d574e8cbe6fe2012947cdd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4437df263d574e8cbe6fe2012947cdd4">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::reference =  <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a>&amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00018">18</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a81682882f6b7435bffa8f602c0132402" name="a81682882f6b7435bffa8f602c0132402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81682882f6b7435bffa8f602c0132402">&#9670;&#160;</a></span>self_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::self_type =  <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>,<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00014">14</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a27b8d18160e1fac46b263724de9e93c9" name="a27b8d18160e1fac46b263724de9e93c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b8d18160e1fac46b263724de9e93c9">&#9670;&#160;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::size_type =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00019">19</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aac0a77b95e6ba0344d8d2ad492a45413" name="aac0a77b95e6ba0344d8d2ad492a45413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0a77b95e6ba0344d8d2ad492a45413">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::value_type =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> __attribute__((<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">__vector_size__</a>(<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>), <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">__aligned__</a>(<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00015">15</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a9027e21346ceab6ad4c5bbda2e7dee1a" name="a9027e21346ceab6ad4c5bbda2e7dee1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9027e21346ceab6ad4c5bbda2e7dee1a">&#9670;&#160;</a></span>buffer() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consructs and allocates the Buffer. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00032">32</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af3831d2a1b6d064579ba8c50172b7d1f" name="af3831d2a1b6d064579ba8c50172b7d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3831d2a1b6d064579ba8c50172b7d1f">&#9670;&#160;</a></span>buffer() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consructs the buffer from a given memory pointer. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the buffer </td></tr>
+    <tr><td class="paramname">buffer</td><td>The using pointer for this buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Zu beachten</dt><dd>This pointer not deallocated, from buffer on deconstruction </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00044">44</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adeb66f56297759728e2c441b67e63924" name="adeb66f56297759728e2c441b67e63924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb66f56297759728e2c441b67e63924">&#9670;&#160;</a></span>buffer() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consructs and allocates the Buffer. copies the contents of the supplied memory into the buffer. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the buffer </td></tr>
+    <tr><td class="paramname">buffer</td><td>The using pointer for this buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00054">54</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b76c4fc55e95f43e77aa939a2fe96c6" name="a7b76c4fc55e95f43e77aa939a2fe96c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b76c4fc55e95f43e77aa939a2fe96c6">&#9670;&#160;</a></span>buffer() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3a76cbedbb4b5e6bf90808dfcd73a95" name="ac3a76cbedbb4b5e6bf90808dfcd73a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a76cbedbb4b5e6bf90808dfcd73a95">&#9670;&#160;</a></span>~buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::~<a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deconstrut the buffer. Is allocated the memory by buffer, then deallocated it. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00067">67</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="ae2d0554c84fa161e3f0fd32a8b4f7888" name="ae2d0554c84fa161e3f0fd32a8b4f7888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d0554c84fa161e3f0fd32a8b4f7888">&#9670;&#160;</a></span>append() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>refBuffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes this buffer and appends the given data. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refBuffer</td><td>The other buffer to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00128">128</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6cc33e0902be5933295e024d5b68c792" name="a6cc33e0902be5933295e024d5b68c792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cc33e0902be5933295e024d5b68c792">&#9670;&#160;</a></span>append() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a>&#160;</td>
+          <td class="paramname"><em>pBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>sBufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes this buffer and appends the given data. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pBuffer</td><td>The array of data to append. </td></tr>
+    <tr><td class="paramname">sBufferSize</td><td>The number elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00107">107</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a24c42eed83b3b4fb5ddb61c5c7269899" name="a24c42eed83b3b4fb5ddb61c5c7269899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c42eed83b3b4fb5ddb61c5c7269899">&#9670;&#160;</a></span>append() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">value_type</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes this buffer and appends the given data. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00119">119</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6eda9bbc5cbcf6c51b02b74f220ab668" name="a6eda9bbc5cbcf6c51b02b74f220ab668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eda9bbc5cbcf6c51b02b74f220ab668">&#9670;&#160;</a></span>assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">const_pointer</a>&#160;</td>
+          <td class="paramname"><em>pBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns the argument buffer to this buffer. </p>
+<dl class="section note"><dt>Zu beachten</dt><dd>If necessary, resizes the buffer. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00194">194</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab58e456fbf1b9bbad6c21deac53706e3" name="ab58e456fbf1b9bbad6c21deac53706e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58e456fbf1b9bbad6c21deac53706e3">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a0368367a7bacb2bf5132fb35a9300aff">iterator</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the iterator to the beginning of the buffer. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The iterator to the beginning of the buffer. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00082">82</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adddc4a1dfcc24a2372a9ca17ce1ba36f" name="adddc4a1dfcc24a2372a9ca17ce1ba36f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adddc4a1dfcc24a2372a9ca17ce1ba36f">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#af090038e3831ac48a8d3ba2eb47010cd">const_iterator</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the iterator to the beginning of the buffer. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The iterator to the beginning of the buffer. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00088">88</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4ee79eb1a2e7a735c67d04f9e7d4b011" name="a4ee79eb1a2e7a735c67d04f9e7d4b011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee79eb1a2e7a735c67d04f9e7d4b011">&#9670;&#160;</a></span>change_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::change_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>newSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td>
+          <td class="paramname"><em>bReserve</em> = <code><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">true</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the buffer size. </p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Externally memory can not change.</dd></dl>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSize</td><td>The new size for this buffer. </td></tr>
+    <tr><td class="paramname">bReserve</td><td>If true then the content of the old buffer is copied over to the new buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00170">170</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6d1456df192fb5b1a3e887f0f7089f38" name="a6d1456df192fb5b1a3e887f0f7089f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1456df192fb5b1a3e887f0f7089f38">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear the used content. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00207">207</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6ca37d658000e214f7ac5222c7b9af54" name="a6ca37d658000e214f7ac5222c7b9af54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca37d658000e214f7ac5222c7b9af54">&#9670;&#160;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> * <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00072">72</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4a0a7fb950a85aac8340e623245f7751" name="a4a0a7fb950a85aac8340e623245f7751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0a7fb950a85aac8340e623245f7751">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a0368367a7bacb2bf5132fb35a9300aff">iterator</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the iterator to end of the buffer. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The iterator to end of the buffer. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00094">94</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6d2656bc1da96a3d973e0153c7868a51" name="a6d2656bc1da96a3d973e0153c7868a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2656bc1da96a3d973e0153c7868a51">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#af090038e3831ac48a8d3ba2eb47010cd">const_iterator</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the iterator to end of the buffer. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The iterator to end of the buffer. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00100">100</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afafa1444855e874d7e650b2747e31e86" name="afafa1444855e874d7e650b2747e31e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afafa1444855e874d7e650b2747e31e86">&#9670;&#160;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::get_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the allocated memory size in elements. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The allocated memory size in elements. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00239">239</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acb25e95f37708cf07247fa23d6da2ec7" name="acb25e95f37708cf07247fa23d6da2ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb25e95f37708cf07247fa23d6da2ec7">&#9670;&#160;</a></span>get_size_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::get_size_bytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the allocated memory size in bytes. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The allocated memory size in bytes. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00245">245</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5cff223dcdb833b6f886ecbcb9a2946c" name="a5cff223dcdb833b6f886ecbcb9a2946c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cff223dcdb833b6f886ecbcb9a2946c">&#9670;&#160;</a></span>get_used()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::get_used </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the used size of the buffer in elements. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The used size of the buffer in elements. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00251">251</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a21a6ff3888505403b03ddd1d8c9d8bc2" name="a21a6ff3888505403b03ddd1d8c9d8bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a6ff3888505403b03ddd1d8c9d8bc2">&#9670;&#160;</a></span>get_used_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::get_used_bytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the used size of the buffer in bytes. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The used size of the buffer in bytes. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00257">257</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4a3471043d1dc0415b974d13dfccda5" name="ae4a3471043d1dc0415b974d13dfccda5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a3471043d1dc0415b974d13dfccda5">&#9670;&#160;</a></span>is_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::is_empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is the buffer empty? </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>If true then is the buffer empty and if false then not. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00228">228</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a72efaf4b725e15f2e43ed3ea590c6a82" name="a72efaf4b725e15f2e43ed3ea590c6a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72efaf4b725e15f2e43ed3ea590c6a82">&#9670;&#160;</a></span>is_equel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::is_equel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is the given buffer equel with this? </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Reference to the comparing buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true The given buffer is equel with this, false when not. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00216">216</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abea597655cf3863497d7b5a8928a22ab" name="abea597655cf3863497d7b5a8928a22ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea597655cf3863497d7b5a8928a22ab">&#9670;&#160;</a></span>is_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">constexpr</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::is_full </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is the buffer full? </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>If true then is the buffer full and if false then not. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00234">234</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a78f88fae572ed900a448b235668bf65b" name="a78f88fae572ed900a448b235668bf65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f88fae572ed900a448b235668bf65b">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Not compare operator. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00268">268</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae45b9e51e01bd1686897cda8f58308d8" name="ae45b9e51e01bd1686897cda8f58308d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae45b9e51e01bd1686897cda8f58308d8">&#9670;&#160;</a></span>operator=() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp; <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> volatile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3efafba7eae5665622b2297b6c2447d0" name="a3efafba7eae5665622b2297b6c2447d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efafba7eae5665622b2297b6c2447d0">&#9670;&#160;</a></span>operator=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp; <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">self_type</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb04f2f66b023336a8bfe81f6f1c662e" name="aeb04f2f66b023336a8bfe81f6f1c662e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb04f2f66b023336a8bfe81f6f1c662e">&#9670;&#160;</a></span>operator=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00284">284</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0842e57bea3ba462fa469c845dad45f7" name="a0842e57bea3ba462fa469c845dad45f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0842e57bea3ba462fa469c845dad45f7">&#9670;&#160;</a></span>operator=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> volatile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00288">288</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abbb1ccbe0f2997e3011eb2ea8fe4dbf8" name="abbb1ccbe0f2997e3011eb2ea8fe4dbf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb1ccbe0f2997e3011eb2ea8fe4dbf8">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">const</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare operator. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00262">262</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="addf2a56f6a53345938d8015de317d60a" name="addf2a56f6a53345938d8015de317d60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf2a56f6a53345938d8015de317d60a">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a4437df263d574e8cbe6fe2012947cdd4">reference</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00272">272</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aeec7c2df288ccd40a533a60314fee053" name="aeec7c2df288ccd40a533a60314fee053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec7c2df288ccd40a533a60314fee053">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a8e841f80772839dc92890ec918e889d0">const_reference</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">::operator</a>[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00278">278</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c5a257418cb32b6418ac98e8bb1a197" name="a3c5a257418cb32b6418ac98e8bb1a197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5a257418cb32b6418ac98e8bb1a197">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a>&#160;</td>
+          <td class="paramname"><em>newSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td>
+          <td class="paramname"><em>bReserve</em> = <code><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">true</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes the buffer capacity and size. </p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Externally memory can not resize.</dd></dl>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSize</td><td>The new size for this buffer. </td></tr>
+    <tr><td class="paramname">bReserve</td><td>If true then the content of the old buffer is copied over to the new buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00139">139</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Felder</h2>
+<a id="a4057faf1a84e91e6599a880f0a4e8f01" name="a4057faf1a84e91e6599a880f0a4e8f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4057faf1a84e91e6599a880f0a4e8f01">&#9670;&#160;</a></span>m_allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a727f7adbf3bb681ecec812d451c77825">allocator</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::m_allocator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00341">341</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b0c2442a1dfa1080968385c866a5c1b" name="a7b0c2442a1dfa1080968385c866a5c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b0c2442a1dfa1080968385c866a5c1b">&#9670;&#160;</a></span>m_bOwnMem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::m_bOwnMem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00340">340</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a17d417dadce37299dd557b9f25889d04" name="a17d417dadce37299dd557b9f25889d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d417dadce37299dd557b9f25889d04">&#9670;&#160;</a></span>m_is2Device</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&gt; <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::m_is2Device</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00342">342</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9eb42d5d1ab724383c15259bf36ed901" name="a9eb42d5d1ab724383c15259bf36ed901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb42d5d1ab724383c15259bf36ed901">&#9670;&#160;</a></span>m_pRawBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">pointer</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::m_pRawBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00335">335</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acb424a93f5feb33defea9808f76ca15d" name="acb424a93f5feb33defea9808f76ca15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb424a93f5feb33defea9808f76ca15d">&#9670;&#160;</a></span>m_sSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::m_sSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00337">337</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aec72a436f0494d6ba0f961452723bbc2" name="aec72a436f0494d6ba0f961452723bbc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec72a436f0494d6ba0f961452723bbc2">&#9670;&#160;</a></span>m_sUsed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a> , <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> TALIGNMENT = alignment_of&lt;TVALUE&gt;::res, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">class</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a>  = vkst::default_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">size_type</a> <a class="el" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TVALUE</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALIGNMENT</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TALLOCATOR</a> &gt;::m_sUsed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html#l00338">338</a> der Datei <a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>include/<a class="el" href="../../da/dc8/vkstBuffer_8hpp_source.html">vkstBuffer.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/dbb/namespacevkst.html">vkst</a></li><li class="navelem"><a class="el" href="../../dc/d45/classvkst_1_1buffer.html">buffer</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

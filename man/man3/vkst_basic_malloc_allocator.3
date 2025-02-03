@@ -1,0 +1,78 @@
+.TH "vkst::basic_malloc_allocator" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::basic_malloc_allocator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstMallocAllocator\&.hpp>\fP
+.SS "Öffentliche Typen"
+
+.in +1c
+.ti -1c
+.RI "\fBusing\fP \fBallocator_category\fP = \fBstd_allocator_tag\fP()"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBis_thread_safe\fP = std::false_type"
+.br
+.in -1c
+.SS "Öffentliche, statische Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBstatic\fP \fBvoid\fP \fBfirst\fP () \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "\fBstatic\fP \fBvoid\fP * \fBallocate\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "\fBstatic\fP \fBvoid\fP \fBdeallocate\fP (\fBvoid\fP *ptr, \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
+.br
+.ti -1c
+.RI "\fBstatic\fP \fBsize_t\fP \fBmax_node_size\fP ()"
+.br
+.ti -1c
+.RI "\fBstatic\fP \fBsize_t\fP \fBget_max_alocator_size\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Definiert in Zeile \fB8\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "\fBusing\fP \fBvkst::basic_malloc_allocator::allocator_category\fP =  \fBstd_allocator_tag\fP()"
+
+.PP
+Definiert in Zeile \fB10\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "\fBusing\fP \fBvkst::basic_malloc_allocator::is_thread_safe\fP =  std::false_type"
+
+.PP
+Definiert in Zeile \fB11\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "\fBstatic\fP \fBvoid\fP * vkst::basic_malloc_allocator::allocate (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB15\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "\fBstatic\fP \fBvoid\fP vkst::basic_malloc_allocator::deallocate (\fBvoid\fP * ptr, \fBsize_t\fP size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB22\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "\fBstatic\fP \fBvoid\fP vkst::basic_malloc_allocator::first ()\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB13\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "\fBstatic\fP \fBsize_t\fP vkst::basic_malloc_allocator::get_max_alocator_size ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definiert in Zeile \fB30\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "\fBstatic\fP \fBsize_t\fP vkst::basic_malloc_allocator::max_node_size ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definiert in Zeile \fB26\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.
