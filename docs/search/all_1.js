@@ -24,5 +24,6 @@ var searchData=
   ['and_20install_21',['Build and Install',['../d0/d30/md_README.html#build-and-install',1,'']]],
   ['and_20opencl_20data_20management_20library_22',['libvkst - Vulkan and OpenCL Data Management Library',['../d0/d30/md_README.html',1,'']]],
   ['append_23',['append',['../dc/d45/classvkst_1_1buffer.html#ae2d0554c84fa161e3f0fd32a8b4f7888',1,'vkst::buffer::append(const self_type &amp;refBuffer)'],['../dc/d45/classvkst_1_1buffer.html#a24c42eed83b3b4fb5ddb61c5c7269899',1,'vkst::buffer::append(value_type value)'],['../dc/d45/classvkst_1_1buffer.html#a6cc33e0902be5933295e024d5b68c792',1,'vkst::buffer::append(const_pointer pBuffer, std::size_t sBufferSize)']]],
-  ['assign_24',['assign',['../dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668',1,'vkst::buffer']]]
+  ['assign_24',['assign',['../dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668',1,'vkst::buffer']]],
+  ['assign_5fto_5fgpu_25',['assign_to_gpu',['../d5/d9b/classvkst_1_1opencl__buffer.html#a663ac5879ae53a3ea4feb17ca8057cfd',1,'vkst::opencl_buffer']]]
 ];

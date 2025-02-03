@@ -18,11 +18,14 @@ md_README \- libvkst - Vulkan and OpenCL Data Management Library
 .IP "\(bu" 2
 \fBIntermediate Storage\fP: Ability to offload data to GPU memory as intermediate storage using Vulkan\&.
 .PP
+.SH "Dokumentation"
+.PP
+Found: https://roseledark.github.io/vkst-doc/d0/d30/md_README.html
 .SH "Installation"
 .PP
 .SS "Prerequisites"
 .IP "\(bu" 2
-Ubuntu
+clang-19
 .IP "\(bu" 2
 Vulkan SDK
 .IP "\(bu" 2
@@ -52,18 +55,12 @@ cd build
 .PP
 
 .IP "3." 4
-Configure the project with CMake\&. Use the following options to choose the license:
-.IP "  \(bu" 4
-\fC-DUSE_EUPL=ON\fP for EUPL license (default)
-.IP "  \(bu" 4
-\fC-DUSE_EUPL=OFF\fP for GPL license 
+Configure the project with CMake\&. 
 .PP
 .nf
-cmake \-DBUILD_SHARED_LIBS=ON \-DUSE_EUPL=ON \&.\&.
+cmake \-DCMAKE_VERBOSE_MAKEFILE:BOOL="1" \-DCMAKE_BUILD_TYPE:STRING="Debug" \-\-preset linux \&.\&.
 
 .fi
-.PP
-
 .PP
 
 .IP "4." 4
@@ -79,14 +76,34 @@ sudo make install
 .PP
 .SH "Usage"
 .PP
+.PP
+.nf
+#include <vkbst/libvkst\&.hpp>
+
+
+int main() {
+    uint32_t a_host[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    vkst::buffer<uint32_t, 16> a_buffer(a_host, 10 * sizeof(uint32_t)); // Create buffer on host \- alignment 16, size 10*sizeof(uint32_t) 
+
+    vkst::opencl_buffer< vkst::buffer<uint32_t, 16> > opencl_buffer(a_buffer, CL::Context::curent, true); // Create Lock
+    if(host_helper\&.assign_to_gpu(CL::CommandQueue, true )) { // Write buffer to gpu
+        // BUffer is in GPU \- a_buffer is locked, don*t use!!!
+    }
+    // With require we get the buffer from the GPU
+    // Wenn second arg true is we read from gpu to a_buffer 
+    if(host_helper\&.require(CL::CommandQueue, false)) {
+        // Buffer now un locked
+    }
+        // To device
+
+    return 0;
+}
+.fi
+.PP
+ 
 .SH "License"
 .PP
-This project is licensed under either EUPL or GPL, based on the build configuration\&.
-.IP "\(bu" 2
-EUPL License: European Union Public License
-.IP "\(bu" 2
-GPL License: GNU General Public License
-.PP
+This project is licensed under either EUPL
 .SH "Contributing"
 .PP
 Contributions are welcome! Please fork the repository and submit pull requests\&.

@@ -10,5 +10,6 @@ var searchData=
   ['allocate_5farray_7',['allocate_array',['../d5/dd8/classvkst_1_1allocator__traits.html#aa7a131484bb1f709dfd9b7d50aefcc3b',1,'vkst::allocator_traits']]],
   ['allocate_5fnode_8',['allocate_node',['../d5/dd8/classvkst_1_1allocator__traits.html#ab678ba240ebbdb3935ea59577f10f96c',1,'vkst::allocator_traits']]],
   ['append_9',['append',['../dc/d45/classvkst_1_1buffer.html#ae2d0554c84fa161e3f0fd32a8b4f7888',1,'vkst::buffer::append(const self_type &amp;refBuffer)'],['../dc/d45/classvkst_1_1buffer.html#a24c42eed83b3b4fb5ddb61c5c7269899',1,'vkst::buffer::append(value_type value)'],['../dc/d45/classvkst_1_1buffer.html#a6cc33e0902be5933295e024d5b68c792',1,'vkst::buffer::append(const_pointer pBuffer, std::size_t sBufferSize)']]],
-  ['assign_10',['assign',['../dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668',1,'vkst::buffer']]]
+  ['assign_10',['assign',['../dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668',1,'vkst::buffer']]],
+  ['assign_5fto_5fgpu_11',['assign_to_gpu',['../d5/d9b/classvkst_1_1opencl__buffer.html#a663ac5879ae53a3ea4feb17ca8057cfd',1,'vkst::opencl_buffer']]]
 ];

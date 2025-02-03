@@ -27,6 +27,7 @@ var NAVTREE =
   [ "vkbst", "index.html", [
     [ "libvkst - Vulkan and OpenCL Data Management Library", "d0/d30/md_README.html", [
       [ "Features", "d0/d30/md_README.html#features", null ],
+      [ "Dokumentation", "d0/d30/md_README.html#dokumentation", null ],
       [ "Installation", "d0/d30/md_README.html#installation", [
         [ "Prerequisites", "d0/d30/md_README.html#prerequisites", null ],
         [ "Build and Install", "d0/d30/md_README.html#build-and-install", null ]
@@ -71,8 +72,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d9b/classvkst_1_1opencl__buffer.html#adc8693862c9eeb3b938d070eb945a3f5",
-"dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#aa99ccb1b3a2bdc4cb3a22a7d28bae83d"
+"d5/d9b/classvkst_1_1opencl__buffer.html#ac7875b7dd27e4c86f19048801ab30f68",
+"dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a8c6081d73fa6e751e5d3b16314825d93"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warn_0',['warn',['../d1/d02/classvkst_1_1logging.html#a0b295c236c42ca5d4c3cc22c56053e42',1,'vkst::logging']]]
+  ['_7ebuffer_0',['~buffer',['../dc/d45/classvkst_1_1buffer.html#ac3a76cbedbb4b5e6bf90808dfcd73a95',1,'vkst::buffer']]]
 ];
