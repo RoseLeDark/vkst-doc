@@ -72,8 +72,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d9b/classvkst_1_1opencl__buffer.html#ac7875b7dd27e4c86f19048801ab30f68",
-"dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a8c6081d73fa6e751e5d3b16314825d93"
+"d5/d9b/classvkst_1_1opencl__buffer.html#ab74a8f965e0f56f269068ed482f6cf85",
+"dc/d45/classvkst_1_1buffer.html#af3831d2a1b6d064579ba8c50172b7d1f"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';

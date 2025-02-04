@@ -29,13 +29,15 @@ include/Allocator/vkstAllocatorTraits.hpp
 .ti -1c
 .RI "struct \fBvkst::internal::allocator_traits< TAlloC >\fP"
 .br
+.RI "Traits for a given allocator type\&. "
 .ti -1c
 .RI "struct \fBvkst::is_thread_safe_allocator< TAlloC >\fP"
 .br
+.RI "Checks whether a given allocator is thread-safe\&. "
 .ti -1c
 .RI "class \fBvkst::allocator_traits< TAllocator >\fP"
 .br
-.RI "The default specialization of the \fBallocator_traits\fP for a allocator\&. Any specialization must provide the same interface\&. "
+.RI "Default specialization of \fC\fBallocator_traits\fP\fP for a given allocator\&. "
 .in -1c
 .SS "Namensbereiche"
 
@@ -51,17 +53,21 @@ include/Allocator/vkstAllocatorTraits.hpp
 
 .in +1c
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::allocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::std_allocator_tag\fP)"
+.RI "template<class TAlloC > void * \fBvkst::allocate\fP (const TAlloC &alloc, size_t size, size_t alignment, \fBvkst::std_allocator_tag\fP)"
 .br
+.RI "Allocates memory using a given allocator with a \fC\fBstd_allocator_tag\fP\fP\&. "
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::allocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.RI "template<class TAlloC > void * \fBvkst::allocate\fP (const TAlloC &alloc, size_t size, size_t alignment, \fBvkst::nodeleter_allocator_tag\fP)"
 .br
+.RI "Allocates memory using a given allocator with a \fC\fBnodeleter_allocator_tag\fP\fP\&. "
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::deallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::std_allocator_tag\fP)"
+.RI "template<class TAlloC > void * \fBvkst::deallocate\fP (const TAlloC &alloc, void *address, size_t size, \fBvkst::std_allocator_tag\fP)"
 .br
+.RI "Deallocates memory using a given allocator with a \fC\fBstd_allocator_tag\fP\fP\&. "
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBvkst::deallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.RI "template<class TAlloC > void * \fBvkst::deallocate\fP (const TAlloC &alloc, void *address, size_t size, \fBvkst::nodeleter_allocator_tag\fP)"
 .br
+.RI "Deallocates memory using a given allocator with a \fC\fBnodeleter_allocator_tag\fP\fP\&. "
 .in -1c
 .SH "Autor"
 .PP 

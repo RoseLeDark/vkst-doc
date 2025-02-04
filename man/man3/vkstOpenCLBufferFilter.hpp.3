@@ -1,0 +1,37 @@
+.TH "include/vkstOpenCLBufferFilter.hpp" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/vkstOpenCLBufferFilter.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstddef>\fP
+.br
+\fC#include <cstdint>\fP
+.br
+\fC#include <lz4\&.h>\fP
+.br
+
+.SS "Datenstrukturen"
+
+.in +1c
+.ti -1c
+.RI "struct \fBvkst::compression_filter< TBUFFER >\fP"
+.br
+.RI "A default compression filter that doesn't actually perform any compression or decompression\&. "
+.ti -1c
+.RI "struct \fBvkst::lz4_compression_filter< TBUFFER >\fP"
+.br
+.RI "LZ4-based compression filter\&. "
+.in -1c
+.SS "Namensbereiche"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBvkst\fP"
+.br
+.in -1c
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

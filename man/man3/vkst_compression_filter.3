@@ -1,0 +1,108 @@
+.TH "vkst::compression_filter< TBUFFER >" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::compression_filter< TBUFFER > \- A default compression filter that doesn't actually perform any compression or decompression\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstOpenCLBufferFilter\&.hpp>\fP
+.PP
+Basisklasse für \fBvkst::lz4_compression_filter< TBUFFER >\fP\&.
+.SS "Öffentliche, statische Methoden"
+
+.in +1c
+.ti -1c
+.RI "static uint16_t \fBcompress\fP (const TBUFFER &\fBbuffer\fP, void *compressed, size_t &compressedSize)"
+.br
+.RI "Compresses the given buffer\&. "
+.ti -1c
+.RI "static uint16_t \fBdecompress\fP (const void *compressed, const size_t compressedSize, TBUFFER &\fBbuffer\fP)"
+.br
+.RI "Decompresses the given compressed buffer\&. "
+.in -1c
+.SS "Statische öffentliche Attribute"
+
+.in +1c
+.ti -1c
+.RI "static constexpr bool \fBcan_compress\fP = false"
+.br
+.RI "Flag indicating if this filter can perform compression (default is false)\&. "
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+
+.SS "template<typename TBUFFER>
+.br
+struct vkst::compression_filter< TBUFFER >"A default compression filter that doesn't actually perform any compression or decompression\&. 
+
+This filter can be used as a fallback when compression is not needed or disabled\&.
+.PP
+\fBTemplate-Parameter\fP
+.RS 4
+\fITBUFFER\fP The type of buffer the filter will work with\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB20\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "template<typename TBUFFER > static uint16_t \fBvkst::compression_filter\fP< TBUFFER >::compress (const TBUFFER & buffer, void * compressed, size_t & compressedSize)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Compresses the given buffer\&. Since this is the default filter, no compression is actually performed\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIbuffer\fP The buffer to compress\&. 
+.br
+\fIcompressed\fP The pointer where the compressed data will be stored\&. 
+.br
+\fIcompressedSize\fP The size of the compressed data\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Returns 0 indicating no compression performed (success)\&. 
+.RE
+.PP
+< No compression performed\&.
+.PP
+Definiert in Zeile \fB34\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+.SS "template<typename TBUFFER > static uint16_t \fBvkst::compression_filter\fP< TBUFFER >::decompress (const void * compressed, const size_t compressedSize, TBUFFER & buffer)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Decompresses the given compressed buffer\&. Since this is the default filter, no decompression is actually performed\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIcompressed\fP The compressed data\&. 
+.br
+\fIcompressedSize\fP The size of the compressed data\&. 
+.br
+\fIbuffer\fP The buffer to store the decompressed data\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Returns 0 indicating no decompression performed (success)\&. 
+.RE
+.PP
+< No decompression performed\&.
+.PP
+Definiert in Zeile \fB48\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+.SH "Dokumentation der Felder"
+.PP 
+.SS "template<typename TBUFFER > constexpr bool \fBvkst::compression_filter\fP< TBUFFER >::can_compress = false\fC [static]\fP, \fC [constexpr]\fP"
+
+.PP
+Flag indicating if this filter can perform compression (default is false)\&. 
+.PP
+Definiert in Zeile \fB22\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

@@ -10,5 +10,6 @@ var searchData=
   ['vkstlogging_2ecpp_7',['vkstLogging.cpp',['../d0/d76/vkstLogging_8cpp.html',1,'']]],
   ['vkstlogging_2ehpp_8',['vkstLogging.hpp',['../d4/d45/vkstLogging_8hpp.html',1,'']]],
   ['vkstmallocallocator_2ehpp_9',['vkstMallocAllocator.hpp',['../d5/d82/vkstMallocAllocator_8hpp.html',1,'']]],
-  ['vkstopenclbuffer_2ehpp_10',['vkstOpenCLBuffer.hpp',['../de/d1d/vkstOpenCLBuffer_8hpp.html',1,'']]]
+  ['vkstopenclbuffer_2ehpp_10',['vkstOpenCLBuffer.hpp',['../de/d1d/vkstOpenCLBuffer_8hpp.html',1,'']]],
+  ['vkstopenclbufferfilter_2ehpp_11',['vkstOpenCLBufferFilter.hpp',['../da/d5a/vkstOpenCLBufferFilter_8hpp.html',1,'']]]
 ];

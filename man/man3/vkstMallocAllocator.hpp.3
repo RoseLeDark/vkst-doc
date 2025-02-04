@@ -6,6 +6,8 @@ include/Allocator/vkstMallocAllocator.hpp
 .SH SYNOPSIS
 .br
 .PP
+\fC#include 'vkstAllocatorBase\&.hpp'\fP
+.br
 \fC#include 'vkstAllocatorTraits\&.hpp'\fP
 .br
 
@@ -15,6 +17,7 @@ include/Allocator/vkstMallocAllocator.hpp
 .ti -1c
 .RI "class \fBvkst::basic_malloc_allocator\fP"
 .br
+.RI "A basic allocator that uses malloc and free for memory management\&. "
 .in -1c
 .SS "Namensbereiche"
 
@@ -27,8 +30,9 @@ include/Allocator/vkstMallocAllocator.hpp
 
 .in +1c
 .ti -1c
-.RI "template<\fBclass\fP \fBTFilter\fP > \fBusing\fP \fBvkst::malloc_allocator\fP = \fBbasic_allocator\fP< \fBbasic_malloc_allocator\fP, \fBTFilter\fP >"
+.RI "template<class TFilter > using \fBvkst::malloc_allocator\fP = \fBbasic_allocator\fP< \fBbasic_malloc_allocator\fP, TFilter >"
 .br
+.RI "A wrapper for the \fBbasic_malloc_allocator\fP with a filter for allocation events\&. "
 .in -1c
 .SH "Autor"
 .PP 

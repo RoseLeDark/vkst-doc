@@ -1,24 +1,42 @@
 <map id="include/Allocator/vkstMallocAllocator.hpp" name="include/Allocator/vkstMallocAllocator.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="79,5,265,45"/>
-<area shape="rect" id="Node000002" href="$d0/dcf/vkstAllocatorTraits_8hpp.html" title=" " alt="" coords="94,93,250,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,46,175,79,169,79,169,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,67,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,121,71,163,69,158,149,116"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="111,240,193,265"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="162,120,145,141,132,167,130,182,131,198,141,227,136,228,126,199,124,182,127,166,141,138,158,117"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="142,167,202,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="175,119,175,153,169,153,169,119"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="227,167,296,192"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="188,117,238,156,234,160,185,121"/>
-<area shape="rect" id="Node000007" href="$d0/d1f/vkstAlignment_8hpp.html" title=" " alt="" coords="321,167,463,192"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="208,116,344,160,343,165,207,121"/>
-<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="354,195,205,239,203,233,353,189"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="220,240,289,265"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="371,194,290,236,288,231,369,190"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="314,240,379,265"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="387,194,364,230,359,227,382,191"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="404,240,468,265"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="402,191,424,227,419,230,397,194"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="493,240,571,265"/>
-<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="416,190,498,231,496,236,413,194"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="413,5,598,45"/>
+<area shape="rect" id="Node000002" href="$d0/dd1/vkstAllocatorBase_8hpp.html" title=" " alt="" coords="371,93,525,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="494,47,467,84,463,80,489,44"/>
+<area shape="rect" id="Node000010" href="$d0/dcf/vkstAllocatorTraits_8hpp.html" title=" " alt="" coords="486,167,642,192"/>
+<area shape="poly" id="edge22_Node000001_Node000010" title=" " alt="" coords="517,45,538,92,559,152,554,154,534,94,512,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="315,240,376,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="442,121,364,230,359,227,437,118"/>
+<area shape="rect" id="Node000004" href="$d1/d72/vkstAllocatorFilter_8hpp.html" title=" " alt="" coords="163,167,314,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="415,121,287,165,285,160,414,116"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="468,116,535,157,532,162,465,121"/>
+<area shape="rect" id="Node000014" href="$d0/d1f/vkstAlignment_8hpp.html" title=" " alt="" coords="401,240,543,265"/>
+<area shape="poly" id="edge21_Node000002_Node000014" title=" " alt="" coords="453,119,470,226,465,227,447,120"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="257,190,318,230,315,235,254,194"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="51,240,120,265"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="215,194,124,237,122,232,213,190"/>
+<area shape="rect" id="Node000006" href="$d4/d45/vkstLogging_8hpp.html" title=" " alt="" coords="145,240,274,265"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="236,193,222,228,217,226,231,191"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="173,313,245,339"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="212,266,212,300,207,300,207,266"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,313,67,339"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="182,268,78,310,76,306,180,263"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="91,313,149,339"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="197,267,147,307,144,302,193,263"/>
+<area shape="poly" id="edge11_Node000010_Node000003" title=" " alt="" coords="530,195,390,240,388,235,528,189"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="645,313,728,339"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="570,191,585,225,609,264,631,286,656,304,653,308,628,290,605,267,580,228,565,193"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="619,240,679,265"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="579,190,627,229,623,233,576,194"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="704,240,773,265"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="593,190,698,232,696,237,591,194"/>
+<area shape="poly" id="edge15_Node000010_Node000014" title=" " alt="" coords="551,194,499,234,496,229,548,190"/>
+<area shape="poly" id="edge20_Node000014_Node000011" title=" " alt="" coords="507,263,640,306,638,311,506,268"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="552,313,621,339"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="492,263,558,304,555,308,489,268"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="270,313,335,339"/>
+<area shape="poly" id="edge17_Node000014_Node000016" title=" " alt="" coords="446,268,344,310,342,305,444,263"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="360,313,424,339"/>
+<area shape="poly" id="edge18_Node000014_Node000017" title=" " alt="" coords="461,267,417,306,413,302,457,263"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="449,313,527,339"/>
+<area shape="poly" id="edge19_Node000014_Node000018" title=" " alt="" coords="477,265,485,300,480,301,472,266"/>
 </map>

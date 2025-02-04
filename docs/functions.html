@@ -122,7 +122,8 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <div class="textblock">Hier folgt die Aufzählung aller Strukturen und Varianten mit Verweisen auf die zugehörigen Elemente:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>allocate()&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#aa51f1bb4121c71722c2c39bcb8758a76">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="df/d7a/classvkst_1_1basic__malloc__allocator.html#a55ef28ba8d2552f75b4019a8f003652d">vkst::basic_malloc_allocator</a></li>
+<li>add_flag()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a3b969706dbd9f3513ae09dd434762e6c">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
+<li>allocate()&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#af06217c996f091b8542e3760c38ed076">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="df/d7a/classvkst_1_1basic__malloc__allocator.html#a55ef28ba8d2552f75b4019a8f003652d">vkst::basic_malloc_allocator</a></li>
 <li>allocate_array()&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#aa7a131484bb1f709dfd9b7d50aefcc3b">vkst::allocator_traits&lt; TAllocator &gt;</a></li>
 <li>allocate_node()&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#ab678ba240ebbdb3935ea59577f10f96c">vkst::allocator_traits&lt; TAllocator &gt;</a></li>
 <li>allocator&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a727f7adbf3bb681ecec812d451c77825">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
@@ -130,7 +131,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>allocator_type&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#a51dc8d60e4cde22300c14dc7bb636333">vkst::allocator_traits&lt; TAllocator &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#afa4bfa620f77d98285be68b53b3f0149">vkst::internal::allocator_traits&lt; TAlloC &gt;</a></li>
 <li>append()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a6cc33e0902be5933295e024d5b68c792">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>assign()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a6eda9bbc5cbcf6c51b02b74f220ab668">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>assign_to_gpu()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a663ac5879ae53a3ea4feb17ca8057cfd">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>assign_to_gpu()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a4a7b1aa69f4e9bfa565cbd447023504a">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 </ul>
 
 
@@ -138,20 +139,25 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>basic_allocator()&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#a3b5e6306ea7314448bcf3c3288226ce3">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a></li>
 <li>begin()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#ab58e456fbf1b9bbad6c21deac53706e3">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>buffer()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a9027e21346ceab6ad4c5bbda2e7dee1a">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>buffer_type&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a6b56c18cd41d5f8d252ead1d9b6c52e9">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>buffer_type&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a6b42d971df74f4878fb8bf2aa7bd8afd">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>c&#160;:&#160;<a class="el" href="d8/d4c/unionvkst_1_1internal_1_1max__align.html#a527b1c7cfaefe3637df77f5daa0f918a">vkst::internal::max_align</a></li>
+<li>can_compress&#160;:&#160;<a class="el" href="df/dde/structvkst_1_1compression__filter.html#a7e817ddf4ce2058b47a8b916f6adcc66">vkst::compression_filter&lt; TBUFFER &gt;</a>, <a class="el" href="dc/dae/structvkst_1_1lz4__compression__filter.html#ae4791aea4f1d2505fe2f2fb0a56c5901">vkst::lz4_compression_filter&lt; TBUFFER &gt;</a></li>
+<li>can_read()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a69af602b7c1c9680de80f318618cf2d4">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
+<li>can_write()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a7d467bb23540ac3554abc0b412e166f6">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>change_size()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a4ee79eb1a2e7a735c67d04f9e7d4b011">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>clear()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a6d1456df192fb5b1a3e887f0f7089f38">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
+<li>compress()&#160;:&#160;<a class="el" href="df/dde/structvkst_1_1compression__filter.html#a86681948f04bf67a7467aa9b659d1326">vkst::compression_filter&lt; TBUFFER &gt;</a>, <a class="el" href="dc/dae/structvkst_1_1lz4__compression__filter.html#afa3ffcfff704a56ae2b85d852b3151d0">vkst::lz4_compression_filter&lt; TBUFFER &gt;</a></li>
+<li>compress_type&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a56823fa5135dda8c18643ef2829afc0c">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>const_iterator&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#af090038e3831ac48a8d3ba2eb47010cd">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>const_pointer&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#aa55c355dd450b7759db9f8c66f2bf5cd">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a8c6081d73fa6e751e5d3b16314825d93">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a483a1f34342f977171b3fe61b4331588">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
-<li>const_reference&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a8e841f80772839dc92890ec918e889d0">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ae40ca31456a80f102e61f78375ef89b8">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>const_pointer&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#aa55c355dd450b7759db9f8c66f2bf5cd">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#aa4bc5cb3beef56bd8070f8b06d691cf5">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a8c6081d73fa6e751e5d3b16314825d93">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ac06964221b5c8e80a852bf1d3e9517f6">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
+<li>const_reference&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a8e841f80772839dc92890ec918e889d0">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a49e286aa03cf10a740f7ab04d1e9d4bb">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>construct()&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#a3828ad891fe06743804acdcdb4cdb188">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a></li>
 <li>copy()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a6ca37d658000e214f7ac5222c7b9af54">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>create_internal_gpu_buffer()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a7bd722321ca91a7bc08f1f37650d855f">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>create_internal_gpu_buffer()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a31bb5a41c8c525c653a83bda3a3575aa">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>critical()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#aaab2e36b80c058b116265031e2a70120">vkst::logging</a></li>
 </ul>
 
@@ -162,6 +168,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>deallocate_array()&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#af9c59a06598a8511fa8b3fc6888f91ab">vkst::allocator_traits&lt; TAllocator &gt;</a></li>
 <li>deallocate_node()&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#a6c30b54cf18eafcbc8a14083aeeea02d">vkst::allocator_traits&lt; TAllocator &gt;</a></li>
 <li>debug()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#ab054c463495b8b3ff990b69f24bb15bf">vkst::logging</a></li>
+<li>decompress()&#160;:&#160;<a class="el" href="df/dde/structvkst_1_1compression__filter.html#ae84f84a61647b8b88b4854f17397a3f2">vkst::compression_filter&lt; TBUFFER &gt;</a>, <a class="el" href="dc/dae/structvkst_1_1lz4__compression__filter.html#a659bff10c44cf349c760c9fc7975c2a2">vkst::lz4_compression_filter&lt; TBUFFER &gt;</a></li>
 <li>destroy()&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#ae3355e591034a952b29e2ce69f508cfd">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a></li>
 <li>difference_type&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#ad22dbf081aa33440f0829feb36fec461">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#add0489436f1aa4b18f3d1ae06722adfd">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a6330c58abd4244308547fd2f9d96069e">vkst::internal::allocator_traits&lt; TAlloC &gt;</a></li>
 </ul>
@@ -179,6 +186,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>f&#160;:&#160;<a class="el" href="d8/d4c/unionvkst_1_1internal_1_1max__align.html#a91a1f2b49d92df9cc49443d5f500429c">vkst::internal::max_align</a></li>
 <li>filter_type&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#a7e900e3d2844b2e13ff86ae49de56707">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a></li>
 <li>first()&#160;:&#160;<a class="el" href="df/d7a/classvkst_1_1basic__malloc__allocator.html#ab34e3152d83180e71b5f8ef15f971ea0">vkst::basic_malloc_allocator</a></li>
+<li>flag_type&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#abbd1b96aea21ae3a89047539230c547c">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 </ul>
 
 
@@ -201,6 +209,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>instance()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#a5c113c776fa7e322360102abbe1609fd">vkst::logging</a></li>
 <li>is_empty()&#160;:&#160;<a class="el" href="d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4693677f039aebf32e7774ade0533b49">vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#ae4a3471043d1dc0415b974d13dfccda5">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>is_equel()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a72efaf4b725e15f2e43ed3ea590c6a82">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
+<li>is_flag()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ab277733c5ecf4ae805dd880f7fa14b15">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>is_full()&#160;:&#160;<a class="el" href="d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4a605f9b991d12c7719d8e534f9e939c">vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#abea597655cf3863497d7b5a8928a22ab">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>is_locked()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a0b835546b57ec0afbe2c9d4f73f0c92e">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>is_thread_safe&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#a4944bee398283600c06620037f8ee948">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="df/d7a/classvkst_1_1basic__malloc__allocator.html#a813072814520506d7efcb0f6206051a5">vkst::basic_malloc_allocator</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a2baea4796673f50cfeb4c8e6fbf8b0cf">vkst::internal::allocator_traits&lt; TAlloC &gt;</a></li>
@@ -212,7 +221,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>l&#160;:&#160;<a class="el" href="d8/d4c/unionvkst_1_1internal_1_1max__align.html#aa5379049927ab0a30b61878dd5e061fe">vkst::internal::max_align</a></li>
 <li>ll&#160;:&#160;<a class="el" href="d8/d4c/unionvkst_1_1internal_1_1max__align.html#a0c6fb7ac9d65a312e2a27c1b33d2b48d">vkst::internal::max_align</a></li>
-<li>lock_type&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a0c08dbe88718c8a854700e2a708cac31">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>lock_type&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a1a6a1c63fe2c25d7dae74ee890ca7ab7">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>log()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#a9eb76173851eda61caa08a162ec0a6c0">vkst::logging</a></li>
 <li>logging()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#ab17cddb986e8de93a9f70c8dcf2a37e1">vkst::logging</a></li>
 </ul>
@@ -220,14 +229,15 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>m_allocator&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a4057faf1a84e91e6599a880f0a4e8f01">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
+<li>m_bHostPtr&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a385dfd26eb3db3b7de0f0b706501a6ea">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>m_bOwnMem&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a7b0c2442a1dfa1080968385c866a5c1b">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>m_bReadOnly&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a061fa31c577e92f707da91a161c1a49f">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
-<li>m_cContext&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a7d1be5e064a0197f62fe02582e178883">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
-<li>m_clBuffer&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a27d6a2a489d6485da40e70bb6d63cf7e">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>m_cContext&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#af0ce13fe452d8f79585e0eef971bbdef">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
+<li>m_clBuffer&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a929f14696aa74ae0a3296168306c4452">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
+<li>m_fFlags&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#afcffb546311023a7431a2a75518c3b7f">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>m_is2Device&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a17d417dadce37299dd557b9f25889d04">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>m_lock&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a655072c46804e65120c507e1679e9b11">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>m_lock&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ab74a8f965e0f56f269068ed482f6cf85">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>m_pRawBuffer&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a9eb42d5d1ab724383c15259bf36ed901">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>m_refBuffer&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#af9de5b13dc3db1ab72d45f4a8a7531f7">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>m_refBuffer&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a3560902e9ba1e9f69a7a5c4aad5db5ba">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>m_sSize&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#acb424a93f5feb33defea9808f76ca15d">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>m_sUsed&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#aec72a436f0494d6ba0f961452723bbc2">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>max_alignment()&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#a7691ca15a41fc016a3d85e4ae0611a66">vkst::allocator_traits&lt; TAllocator &gt;</a></li>
@@ -241,24 +251,24 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>on_dealloc()&#160;:&#160;<a class="el" href="d7/d44/classvkst_1_1basic__allocator__filter.html#a6dff37f044420d0c2542b985da00e8c2">vkst::basic_allocator_filter</a>, <a class="el" href="d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4b7b05177cb60681682b2ac7152271a9">vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</a></li>
 <li>on_pre_alloc()&#160;:&#160;<a class="el" href="d7/d44/classvkst_1_1basic__allocator__filter.html#a999253745112091ecf33a08abe456238">vkst::basic_allocator_filter</a>, <a class="el" href="d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a5c33ded1ca1d25dcbc96743b5c144a80">vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</a></li>
 <li>on_pre_dealloc()&#160;:&#160;<a class="el" href="d7/d44/classvkst_1_1basic__allocator__filter.html#a0c2413d2a3668dd75f411516c55df9bb">vkst::basic_allocator_filter</a>, <a class="el" href="d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a9bb29f697dc7d407fd87e07d73f5fdae">vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</a></li>
-<li>opencl_buffer()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a18a72e3225126a8fcc21113e4654fca2">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
-<li>operator cl_mem()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a4e35f55fef5103bf5df304a7d190b590">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>opencl_buffer()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ade5140119e790e3593c11e0b166cf265">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>operator!=()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a78f88fae572ed900a448b235668bf65b">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
-<li>operator=()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a3efafba7eae5665622b2297b6c2447d0">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ac7875b7dd27e4c86f19048801ab30f68">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>operator=()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a3efafba7eae5665622b2297b6c2447d0">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a3876caeee3090a76075fc6ebff7718ed">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>operator==()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#abbb1ccbe0f2997e3011eb2ea8fe4dbf8">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 <li>operator[]()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#addf2a56f6a53345938d8015de317d60a">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>pointer&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#a6bd937a7b96af74e820c3217ac25b35d">vkst::allocator_traits&lt; TAllocator &gt;</a>, <a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#af459e0c6df8ebb55034fa1492c1d58c0">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#aa7975b8116f6c3a739d7bea41d49b4a6">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#abf3e409e0cf7528e7c8d2263d5050413">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>pointer&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#a6bd937a7b96af74e820c3217ac25b35d">vkst::allocator_traits&lt; TAllocator &gt;</a>, <a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#af459e0c6df8ebb55034fa1492c1d58c0">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#a97ab977e8ee55e2eff90928f2faec183">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#aa7975b8116f6c3a739d7bea41d49b4a6">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ab90efdb8d627ae69e3c1058dd4879b5d">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>reference&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a4437df263d574e8cbe6fe2012947cdd4">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#afa3a22424226d96a8feef08fb84d859d">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>reference&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a4437df263d574e8cbe6fe2012947cdd4">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ab9c90921d2a7ba935f6027946d4dc847">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>release()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#a26157b79e142feca131327baf9d6740b">vkst::logging</a></li>
-<li>require()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#acd799996b77b8860bf77f3e336efbc57">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>remove_flag()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a4504f812d1f504fc966d743d0582c235">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
+<li>require()&#160;:&#160;<a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a0e19fa2247afdde73e2ce396b58bec8d">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>res&#160;:&#160;<a class="el" href="de/d3d/structvkst_1_1aligned__as.html#abb42ae27039a8137c3698f09adf54644">vkst::aligned_as&lt; T &gt;</a>, <a class="el" href="df/df3/structvkst_1_1alignment__of.html#aeac49ed857d3eb0f1a2c2499bbf86b40a23ec6e20b95bdf1012783dc92f068263">vkst::alignment_of&lt; T &gt;</a>, <a class="el" href="d3/dfa/structvkst_1_1alignment__of_3_01void_01_4.html#aee3fc86c262246105e44938f78272c2fa1826c1254cc6c66042403a9dcaa28467">vkst::alignment_of&lt; void &gt;</a>, <a class="el" href="d3/dda/structvkst_1_1alignment__of_3_01void_01const_01_4.html#aeb2ec9e0658867dca5f62b8250943195a905fb614a529decd8f924be909ff26f5">vkst::alignment_of&lt; void const &gt;</a>, <a class="el" href="de/d2e/structvkst_1_1alignment__of_3_01void_01const_01volatile_01_4.html#a7a32c3bdb45ae95e6da178146e34f47ba04793a295848a94d2bfd925059f85dca">vkst::alignment_of&lt; void const volatile &gt;</a>, <a class="el" href="da/dd3/structvkst_1_1alignment__of_3_01void_01volatile_01_4.html#ae49f9e2cff50d1a7578c4845d382dab1ab4754240cfb936c557419eb5d2493d5a">vkst::alignment_of&lt; void volatile &gt;</a></li>
 <li>reset()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#ac24371a9cd35017ae675b9d1a69fd05c">vkst::logging</a></li>
 <li>resize()&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a3c5a257418cb32b6418ac98e8bb1a197">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a></li>
@@ -267,9 +277,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>s&#160;:&#160;<a class="el" href="d8/d4c/unionvkst_1_1internal_1_1max__align.html#a58dab6cefb9778ccd7ecd2dcf18f4fc2">vkst::internal::max_align</a></li>
-<li>self_type&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d1/d02/classvkst_1_1logging.html#ae7b29bde48eb829dd2873814779d0cfc">vkst::logging</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a24a38ed5ba21fe60cea62b5c18a11d21">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>self_type&#160;:&#160;<a class="el" href="dc/d45/classvkst_1_1buffer.html#a81682882f6b7435bffa8f602c0132402">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="d1/d02/classvkst_1_1logging.html#ae7b29bde48eb829dd2873814779d0cfc">vkst::logging</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ab81cfc5b238bc4a8879b83640a24fac3">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>set_level()&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#a78064f2385c53ec45536dfedf04d88da">vkst::logging</a></li>
-<li>size_type&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#ad8f280153d44ba29bff5fc36e3c6e46f">vkst::allocator_traits&lt; TAllocator &gt;</a>, <a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#ae6ca95c75d88c9dc8fa9ebd0b81db879">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a3800c7af25cf493c5841528f91356f3e">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#a48062e3c9b951cc4a18ad83913382665">vkst::opencl_buffer&lt; TBUFFER &gt;</a></li>
+<li>size_type&#160;:&#160;<a class="el" href="d5/dd8/classvkst_1_1allocator__traits.html#ad8f280153d44ba29bff5fc36e3c6e46f">vkst::allocator_traits&lt; TAllocator &gt;</a>, <a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#ae6ca95c75d88c9dc8fa9ebd0b81db879">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#a27b8d18160e1fac46b263724de9e93c9">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a3800c7af25cf493c5841528f91356f3e">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ac5288f804eca0aa2ac3893725c618c1a">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 <li>stream_type&#160;:&#160;<a class="el" href="d1/d02/classvkst_1_1logging.html#a931ee7b660d7a18951d6a740067421e2">vkst::logging</a></li>
 </ul>
 
@@ -280,7 +290,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
-<li>value_type&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#a2301dffa7e0b650df6ab8f8a2587536f">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a138ef5dfb1fc415baf6dfd7bd591931d">vkst::internal::allocator_traits&lt; TAlloC &gt;</a></li>
+<li>value_type&#160;:&#160;<a class="el" href="d9/d40/classvkst_1_1basic__allocator.html#a2301dffa7e0b650df6ab8f8a2587536f">vkst::basic_allocator&lt; TAllocator, TFilter &gt;</a>, <a class="el" href="dc/d45/classvkst_1_1buffer.html#aac0a77b95e6ba0344d8d2ad492a45413">vkst::buffer&lt; TVALUE, TALIGNMENT, TALLOCATOR &gt;</a>, <a class="el" href="dd/d2c/structvkst_1_1internal_1_1allocator__traits.html#a138ef5dfb1fc415baf6dfd7bd591931d">vkst::internal::allocator_traits&lt; TAlloC &gt;</a>, <a class="el" href="d5/d9b/classvkst_1_1opencl__buffer.html#ad5308950e266e7947bc9700f5d3fcaa9">vkst::opencl_buffer&lt; TBUFFER, TFLAGS &gt;</a></li>
 </ul>
 
 

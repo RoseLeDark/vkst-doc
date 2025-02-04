@@ -6,10 +6,6 @@ include/vkstAllocator.hpp
 .SH SYNOPSIS
 .br
 .PP
-\fC#include 'config\&.h'\fP
-.br
-\fC#include 'Allocator/vkstAllocatorBase\&.hpp'\fP
-.br
 \fC#include 'Allocator/vkstMallocAllocator\&.hpp'\fP
 .br
 \fC#include 'Allocator/vkstAllocatorMaximalFilter\&.hpp'\fP
@@ -26,8 +22,13 @@ include/vkstAllocator.hpp
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBvkst::default_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_maximal_filter\fP< \fBLIBVKST_CONFIG_MAX_MEMORY_USE\fP > >"
+.RI "using \fBvkst::default_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_filter\fP >"
 .br
+.RI "A default allocator that uses the malloc_allocator with a basic memory filter\&. "
+.ti -1c
+.RI "template<size_t TMaxAlloc> using \fBvkst::default_limmeted_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_maximal_filter\fP< TMaxAlloc > >"
+.br
+.RI "A default allocator with a maximum allocation size limit\&. "
 .in -1c
 .SH "Autor"
 .PP 

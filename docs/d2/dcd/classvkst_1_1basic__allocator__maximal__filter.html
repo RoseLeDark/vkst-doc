@@ -125,31 +125,50 @@ $(document).ready(function(){initNavTree('d2/dcd/classvkst_1_1basic__allocator__
 </div><!--header-->
 <div class="contents">
 
+<p>A memory allocator that enforces a maximum allocation limit during the program's runtime.  
+ <a href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:a5c33ded1ca1d25dcbc96743b5c144a80" id="r_a5c33ded1ca1d25dcbc96743b5c144a80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a5c33ded1ca1d25dcbc96743b5c144a80">on_pre_alloc</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">alignment</a>)</td></tr>
+<tr class="memitem:a5c33ded1ca1d25dcbc96743b5c144a80" id="r_a5c33ded1ca1d25dcbc96743b5c144a80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a5c33ded1ca1d25dcbc96743b5c144a80">on_pre_alloc</a> (size_t size, size_t alignment)</td></tr>
+<tr class="memdesc:a5c33ded1ca1d25dcbc96743b5c144a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there is enough available memory for a requested allocation.  <br /></td></tr>
 <tr class="separator:a5c33ded1ca1d25dcbc96743b5c144a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb29f697dc7d407fd87e07d73f5fdae" id="r_a9bb29f697dc7d407fd87e07d73f5fdae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a9bb29f697dc7d407fd87e07d73f5fdae">on_pre_dealloc</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>)</td></tr>
+<tr class="memitem:a9bb29f697dc7d407fd87e07d73f5fdae" id="r_a9bb29f697dc7d407fd87e07d73f5fdae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a9bb29f697dc7d407fd87e07d73f5fdae">on_pre_dealloc</a> (size_t size)</td></tr>
+<tr class="memdesc:a9bb29f697dc7d407fd87e07d73f5fdae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns true before deallocation.  <br /></td></tr>
 <tr class="separator:a9bb29f697dc7d407fd87e07d73f5fdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc9875faa334c08d90df96be6650807" id="r_a2bc9875faa334c08d90df96be6650807"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a2bc9875faa334c08d90df96be6650807">on_alloc</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">alignment</a>)</td></tr>
+<tr class="memitem:a2bc9875faa334c08d90df96be6650807" id="r_a2bc9875faa334c08d90df96be6650807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a2bc9875faa334c08d90df96be6650807">on_alloc</a> (size_t size, size_t alignment)</td></tr>
+<tr class="memdesc:a2bc9875faa334c08d90df96be6650807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current memory usage after an allocation.  <br /></td></tr>
 <tr class="separator:a2bc9875faa334c08d90df96be6650807"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b7b05177cb60681682b2ac7152271a9" id="r_a4b7b05177cb60681682b2ac7152271a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4b7b05177cb60681682b2ac7152271a9">on_dealloc</a> (<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size</a>)</td></tr>
+<tr class="memitem:a4b7b05177cb60681682b2ac7152271a9" id="r_a4b7b05177cb60681682b2ac7152271a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4b7b05177cb60681682b2ac7152271a9">on_dealloc</a> (size_t size)</td></tr>
+<tr class="memdesc:a4b7b05177cb60681682b2ac7152271a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current memory usage after a deallocation.  <br /></td></tr>
 <tr class="separator:a4b7b05177cb60681682b2ac7152271a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b61854189b196923dbb40b5aea3fe48" id="r_a4b61854189b196923dbb40b5aea3fe48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4b61854189b196923dbb40b5aea3fe48">get_left</a> ()</td></tr>
+<tr class="memitem:a4b61854189b196923dbb40b5aea3fe48" id="r_a4b61854189b196923dbb40b5aea3fe48"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4b61854189b196923dbb40b5aea3fe48">get_left</a> ()</td></tr>
+<tr class="memdesc:a4b61854189b196923dbb40b5aea3fe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the amount of available memory left for allocation.  <br /></td></tr>
 <tr class="separator:a4b61854189b196923dbb40b5aea3fe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae80f0769e0ce170a8d07af72449994bb" id="r_ae80f0769e0ce170a8d07af72449994bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#ae80f0769e0ce170a8d07af72449994bb">get_current</a> ()</td></tr>
+<tr class="memitem:ae80f0769e0ce170a8d07af72449994bb" id="r_ae80f0769e0ce170a8d07af72449994bb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#ae80f0769e0ce170a8d07af72449994bb">get_current</a> ()</td></tr>
+<tr class="memdesc:ae80f0769e0ce170a8d07af72449994bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current amount of allocated memory.  <br /></td></tr>
 <tr class="separator:ae80f0769e0ce170a8d07af72449994bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a605f9b991d12c7719d8e534f9e939c" id="r_a4a605f9b991d12c7719d8e534f9e939c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4a605f9b991d12c7719d8e534f9e939c">is_full</a> ()</td></tr>
+<tr class="memitem:a4a605f9b991d12c7719d8e534f9e939c" id="r_a4a605f9b991d12c7719d8e534f9e939c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4a605f9b991d12c7719d8e534f9e939c">is_full</a> ()</td></tr>
+<tr class="memdesc:a4a605f9b991d12c7719d8e534f9e939c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the allocator has reached its maximum capacity.  <br /></td></tr>
 <tr class="separator:a4a605f9b991d12c7719d8e534f9e939c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4693677f039aebf32e7774ade0533b49" id="r_a4693677f039aebf32e7774ade0533b49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4693677f039aebf32e7774ade0533b49">is_empty</a> ()</td></tr>
+<tr class="memitem:a4693677f039aebf32e7774ade0533b49" id="r_a4693677f039aebf32e7774ade0533b49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html#a4693677f039aebf32e7774ade0533b49">is_empty</a> ()</td></tr>
+<tr class="memdesc:a4693677f039aebf32e7774ade0533b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the allocator is empty (no memory allocated).  <br /></td></tr>
 <tr class="separator:a4693677f039aebf32e7774ade0533b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt;<br />
-class vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</div>
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00009">9</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;size_t TMaxAlloc&gt;<br />
+class vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</div><p>A memory allocator that enforces a maximum allocation limit during the program's runtime. </p>
+<p>This allocator ensures that the total memory allocated does not exceed a predefined limit, defined as TMaxAlloc. It tracks the current memory usage and prevents further allocations once the limit has been reached. It is useful for scenarios where the application needs to operate within a constrained memory budget.</p>
+<dl class="tparams"><dt>Template-Parameter</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TMaxAlloc</td><td>The maximum amount of memory that can be allocated by this allocator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00019">19</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a id="ae80f0769e0ce170a8d07af72449994bb" name="ae80f0769e0ce170a8d07af72449994bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae80f0769e0ce170a8d07af72449994bb">&#9670;&#160;</a></span>get_current()</h2>
@@ -157,13 +176,13 @@ class vkst::basic_allocator_maximal_filter&lt; TMaxAlloc &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::get_current </td>
+          <td class="memname">size_t <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::get_current </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -176,7 +195,11 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00018">18</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Gets the current amount of allocated memory. </p>
+<p>This method returns the total amount of memory that has currently been allocated.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The current allocated memory. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00093">93</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -186,13 +209,13 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::get_left </td>
+          <td class="memname">size_t <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::get_left </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -205,7 +228,11 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00017">17</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Gets the amount of available memory left for allocation. </p>
+<p>This method returns the remaining memory that can still be allocated, which is the maximum allocation limit minus the current usage.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>The amount of free memory left. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00082">82</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -215,13 +242,13 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::is_empty </td>
+          <td class="memname">bool <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::is_empty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -234,7 +261,11 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00021">21</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Checks if the allocator is empty (no memory allocated). </p>
+<p>This method checks if the allocator has not yet allocated any memory.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>true if no memory has been allocated; false otherwise. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00116">116</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,13 +275,13 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::is_full </td>
+          <td class="memname">bool <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::is_full </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -263,7 +294,11 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00020">20</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Checks if the allocator has reached its maximum capacity. </p>
+<p>This method checks if the allocator has already allocated the maximum allowed memory. If the current usage is greater than or equal to the maximum limit, it returns true.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>true if the allocator is full; false otherwise. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00105">105</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,21 +308,21 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::on_alloc </td>
+          <td class="memname">void <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::on_alloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>alignment</em>&#160;</td>
         </tr>
         <tr>
@@ -303,7 +338,17 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00014">14</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Updates the current memory usage after an allocation. </p>
+<p>This method is called after a successful allocation. It updates the current memory usage by adding the allocated size to the total.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the memory allocated. </td></tr>
+    <tr><td class="paramname">alignment</td><td>The alignment for the allocation (not used in this implementation). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00058">58</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,15 +358,15 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">void</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::on_dealloc </td>
+          <td class="memname">void <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::on_dealloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -333,7 +378,16 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00015">15</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Updates the current memory usage after a deallocation. </p>
+<p>This method is called after a deallocation. It updates the current memory usage by subtracting the deallocated size from the total.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the memory to deallocate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00070">70</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -343,21 +397,21 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::on_pre_alloc </td>
+          <td class="memname">bool <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::on_pre_alloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>alignment</em>&#160;</td>
         </tr>
         <tr>
@@ -373,7 +427,18 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00011">11</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Checks if there is enough available memory for a requested allocation. </p>
+<p>This method is called before performing an allocation. It checks if there is enough free memory left to accommodate the requested size. If the allocation would exceed the maximum allowed memory, it returns false.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The requested size to allocate. </td></tr>
+    <tr><td class="paramname">alignment</td><td>The alignment for the allocation (not used in this implementation). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true if enough memory is available; false otherwise. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00032">32</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>
@@ -383,15 +448,15 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> TMaxAlloc&gt; </div>
+template&lt;size_t TMaxAlloc&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">TMaxAlloc</a> &gt;::on_pre_dealloc </td>
+          <td class="memname">bool <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">vkst::basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt;::on_pre_dealloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -403,7 +468,17 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00012">12</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
+<p>Always returns true before deallocation. </p>
+<p>This method is called before performing a deallocation. In this implementation, it does not impose any restrictions and always returns true.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the memory to deallocate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true always, indicating deallocation is allowed. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html#l00045">45</a> der Datei <a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">vkstAllocatorMaximalFilter.hpp</a>.</p>
 
 </div>
 </div>

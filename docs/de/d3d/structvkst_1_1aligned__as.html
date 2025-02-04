@@ -125,17 +125,28 @@ $(document).ready(function(){initNavTree('de/d3d/structvkst_1_1aligned__as.html'
 </div><!--header-->
 <div class="contents">
 
+<p>A helper type alias to align a type to its appropriate alignment.  
+ <a href="../../de/d3d/structvkst_1_1aligned__as.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Öffentliche Typen</h2></td></tr>
-<tr class="memitem:abb42ae27039a8137c3698f09adf54644" id="r_abb42ae27039a8137c3698f09adf54644"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/structvkst_1_1aligned__as.html#abb42ae27039a8137c3698f09adf54644">res</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html">internal::type_with_alignment</a>&lt; <a class="el" href="../../df/df3/structvkst_1_1alignment__of.html">alignment_of</a>&lt; T &gt;::res &gt;</td></tr>
+<tr class="memitem:abb42ae27039a8137c3698f09adf54644" id="r_abb42ae27039a8137c3698f09adf54644"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/structvkst_1_1aligned__as.html#abb42ae27039a8137c3698f09adf54644">res</a> = typename <a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html">internal::type_with_alignment</a>&lt; <a class="el" href="../../df/df3/structvkst_1_1alignment__of.html">alignment_of</a>&lt; T &gt;::res &gt;</td></tr>
 <tr class="separator:abb42ae27039a8137c3698f09adf54644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T&gt;<br />
-struct vkst::aligned_as&lt; T &gt;</div>
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00129">129</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct vkst::aligned_as&lt; T &gt;</div><p>A helper type alias to align a type to its appropriate alignment. </p>
+<p>This alias ensures that the type <code>T</code> is aligned correctly according to its <code><a class="el" href="../../df/df3/structvkst_1_1alignment__of.html" title="A template to get the alignment of a type.">alignment_of</a></code>.</p>
+<dl class="tparams"><dt>Template-Parameter</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to align. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00207">207</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentation der benutzerdefinierten Datentypen</h2>
 <a id="abb42ae27039a8137c3698f09adf54644" name="abb42ae27039a8137c3698f09adf54644"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb42ae27039a8137c3698f09adf54644">&#9670;&#160;</a></span>res</h2>
@@ -143,15 +154,15 @@ struct vkst::aligned_as&lt; T &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../de/d3d/structvkst_1_1aligned__as.html">vkst::aligned_as</a>&lt; T &gt;::res =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> <a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html">internal::type_with_alignment</a>&lt;<a class="el" href="../../df/df3/structvkst_1_1alignment__of.html">alignment_of</a>&lt;T&gt;::res&gt;</td>
+          <td class="memname">using <a class="el" href="../../de/d3d/structvkst_1_1aligned__as.html">vkst::aligned_as</a>&lt; T &gt;::res =  typename <a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html">internal::type_with_alignment</a>&lt;<a class="el" href="../../df/df3/structvkst_1_1alignment__of.html">alignment_of</a>&lt;T&gt;::res&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00130">130</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00208">208</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 
 </div>
 </div>

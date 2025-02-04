@@ -1,64 +1,70 @@
 <map id="include/libvkst.hpp" name="include/libvkst.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="707,5,838,31"/>
-<area shape="rect" id="Node000002" href="$da/dc8/vkstBuffer_8hpp.html" title=" " alt="" coords="621,152,727,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="767,33,692,142,688,139,762,30"/>
-<area shape="rect" id="Node000025" href="$de/d1d/vkstOpenCLBuffer_8hpp.html" title=" " alt="" coords="834,79,989,104"/>
-<area shape="poly" id="edge32_Node000001_Node000025" title=" " alt="" coords="796,28,878,70,875,75,794,33"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="465,460,526,485"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="677,178,675,220,666,282,646,351,631,384,611,414,578,442,540,461,538,456,575,438,607,410,626,381,641,349,661,281,669,220,671,178"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="369,225,438,251"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="631,180,452,227,451,221,630,175"/>
-<area shape="rect" id="Node000005" href="$dd/d2c/vkstAllocator_8hpp.html" title=" " alt="" coords="462,225,585,251"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="651,180,562,222,559,217,649,175"/>
-<area shape="rect" id="Node000010" href="$d4/d45/vkstLogging_8hpp.html" title=" " alt="" coords="744,460,873,485"/>
-<area shape="poly" id="edge31_Node000002_Node000010" title=" " alt="" coords="690,176,723,206,765,251,807,307,824,339,838,371,841,392,839,412,825,449,820,447,834,411,836,392,833,373,819,341,802,310,761,255,719,210,686,180"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="477,299,545,324"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="524,251,518,286,513,285,519,251"/>
-<area shape="rect" id="Node000007" href="$d0/dd1/vkstAllocatorBase_8hpp.html" title=" " alt="" coords="245,299,453,324"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="496,253,391,296,389,291,494,248"/>
-<area shape="rect" id="Node000023" href="$d5/d82/vkstMallocAllocator_8hpp.html" title=" " alt="" coords="5,299,220,324"/>
-<area shape="poly" id="edge27_Node000005_Node000023" title=" " alt="" coords="462,253,192,299,191,294,461,247"/>
-<area shape="rect" id="Node000024" href="$d5/d58/vkstAllocatorMaximalFilter_8hpp.html" title=" " alt="" coords="394,372,597,412"/>
-<area shape="poly" id="edge29_Node000005_Node000024" title=" " alt="" coords="536,249,557,283,563,304,561,325,549,346,533,364,529,361,544,343,555,323,558,304,553,285,532,252"/>
-<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="352,324,361,365,370,389,384,410,416,437,453,455,451,460,413,442,380,414,366,391,356,367,347,325"/>
-<area shape="rect" id="Node000008" href="$d1/d72/vkstAllocatorFilter_8hpp.html" title=" " alt="" coords="672,379,823,405"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="407,321,676,374,675,379,406,327"/>
-<area shape="rect" id="Node000014" href="$d0/dcf/vkstAllocatorTraits_8hpp.html" title=" " alt="" coords="108,379,264,405"/>
-<area shape="poly" id="edge15_Node000007_Node000014" title=" " alt="" coords="326,326,223,376,221,371,324,322"/>
-<area shape="rect" id="Node000018" href="$d0/d1f/vkstAlignment_8hpp.html" title=" " alt="" coords="240,460,383,485"/>
-<area shape="poly" id="edge26_Node000007_Node000018" title=" " alt="" coords="349,325,320,447,315,446,343,323"/>
-<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="711,407,540,460,538,455,710,402"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="650,460,719,485"/>
-<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="740,407,705,451,700,448,736,403"/>
-<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="758,403,793,448,789,451,754,406"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="773,533,845,559"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="811,486,811,520,806,520,806,486"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="989,533,1050,559"/>
-<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="843,483,977,528,975,533,842,488"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="875,533,934,559"/>
-<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="826,483,879,523,876,527,823,488"/>
-<area shape="poly" id="edge16_Node000014_Node000003" title=" " alt="" coords="232,402,452,458,451,463,230,407"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="78,533,161,559"/>
-<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="179,407,162,431,146,461,127,520,122,519,141,459,158,428,175,403"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="156,460,216,485"/>
-<area shape="poly" id="edge18_Node000014_Node000016" title=" " alt="" coords="189,405,189,446,183,446,183,405"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="11,460,81,485"/>
-<area shape="poly" id="edge19_Node000014_Node000017" title=" " alt="" coords="167,407,80,456,77,451,164,403"/>
-<area shape="poly" id="edge20_Node000014_Node000018" title=" " alt="" coords="206,403,283,450,280,455,203,407"/>
-<area shape="poly" id="edge25_Node000018_Node000015" title=" " alt="" coords="281,488,165,531,163,526,280,483"/>
-<area shape="rect" id="Node000019" title=" " alt="" coords="185,533,254,559"/>
-<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="298,487,247,527,243,523,295,483"/>
-<area shape="rect" id="Node000020" title=" " alt="" coords="279,533,344,559"/>
-<area shape="poly" id="edge22_Node000018_Node000020" title=" " alt="" coords="314,486,314,520,309,520,309,486"/>
-<area shape="rect" id="Node000021" title=" " alt="" coords="369,533,433,559"/>
-<area shape="poly" id="edge23_Node000018_Node000021" title=" " alt="" coords="327,483,377,522,374,527,324,487"/>
-<area shape="rect" id="Node000022" title=" " alt="" coords="457,533,536,559"/>
-<area shape="poly" id="edge24_Node000018_Node000022" title=" " alt="" coords="342,483,455,526,453,531,340,488"/>
-<area shape="poly" id="edge28_Node000023_Node000014" title=" " alt="" coords="125,322,168,367,164,371,122,326"/>
-<area shape="poly" id="edge30_Node000024_Node000003" title=" " alt="" coords="498,412,498,446,493,446,493,412"/>
-<area shape="poly" id="edge36_Node000025_Node000002" title=" " alt="" coords="874,107,726,151,725,145,872,101"/>
-<area shape="poly" id="edge34_Node000025_Node000012" title=" " alt="" coords="951,102,991,121,1010,134,1027,150,1042,171,1049,190,1053,237,1053,393,1045,463,1030,521,1025,519,1040,462,1047,393,1047,237,1044,192,1037,174,1023,154,1007,138,988,125,949,107"/>
-<area shape="poly" id="edge35_Node000025_Node000013" title=" " alt="" coords="914,104,914,237,914,393,909,520,904,520,909,393,909,237,909,104"/>
-<area shape="rect" id="Node000026" title=" " alt="" coords="949,152,1013,177"/>
-<area shape="poly" id="edge33_Node000025_Node000026" title=" " alt="" coords="925,102,962,140,958,144,921,106"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="633,5,764,31"/>
+<area shape="rect" id="Node000002" href="$da/dc8/vkstBuffer_8hpp.html" title=" " alt="" coords="585,79,692,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="691,33,659,70,655,66,687,29"/>
+<area shape="rect" id="Node000024" href="$de/d1d/vkstOpenCLBuffer_8hpp.html" title=" " alt="" coords="793,387,948,412"/>
+<area shape="poly" id="edge32_Node000001_Node000024" title=" " alt="" coords="722,28,755,49,790,79,819,117,827,140,831,163,831,239,834,276,842,313,862,373,857,375,837,314,829,277,825,239,825,164,822,141,814,120,786,83,751,53,719,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="380,460,441,485"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="642,104,644,147,639,209,632,244,622,278,608,311,587,340,573,354,558,362,529,368,498,373,483,378,467,389,441,418,423,449,419,446,437,415,464,385,480,374,497,367,528,363,556,357,570,350,583,337,603,308,617,276,627,242,634,208,638,147,637,104"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="337,152,407,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="597,107,421,153,419,148,595,101"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="637,533,699,559"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="645,103,659,160,665,198,668,237,668,401,670,520,665,520,663,401,663,237,660,199,654,161,640,105"/>
+<area shape="rect" id="Node000006" href="$dd/d2c/vkstAllocator_8hpp.html" title=" " alt="" coords="431,152,553,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="616,106,529,148,527,144,614,102"/>
+<area shape="rect" id="Node000011" href="$d4/d45/vkstLogging_8hpp.html" title=" " alt="" coords="703,460,833,485"/>
+<area shape="poly" id="edge31_Node000002_Node000011" title=" " alt="" coords="656,102,680,124,707,156,729,194,736,215,739,237,739,320,741,355,747,389,762,446,757,447,742,390,736,355,733,320,733,237,731,216,725,196,703,159,676,128,652,106"/>
+<area shape="rect" id="Node000007" href="$d5/d82/vkstMallocAllocator_8hpp.html" title=" " alt="" coords="162,225,377,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="457,180,319,224,317,219,455,175"/>
+<area shape="rect" id="Node000023" href="$d5/d58/vkstAllocatorMaximalFilter_8hpp.html" title=" " alt="" coords="371,299,573,339"/>
+<area shape="poly" id="edge29_Node000006_Node000023" title=" " alt="" coords="493,178,479,285,474,285,488,177"/>
+<area shape="rect" id="Node000008" href="$d0/dd1/vkstAllocatorBase_8hpp.html" title=" " alt="" coords="193,306,346,331"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="272,251,272,292,267,292,267,251"/>
+<area shape="rect" id="Node000014" href="$d0/dcf/vkstAllocatorTraits_8hpp.html" title=" " alt="" coords="77,387,233,412"/>
+<area shape="poly" id="edge28_Node000007_Node000014" title=" " alt="" coords="244,253,211,272,182,300,166,337,159,373,153,372,161,335,178,297,208,268,241,248"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="282,330,393,448,389,452,278,333"/>
+<area shape="rect" id="Node000009" href="$d1/d72/vkstAllocatorFilter_8hpp.html" title=" " alt="" coords="477,387,627,412"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="311,329,499,381,497,386,310,334"/>
+<area shape="poly" id="edge16_Node000008_Node000014" title=" " alt="" coords="254,334,184,381,181,377,251,329"/>
+<area shape="rect" id="Node000018" href="$d0/d1f/vkstAlignment_8hpp.html" title=" " alt="" coords="213,460,355,485"/>
+<area shape="poly" id="edge27_Node000008_Node000018" title=" " alt="" coords="273,331,284,446,279,447,268,332"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="530,414,447,456,445,451,528,410"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="517,460,587,485"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="555,412,555,446,549,446,549,412"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="588,409,721,453,719,458,586,415"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="753,488,697,527,694,523,750,483"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="728,533,800,559"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="770,486,768,520,763,520,765,486"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="824,533,883,559"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="783,483,831,522,827,527,780,487"/>
+<area shape="poly" id="edge17_Node000014_Node000003" title=" " alt="" coords="197,409,367,457,366,462,195,415"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="5,533,88,559"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="95,414,55,432,38,445,24,461,19,475,20,491,32,521,27,523,14,492,13,475,19,459,34,441,52,428,93,410"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="34,460,94,485"/>
+<area shape="poly" id="edge19_Node000014_Node000016" title=" " alt="" coords="142,414,91,453,88,449,138,410"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="119,460,188,485"/>
+<area shape="poly" id="edge20_Node000014_Node000017" title=" " alt="" coords="157,412,156,447,151,446,152,412"/>
+<area shape="poly" id="edge21_Node000014_Node000018" title=" " alt="" coords="177,410,252,451,249,455,174,414"/>
+<area shape="poly" id="edge26_Node000018_Node000015" title=" " alt="" coords="247,488,99,532,97,527,245,483"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="396,533,465,559"/>
+<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="309,483,396,525,393,530,306,488"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="114,533,179,559"/>
+<area shape="poly" id="edge23_Node000018_Node000020" title=" " alt="" coords="263,488,182,529,180,525,261,483"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="204,533,268,559"/>
+<area shape="poly" id="edge24_Node000018_Node000021" title=" " alt="" coords="278,487,254,524,249,521,274,484"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="293,533,371,559"/>
+<area shape="poly" id="edge25_Node000018_Node000022" title=" " alt="" coords="294,484,319,521,314,524,290,487"/>
+<area shape="poly" id="edge30_Node000023_Node000003" title=" " alt="" coords="454,341,437,362,422,388,415,418,413,447,407,446,410,417,418,386,432,359,450,337"/>
+<area shape="poly" id="edge39_Node000024_Node000011" title=" " alt="" coords="856,414,798,454,795,450,853,410"/>
+<area shape="poly" id="edge34_Node000024_Node000013" title=" " alt="" coords="872,413,859,520,854,519,867,412"/>
+<area shape="rect" id="Node000025" title=" " alt="" coords="1116,460,1180,485"/>
+<area shape="poly" id="edge33_Node000024_Node000025" title=" " alt="" coords="916,409,1103,457,1102,462,915,415"/>
+<area shape="rect" id="Node000026" href="$da/d5a/vkstOpenCLBufferFilter_8hpp.html" title=" " alt="" coords="909,460,1091,485"/>
+<area shape="poly" id="edge35_Node000024_Node000026" title=" " alt="" coords="893,410,968,451,965,455,890,414"/>
+<area shape="rect" id="Node000027" title=" " alt="" coords="982,533,1047,559"/>
+<area shape="poly" id="edge36_Node000026_Node000027" title=" " alt="" coords="1005,485,1012,519,1007,520,1000,486"/>
+<area shape="rect" id="Node000028" title=" " alt="" coords="1072,533,1133,559"/>
+<area shape="poly" id="edge37_Node000026_Node000028" title=" " alt="" coords="1018,483,1076,523,1073,527,1015,488"/>
+<area shape="rect" id="Node000029" title=" " alt="" coords="907,533,957,559"/>
+<area shape="poly" id="edge38_Node000026_Node000029" title=" " alt="" coords="991,488,955,525,951,521,987,484"/>
 </map>

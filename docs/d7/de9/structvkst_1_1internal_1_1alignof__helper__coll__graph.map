@@ -1,5 +1,5 @@
 <map id="vkst::internal::alignof_helper&lt; T &gt;" name="vkst::internal::alignof_helper&lt; T &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,148,133"/>
+<area shape="rect" id="Node000001" title="A helper structure for computing alignment of a given type." alt="" coords="5,93,148,133"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="57,5,96,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,44,79,93,74,93,74,44"/>
 </map>

@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::logging
+vkst::logging \- A singleton class for logging messages at various levels\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,55 +13,67 @@ vkst::logging
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBself_type\fP = \fBlogging\fP"
+.RI "using \fBself_type\fP = \fBlogging\fP"
 .br
+.RI "Type alias for the logging class\&. "
 .ti -1c
-.RI "\fBusing\fP \fBstream_type\fP = std::ostream *"
+.RI "using \fBstream_type\fP = std::ostream *"
 .br
+.RI "Type alias for the output stream\&. "
 .in -1c
 .SS "Öffentliche Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBlogging\fP (\fBself_type\fP &&\fBother\fP)=\fBdelete\fP"
+.RI "\fBlogging\fP (\fBself_type\fP &&other)=delete"
 .br
 .ti -1c
-.RI "\fBlogging\fP (\fBconst\fP \fBself_type\fP &)=\fBdelete\fP"
+.RI "\fBlogging\fP (const \fBself_type\fP &)=delete"
 .br
 .ti -1c
 .RI "\fBlogging_level\fP \fBget_level\fP ()"
 .br
+.RI "Gets the current logging level\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBset_level\fP (\fBlogging_level\fP \fBlevel\fP)"
+.RI "void \fBset_level\fP (\fBlogging_level\fP level)"
 .br
+.RI "Sets a new logging level\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBreset\fP (\fBstream_type\fP \fBstream\fP, \fBbool\fP \fBowner\fP=\fBfalse\fP)"
+.RI "void \fBreset\fP (\fBstream_type\fP stream, bool owner=false)"
 .br
+.RI "Resets the output stream used by the logger\&. "
 .ti -1c
 .RI "\fBstream_type\fP \fBrelease\fP ()"
 .br
+.RI "Releases the current output stream used by the logger\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBdebug\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.RI "void \fBdebug\fP (const std::string &msg, const std::string &file='', const std::string &func='')"
 .br
+.RI "Logs a debug message\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBinfo\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.RI "void \fBinfo\fP (const std::string &msg, const std::string &file='', const std::string &func='')"
 .br
+.RI "Logs an info message\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBwarn\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.RI "void \fBwarn\fP (const std::string &msg, const std::string &file='', const std::string &func='')"
 .br
+.RI "Logs a warning message\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBerror\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.RI "void \fBerror\fP (const std::string &msg, const std::string &file='', const std::string &func='')"
 .br
+.RI "Logs an error message\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBcritical\fP (\fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP='', \fBconst\fP std::string &\fBfunc\fP='')"
+.RI "void \fBcritical\fP (const std::string &msg, const std::string &file='', const std::string &func='')"
 .br
+.RI "Logs a critical error message\&. "
 .in -1c
 .SS "Öffentliche, statische Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBstatic\fP \fBlogging\fP & \fBinstance\fP ()"
+.RI "static \fBlogging\fP & \fBinstance\fP ()"
 .br
+.RI "Returns the singleton instance of the logging class\&. "
 .in -1c
 .SS "Geschützte Methoden"
 
@@ -68,86 +81,242 @@ vkst::logging
 .ti -1c
 .RI "\fBlogging\fP ()"
 .br
+.RI "Private constructor for logging\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBlog\fP (\fBlogging_level\fP \fBlevel\fP, \fBconst\fP std::string &\fBmsg\fP, \fBconst\fP std::string &\fBfile\fP, \fBconst\fP std::string &\fBfunc\fP)"
+.RI "void \fBlog\fP (\fBlogging_level\fP level, const std::string &msg, const std::string &file, const std::string &func)"
 .br
+.RI "Logs a message at the specified logging level\&. "
 .ti -1c
-.RI "std::string \fBextract_filename\fP (\fBconst\fP std::string &\fBfilePath\fP)"
+.RI "std::string \fBextract_filename\fP (const std::string &filePath)"
 .br
+.RI "Extracts the filename from a full file path\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
-Definiert in Zeile \fB41\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+A singleton class for logging messages at various levels\&. 
+
+This logging class provides functionality for logging messages at different levels such as Debug, Info, Warn, Error, and Critical\&. It ensures that all logs are handled through a single instance, preventing multiple instances of the logger and ensuring thread safety\&.
+.PP
+The logger outputs messages to a stream, which can be customized\&. The logging level can also be adjusted, allowing fine-grained control over the verbosity of the logged messages\&. 
+.PP
+Definiert in Zeile \fB71\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SH "Dokumentation der benutzerdefinierten Datentypen"
 .PP 
-.SS "\fBusing\fP \fBvkst::logging::self_type\fP =  \fBlogging\fP"
+.SS "using \fBvkst::logging::self_type\fP =  \fBlogging\fP"
 
 .PP
-Definiert in Zeile \fB65\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBusing\fP \fBvkst::logging::stream_type\fP =  std::ostream*"
+Type alias for the logging class\&. 
+.PP
+Definiert in Zeile \fB108\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "using \fBvkst::logging::stream_type\fP =  std::ostream*"
 
 .PP
-Definiert in Zeile \fB66\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Type alias for the output stream\&. 
+.PP
+Definiert in Zeile \fB109\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SH "Beschreibung der Konstruktoren und Destruktoren"
 .PP 
 .SS "vkst::logging::logging ()\fC [inline]\fP, \fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB43\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Private constructor for logging\&. Initializes the logger, setting the default output stream and the initial logging level\&. < Default output stream\&.
+.PP
+Definiert in Zeile \fB78\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SS "vkst::logging::logging (\fBself_type\fP && other)\fC [delete]\fP"
 
-.SS "vkst::logging::logging (\fBconst\fP \fBself_type\fP &)\fC [delete]\fP"
+.SS "vkst::logging::logging (const \fBself_type\fP &)\fC [delete]\fP"
 
 .SH "Dokumentation der Elementfunktionen"
 .PP 
-.SS "\fBvoid\fP vkst::logging::critical (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+.SS "void vkst::logging::critical (const std::string & msg, const std::string & file = \fC''\fP, const std::string & func = \fC''\fP)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB89\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBvoid\fP vkst::logging::debug (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+Logs a critical error message\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fImsg\fP The message to log\&. 
+.br
+\fIfile\fP The file where the log was called\&. 
+.br
+\fIfunc\fP The function where the log was called\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB77\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBvoid\fP vkst::logging::error (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+Definiert in Zeile \fB195\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "void vkst::logging::debug (const std::string & msg, const std::string & file = \fC''\fP, const std::string & func = \fC''\fP)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB86\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "std::string logging::extract_filename (\fBconst\fP std::string & filePath)\fC [protected]\fP"
+Logs a debug message\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fImsg\fP The message to log\&. 
+.br
+\fIfile\fP The file where the log was called\&. 
+.br
+\fIfunc\fP The function where the log was called\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB151\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "void vkst::logging::error (const std::string & msg, const std::string & file = \fC''\fP, const std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Logs an error message\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fImsg\fP The message to log\&. 
+.br
+\fIfile\fP The file where the log was called\&. 
+.br
+\fIfunc\fP The function where the log was called\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB184\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "std::string logging::extract_filename (const std::string & filePath)\fC [protected]\fP"
+
+.PP
+Extracts the filename from a full file path\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIfilePath\fP The full path of the file\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The extracted filename\&. 
+.RE
+.PP
 
 .PP
 Definiert in Zeile \fB28\fP der Datei \fBvkstLogging\&.cpp\fP\&.
 .SS "\fBlogging_level\fP vkst::logging::get_level ()\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB71\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBvoid\fP vkst::logging::info (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+Gets the current logging level\&. 
+.PP
+\fBRückgabe\fP
+.RS 4
+The current logging level\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB80\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBstatic\fP \fBlogging\fP & vkst::logging::instance ()\fC [inline]\fP, \fC [static]\fP"
+Definiert in Zeile \fB120\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "void vkst::logging::info (const std::string & msg, const std::string & file = \fC''\fP, const std::string & func = \fC''\fP)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB50\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBvoid\fP logging::log (\fBlogging_level\fP level, \fBconst\fP std::string & msg, \fBconst\fP std::string & file, \fBconst\fP std::string & func)\fC [protected]\fP"
+Logs an info message\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fImsg\fP The message to log\&. 
+.br
+\fIfile\fP The file where the log was called\&. 
+.br
+\fIfunc\fP The function where the log was called\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB162\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "static \fBlogging\fP & vkst::logging::instance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Returns the singleton instance of the logging class\&. This method ensures that there is only one instance of the logger used throughout the application\&. It uses lazy initialization and thread safety mechanisms (e\&.g\&., mutexes) to manage the logger instance\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+The singleton instance of the logging class\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB94\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "void logging::log (\fBlogging_level\fP level, const std::string & msg, const std::string & file, const std::string & func)\fC [protected]\fP"
+
+.PP
+Logs a message at the specified logging level\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIlevel\fP The logging level\&. 
+.br
+\fImsg\fP The message to log\&. 
+.br
+\fIfile\fP The file where the log was called\&. 
+.br
+\fIfunc\fP The function where the log was called\&. 
+.RE
+.PP
 
 .PP
 Definiert in Zeile \fB10\fP der Datei \fBvkstLogging\&.cpp\fP\&.
 .SS "\fBlogging::stream_type\fP logging::release ()"
 
 .PP
+Releases the current output stream used by the logger\&. 
+.PP
+\fBRückgabe\fP
+.RS 4
+The released output stream\&. 
+.RE
+.PP
+
+.PP
 Definiert in Zeile \fB41\fP der Datei \fBvkstLogging\&.cpp\fP\&.
-.SS "\fBvoid\fP logging::reset (\fBstream_type\fP stream, \fBbool\fP owner = \fC\fBfalse\fP\fP)"
+.SS "void logging::reset (\fBstream_type\fP stream, bool owner = \fCfalse\fP)"
+
+.PP
+Resets the output stream used by the logger\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIstream\fP The new output stream\&. 
+.br
+\fIowner\fP If true, the logger will take ownership of the stream\&. 
+.RE
+.PP
 
 .PP
 Definiert in Zeile \fB33\fP der Datei \fBvkstLogging\&.cpp\fP\&.
-.SS "\fBvoid\fP vkst::logging::set_level (\fBlogging_level\fP level)\fC [inline]\fP"
+.SS "void vkst::logging::set_level (\fBlogging_level\fP level)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB72\fP der Datei \fBvkstLogging\&.hpp\fP\&.
-.SS "\fBvoid\fP vkst::logging::warn (\fBconst\fP std::string & msg, \fBconst\fP std::string & file = \fC''\fP, \fBconst\fP std::string & func = \fC''\fP)\fC [inline]\fP"
+Sets a new logging level\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIlevel\fP The new logging level to set\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB83\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB127\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+.SS "void vkst::logging::warn (const std::string & msg, const std::string & file = \fC''\fP, const std::string & func = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Logs a warning message\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fImsg\fP The message to log\&. 
+.br
+\fIfile\fP The file where the log was called\&. 
+.br
+\fIfunc\fP The function where the log was called\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB173\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

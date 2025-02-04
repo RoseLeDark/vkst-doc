@@ -16,6 +16,9 @@ var hierarchy =
     [ "vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >", "dc/d45/classvkst_1_1buffer.html", null ],
     [ "vkst::char_alignment< Target, check >", "d2/db1/structvkst_1_1char__alignment.html", null ],
     [ "vkst::char_alignment< Target, false >", "d5/d16/structvkst_1_1char__alignment_3_01Target_00_01false_01_4.html", null ],
+    [ "vkst::compression_filter< TBUFFER >", "df/dde/structvkst_1_1compression__filter.html", [
+      [ "vkst::lz4_compression_filter< TBUFFER >", "dc/dae/structvkst_1_1lz4__compression__filter.html", null ]
+    ] ],
     [ "vkst::double_alignment< Target, check >", "db/d7f/structvkst_1_1double__alignment.html", null ],
     [ "vkst::double_alignment< Target, false >", "da/d86/structvkst_1_1double__alignment_3_01Target_00_01false_01_4.html", null ],
     [ "vkst::int_alignment< Target, check >", "d2/d90/structvkst_1_1int__alignment.html", null ],
@@ -33,7 +36,7 @@ var hierarchy =
     [ "vkst::long_long_alignment< Target, false >", "db/d4b/structvkst_1_1long__long__alignment_3_01Target_00_01false_01_4.html", null ],
     [ "vkst::internal::max_align", "d8/d4c/unionvkst_1_1internal_1_1max__align.html", null ],
     [ "vkst::nodeleter_allocator_tag", "d9/de0/structvkst_1_1nodeleter__allocator__tag.html", null ],
-    [ "vkst::opencl_buffer< TBUFFER >", "d5/d9b/classvkst_1_1opencl__buffer.html", null ],
+    [ "vkst::opencl_buffer< TBUFFER, TFLAGS >", "d5/d9b/classvkst_1_1opencl__buffer.html", null ],
     [ "vkst::short_alignment< Target, check >", "dd/d94/structvkst_1_1short__alignment.html", null ],
     [ "vkst::short_alignment< Target, false >", "d0/d38/structvkst_1_1short__alignment_3_01Target_00_01false_01_4.html", null ],
     [ "vkst::std_allocator_tag", "da/db2/structvkst_1_1std__allocator__tag.html", null ],

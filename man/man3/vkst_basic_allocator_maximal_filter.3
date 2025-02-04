@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::basic_allocator_maximal_filter< TMaxAlloc >
+vkst::basic_allocator_maximal_filter< TMaxAlloc > \- A memory allocator that enforces a maximum allocation limit during the program's runtime\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,72 +13,175 @@ vkst::basic_allocator_maximal_filter< TMaxAlloc >
 
 .in +1c
 .ti -1c
-.RI "\fBbool\fP \fBon_pre_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.RI "bool \fBon_pre_alloc\fP (size_t size, size_t alignment)"
 .br
+.RI "Checks if there is enough available memory for a requested allocation\&. "
 .ti -1c
-.RI "\fBbool\fP \fBon_pre_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.RI "bool \fBon_pre_dealloc\fP (size_t size)"
 .br
+.RI "Always returns true before deallocation\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBon_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.RI "void \fBon_alloc\fP (size_t size, size_t alignment)"
 .br
+.RI "Updates the current memory usage after an allocation\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBon_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.RI "void \fBon_dealloc\fP (size_t size)"
 .br
+.RI "Updates the current memory usage after a deallocation\&. "
 .ti -1c
-.RI "\fBsize_t\fP \fBget_left\fP ()"
+.RI "size_t \fBget_left\fP ()"
 .br
+.RI "Gets the amount of available memory left for allocation\&. "
 .ti -1c
-.RI "\fBsize_t\fP \fBget_current\fP ()"
+.RI "size_t \fBget_current\fP ()"
 .br
+.RI "Gets the current amount of allocated memory\&. "
 .ti -1c
-.RI "\fBbool\fP \fBis_full\fP ()"
+.RI "bool \fBis_full\fP ()"
 .br
+.RI "Checks if the allocator has reached its maximum capacity\&. "
 .ti -1c
-.RI "\fBbool\fP \fBis_empty\fP ()"
+.RI "bool \fBis_empty\fP ()"
 .br
+.RI "Checks if the allocator is empty (no memory allocated)\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBsize_t\fP TMaxAlloc>
+.SS "template<size_t TMaxAlloc>
 .br
-class vkst::basic_allocator_maximal_filter< TMaxAlloc >"
+class vkst::basic_allocator_maximal_filter< TMaxAlloc >"A memory allocator that enforces a maximum allocation limit during the program's runtime\&. 
+
+This allocator ensures that the total memory allocated does not exceed a predefined limit, defined as TMaxAlloc\&. It tracks the current memory usage and prevents further allocations once the limit has been reached\&. It is useful for scenarios where the application needs to operate within a constrained memory budget\&.
 .PP
-Definiert in Zeile \fB9\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+\fBTemplate-Parameter\fP
+.RS 4
+\fITMaxAlloc\fP The maximum amount of memory that can be allocated by this allocator\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB19\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
 .SH "Dokumentation der Elementfunktionen"
 .PP 
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBsize_t\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::get_current ()\fC [inline]\fP"
+.SS "template<size_t TMaxAlloc> size_t \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::get_current ()\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB18\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBsize_t\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::get_left ()\fC [inline]\fP"
+Gets the current amount of allocated memory\&. This method returns the total amount of memory that has currently been allocated\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+The current allocated memory\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB17\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::is_empty ()\fC [inline]\fP"
+Definiert in Zeile \fB93\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> size_t \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::get_left ()\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB21\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::is_full ()\fC [inline]\fP"
+Gets the amount of available memory left for allocation\&. This method returns the remaining memory that can still be allocated, which is the maximum allocation limit minus the current usage\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+The amount of free memory left\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB20\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBvoid\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+Definiert in Zeile \fB82\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> bool \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::is_empty ()\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB14\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBvoid\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+Checks if the allocator is empty (no memory allocated)\&. This method checks if the allocator has not yet allocated any memory\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+true if no memory has been allocated; false otherwise\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB15\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_pre_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+Definiert in Zeile \fB116\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> bool \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::is_full ()\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB11\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
-.SS "template<\fBsize_t\fP TMaxAlloc> \fBbool\fP \fBvkst::basic_allocator_maximal_filter\fP< \fBTMaxAlloc\fP >::on_pre_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+Checks if the allocator has reached its maximum capacity\&. This method checks if the allocator has already allocated the maximum allowed memory\&. If the current usage is greater than or equal to the maximum limit, it returns true\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+true if the allocator is full; false otherwise\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB12\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+Definiert in Zeile \fB105\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> void \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::on_alloc (size_t size, size_t alignment)\fC [inline]\fP"
+
+.PP
+Updates the current memory usage after an allocation\&. This method is called after a successful allocation\&. It updates the current memory usage by adding the allocated size to the total\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the memory allocated\&. 
+.br
+\fIalignment\fP The alignment for the allocation (not used in this implementation)\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB58\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> void \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::on_dealloc (size_t size)\fC [inline]\fP"
+
+.PP
+Updates the current memory usage after a deallocation\&. This method is called after a deallocation\&. It updates the current memory usage by subtracting the deallocated size from the total\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the memory to deallocate\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB70\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> bool \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::on_pre_alloc (size_t size, size_t alignment)\fC [inline]\fP"
+
+.PP
+Checks if there is enough available memory for a requested allocation\&. This method is called before performing an allocation\&. It checks if there is enough free memory left to accommodate the requested size\&. If the allocation would exceed the maximum allowed memory, it returns false\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The requested size to allocate\&. 
+.br
+\fIalignment\fP The alignment for the allocation (not used in this implementation)\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+true if enough memory is available; false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB32\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> bool \fBvkst::basic_allocator_maximal_filter\fP< TMaxAlloc >::on_pre_dealloc (size_t size)\fC [inline]\fP"
+
+.PP
+Always returns true before deallocation\&. This method is called before performing a deallocation\&. In this implementation, it does not impose any restrictions and always returns true\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the memory to deallocate\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+true always, indicating deallocation is allowed\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB45\fP der Datei \fBvkstAllocatorMaximalFilter\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

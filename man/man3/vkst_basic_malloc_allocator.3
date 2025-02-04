@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::basic_malloc_allocator
+vkst::basic_malloc_allocator \- A basic allocator that uses malloc and free for memory management\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,66 +13,151 @@ vkst::basic_malloc_allocator
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBallocator_category\fP = \fBstd_allocator_tag\fP()"
+.RI "using \fBallocator_category\fP = \fBstd_allocator_tag\fP()"
 .br
+.RI "The allocator category\&. "
 .ti -1c
-.RI "\fBusing\fP \fBis_thread_safe\fP = std::false_type"
+.RI "using \fBis_thread_safe\fP = std::false_type"
 .br
+.RI "Indicates whether the allocator is thread-safe\&. "
 .in -1c
 .SS "Öffentliche, statische Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBstatic\fP \fBvoid\fP \fBfirst\fP () \fBnoexcept\fP"
+.RI "static void \fBfirst\fP () noexcept"
 .br
+.RI "A method to initialize the allocator\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBvoid\fP * \fBallocate\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
+.RI "static void * \fBallocate\fP (size_t size, size_t alignment) noexcept"
 .br
+.RI "Allocates memory of a given size and alignment\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBvoid\fP \fBdeallocate\fP (\fBvoid\fP *ptr, \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
+.RI "static void \fBdeallocate\fP (void *ptr, size_t size) noexcept"
 .br
+.RI "Deallocates a previously allocated memory block\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBsize_t\fP \fBmax_node_size\fP ()"
+.RI "static size_t \fBmax_node_size\fP ()"
 .br
+.RI "Gets the maximum size that can be allocated by the allocator\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBsize_t\fP \fBget_max_alocator_size\fP ()"
+.RI "static size_t \fBget_max_alocator_size\fP ()"
 .br
+.RI "Gets the maximum allocator size\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
-Definiert in Zeile \fB8\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SH "Dokumentation der benutzerdefinierten Datentypen"
-.PP 
-.SS "\fBusing\fP \fBvkst::basic_malloc_allocator::allocator_category\fP =  \fBstd_allocator_tag\fP()"
+A basic allocator that uses malloc and free for memory management\&. 
 
+This class provides a basic implementation of an allocator using the C standard library's malloc, aligned_alloc (if needed), and free functions\&. The allocator does not track memory usage and does not provide any custom allocation strategies or memory pooling\&.
 .PP
-Definiert in Zeile \fB10\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SS "\fBusing\fP \fBvkst::basic_malloc_allocator::is_thread_safe\fP =  std::false_type"
-
+The allocator supports alignment-based memory allocation when specified\&.
 .PP
-Definiert in Zeile \fB11\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SH "Dokumentation der Elementfunktionen"
-.PP 
-.SS "\fBstatic\fP \fBvoid\fP * vkst::basic_malloc_allocator::allocate (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
-
+\fBTemplate-Parameter\fP
+.RS 4
+\fITFilter\fP A filter type to provide hooks for allocation and deallocation events\&.
+.RE
 .PP
-Definiert in Zeile \fB15\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SS "\fBstatic\fP \fBvoid\fP vkst::basic_malloc_allocator::deallocate (\fBvoid\fP * ptr, \fBsize_t\fP size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+\fBSiehe auch\fP
+.RS 4
+\fBbasic_allocator\fP 
+.RE
+.PP
 
 .PP
 Definiert in Zeile \fB22\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SS "\fBstatic\fP \fBvoid\fP vkst::basic_malloc_allocator::first ()\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "using \fBvkst::basic_malloc_allocator::allocator_category\fP =  \fBstd_allocator_tag\fP()"
 
 .PP
-Definiert in Zeile \fB13\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SS "\fBstatic\fP \fBsize_t\fP vkst::basic_malloc_allocator::get_max_alocator_size ()\fC [inline]\fP, \fC [static]\fP"
+The allocator category\&. This is a tag that identifies the allocator as a standard allocator (using \fC\fBstd_allocator_tag\fP\fP)\&.
+.PP
+\fBZu beachten\fP
+.RS 4
+This is an empty tag structure used for classification purposes\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB30\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SS "\fBstatic\fP \fBsize_t\fP vkst::basic_malloc_allocator::max_node_size ()\fC [inline]\fP, \fC [static]\fP"
+Definiert in Zeile \fB31\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "using \fBvkst::basic_malloc_allocator::is_thread_safe\fP =  std::false_type"
 
 .PP
-Definiert in Zeile \fB26\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+Indicates whether the allocator is thread-safe\&. This allocator is not thread-safe, as \fCstd::false_type\fP is used here\&. 
+.PP
+Definiert in Zeile \fB38\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "static void * vkst::basic_malloc_allocator::allocate (size_t size, size_t alignment)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+Allocates memory of a given size and alignment\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of memory to allocate\&. 
+.br
+\fIalignment\fP The alignment requirement for the allocated memory\&.
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A pointer to the allocated memory block, or nullptr if allocation fails\&.
+.RE
+.PP
+This function uses either \fCaligned_alloc()\fP (if alignment is non-zero) or \fCmalloc()\fP to allocate memory\&. If alignment is zero, \fCmalloc()\fP is used without alignment specification\&. < Use aligned_alloc for non-zero alignment
+.PP
+< Use malloc for zero alignment
+.PP
+Definiert in Zeile \fB58\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "static void vkst::basic_malloc_allocator::deallocate (void * ptr, size_t size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+Deallocates a previously allocated memory block\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIptr\fP The pointer to the memory block to deallocate\&. 
+.br
+\fIsize\fP The size of the memory block being freed\&.
+.RE
+.PP
+This function calls \fCfree()\fP to release the allocated memory\&. < Use free to deallocate memory
+.PP
+Definiert in Zeile \fB73\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "static void vkst::basic_malloc_allocator::first ()\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+
+.PP
+A method to initialize the allocator\&. This function doesn't need to do anything, as this allocator doesn't maintain any state between allocations\&. 
+.PP
+Definiert in Zeile \fB45\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "static size_t vkst::basic_malloc_allocator::get_max_alocator_size ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Gets the maximum allocator size\&. This function returns the maximum allocatable size, which is typically the maximum value that can be stored in a size_t\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+The maximum allocator size\&. 
+.RE
+.PP
+< Return the maximum value for size_t
+.PP
+Definiert in Zeile \fB95\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "static size_t vkst::basic_malloc_allocator::max_node_size ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Gets the maximum size that can be allocated by the allocator\&. This function returns the maximum size available for a single allocation\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+The maximum size available for allocation\&. 
+.RE
+.PP
+< Return the maximum possible value for size_t
+.PP
+Definiert in Zeile \fB84\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

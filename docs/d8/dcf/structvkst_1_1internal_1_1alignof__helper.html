@@ -125,6 +125,9 @@ $(document).ready(function(){initNavTree('d8/dcf/structvkst_1_1internal_1_1align
 </div><!--header-->
 <div class="contents">
 
+<p>A helper structure for computing alignment of a given type.  
+ <a href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Zusammengehörigkeiten von vkst::internal::alignof_helper&lt; T &gt;:</div>
@@ -134,15 +137,25 @@ Zusammengehörigkeiten von vkst::internal::alignof_helper&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Datenfelder</h2></td></tr>
-<tr class="memitem:a68ba1303e116805847c5554097179661" id="r_a68ba1303e116805847c5554097179661"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html#a68ba1303e116805847c5554097179661">x</a></td></tr>
+<tr class="memitem:a68ba1303e116805847c5554097179661" id="r_a68ba1303e116805847c5554097179661"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html#a68ba1303e116805847c5554097179661">x</a></td></tr>
+<tr class="memdesc:a68ba1303e116805847c5554097179661"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-aligned member.  <br /></td></tr>
 <tr class="separator:a68ba1303e116805847c5554097179661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8097f8e8bcb9bc333bd0d35daf80c108" id="r_a8097f8e8bcb9bc333bd0d35daf80c108"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html#a8097f8e8bcb9bc333bd0d35daf80c108">y</a></td></tr>
+<tr class="memdesc:a8097f8e8bcb9bc333bd0d35daf80c108"><td class="mdescLeft">&#160;</td><td class="mdescRight">The aligned member of type T.  <br /></td></tr>
 <tr class="separator:a8097f8e8bcb9bc333bd0d35daf80c108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T&gt;<br />
-struct vkst::internal::alignof_helper&lt; T &gt;</div>
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00028">28</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct vkst::internal::alignof_helper&lt; T &gt;</div><p>A helper structure for computing alignment of a given type. </p>
+<p>This structure contains a character array to ensure that the <code>y</code> member is aligned according to the alignment requirements of the type <code>T</code>.</p>
+<dl class="tparams"><dt>Template-Parameter</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type for which the alignment is calculated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00060">60</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Felder</h2>
 <a id="a68ba1303e116805847c5554097179661" name="a68ba1303e116805847c5554097179661"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68ba1303e116805847c5554097179661">&#9670;&#160;</a></span>x</h2>
@@ -150,15 +163,17 @@ struct vkst::internal::alignof_helper&lt; T &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> <a class="el" href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html">vkst::internal::alignof_helper</a>&lt; T &gt;::x</td>
+          <td class="memname">char <a class="el" href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html">vkst::internal::alignof_helper</a>&lt; T &gt;::x</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00029">29</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<p>The non-aligned member. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00061">61</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 
 </div>
 </div>
@@ -168,7 +183,7 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">T <a class="el" href="../../d8/dcf/structvkst_1_1internal_1_1alignof__helper.html">vkst::internal::alignof_helper</a>&lt; T &gt;::y</td>
@@ -176,7 +191,9 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00030">30</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<p>The aligned member of type T. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00062">62</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 
 </div>
 </div>

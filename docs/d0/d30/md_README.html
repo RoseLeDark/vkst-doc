@@ -167,9 +167,9 @@ Usage</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    uint32_t a_host[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };</div>
-<div class="line">    <a class="code hl_class" href="../../d9/d40/classvkst_1_1basic__allocator.html">vkst::buffer&lt;uint32_t, 16&gt;</a> a_buffer(a_host, 10 * <span class="keyword">sizeof</span>(uint32_t)); <span class="comment">// Create buffer on host - alignment 16, size 10*sizeof(uint32_t) </span></div>
+<div class="line">    <a class="code hl_class" href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer&lt;uint32_t, 16&gt;</a> a_buffer(a_host, 10 * <span class="keyword">sizeof</span>(uint32_t)); <span class="comment">// Create buffer on host - alignment 16, size 10*sizeof(uint32_t) </span></div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="../../d9/d40/classvkst_1_1basic__allocator.html">vkst::opencl_buffer&lt; vkst::buffer&lt;uint32_t, 16&gt;</a> &gt; opencl_buffer(a_buffer, CL::Context::curent, <span class="keyword">true</span>); <span class="comment">// Create Lock</span></div>
+<div class="line">    <a class="code hl_class" href="../../d5/d9b/classvkst_1_1opencl__buffer.html">vkst::opencl_buffer&lt; vkst::buffer&lt;uint32_t, 16&gt;</a> &gt; opencl_buffer(a_buffer, CL::Context::curent, <span class="keyword">true</span>); <span class="comment">// Create Lock</span></div>
 <div class="line">    <span class="keywordflow">if</span>(host_helper.assign_to_gpu(CL::CommandQueue, <span class="keyword">true</span> )) { <span class="comment">// Write buffer to gpu</span></div>
 <div class="line">        <span class="comment">// BUffer is in GPU - a_buffer is locked, don*t use!!!</span></div>
 <div class="line">    }</div>
@@ -182,7 +182,8 @@ Usage</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvkst_1_1basic__allocator_html"><div class="ttname"><a href="../../d9/d40/classvkst_1_1basic__allocator.html">vkst::basic_allocator</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dd1/vkstAllocatorBase_8hpp_source.html#l00016">vkstAllocatorBase.hpp:16</a></div></div>
+<div class="ttc" id="aclassvkst_1_1buffer_html"><div class="ttname"><a href="../../dc/d45/classvkst_1_1buffer.html">vkst::buffer</a></div><div class="ttdoc">A templated buffer class for managing dynamic arrays of values.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dc8/vkstBuffer_8hpp_source.html#l00023">vkstBuffer.hpp:23</a></div></div>
+<div class="ttc" id="aclassvkst_1_1opencl__buffer_html"><div class="ttname"><a href="../../d5/d9b/classvkst_1_1opencl__buffer.html">vkst::opencl_buffer</a></div><div class="ttdoc">A template class representing an OpenCL buffer with customizable flags.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d1d/vkstOpenCLBuffer_8hpp_source.html#l00025">vkstOpenCLBuffer.hpp:25</a></div></div>
 </div><!-- fragment --> <h1><a class="anchor" id="license"></a>
 License</h1>
 <p>This project is licensed under either EUPL</p>

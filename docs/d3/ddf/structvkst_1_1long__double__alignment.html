@@ -125,17 +125,29 @@ $(document).ready(function(){initNavTree('d3/ddf/structvkst_1_1long__double__ali
 </div><!--header-->
 <div class="contents">
 
+<p>Adjusts the alignment of a type based on the target alignment.  
+ <a href="../../d3/ddf/structvkst_1_1long__double__alignment.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Öffentliche Typen</h2></td></tr>
-<tr class="memitem:a0b3517d0d392ee68c39885c74b7d0187" id="r_a0b3517d0d392ee68c39885c74b7d0187"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddf/structvkst_1_1long__double__alignment.html#a0b3517d0d392ee68c39885c74b7d0187">type</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">long</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">double</a></td></tr>
+<tr class="memitem:a0b3517d0d392ee68c39885c74b7d0187" id="r_a0b3517d0d392ee68c39885c74b7d0187"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ddf/structvkst_1_1long__double__alignment.html#a0b3517d0d392ee68c39885c74b7d0187">type</a> = long double</td></tr>
 <tr class="separator:a0b3517d0d392ee68c39885c74b7d0187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> Target, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> check&gt;<br />
-struct vkst::long_double_alignment&lt; Target, check &gt;</div>
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00100">100</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;size_t Target, bool check&gt;<br />
+struct vkst::long_double_alignment&lt; Target, check &gt;</div><p>Adjusts the alignment of a type based on the target alignment. </p>
+<p>This set of templates ensures that a type's alignment satisfies the specified target alignment. It will fallback to types with larger alignments if necessary.</p>
+<dl class="tparams"><dt>Template-Parameter</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Target</td><td>The target alignment. </td></tr>
+    <tr><td class="paramname">check</td><td>A boolean value used to check if the alignment of a type is sufficient. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00171">171</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentation der benutzerdefinierten Datentypen</h2>
 <a id="a0b3517d0d392ee68c39885c74b7d0187" name="a0b3517d0d392ee68c39885c74b7d0187"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b3517d0d392ee68c39885c74b7d0187">&#9670;&#160;</a></span>type</h2>
@@ -143,15 +155,15 @@ struct vkst::long_double_alignment&lt; Target, check &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> Target, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">bool</a> check&gt; </div>
+template&lt;size_t Target, bool check&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a> <a class="el" href="../../d3/ddf/structvkst_1_1long__double__alignment.html">vkst::long_double_alignment</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">Target</a>, <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">check</a> &gt;::type =  <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">long</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">double</a></td>
+          <td class="memname">using <a class="el" href="../../d3/ddf/structvkst_1_1long__double__alignment.html">vkst::long_double_alignment</a>&lt; Target, check &gt;::type =  long double</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00100">100</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00171">171</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 
 </div>
 </div>

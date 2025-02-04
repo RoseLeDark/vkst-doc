@@ -12,39 +12,93 @@ vkst::basic_allocator_filter
 
 .in +1c
 .ti -1c
-.RI "\fBbool\fP \fBon_pre_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.RI "bool \fBon_pre_alloc\fP (size_t size, size_t alignment)"
 .br
+.RI "Called before an allocation is performed\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBon_alloc\fP (\fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP)"
+.RI "void \fBon_alloc\fP (size_t size, size_t alignment)"
 .br
+.RI "Called after an allocation is performed\&. "
 .ti -1c
-.RI "\fBbool\fP \fBon_pre_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.RI "bool \fBon_pre_dealloc\fP (size_t size)"
 .br
+.RI "Called before deallocating memory\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBon_dealloc\fP (\fBsize_t\fP \fBsize\fP)"
+.RI "void \fBon_dealloc\fP (size_t size)"
 .br
+.RI "Called after memory is deallocated\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
-Definiert in Zeile \fB14\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+Definiert in Zeile \fB22\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
 .SH "Dokumentation der Elementfunktionen"
 .PP 
-.SS "\fBvoid\fP vkst::basic_allocator_filter::on_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+.SS "void vkst::basic_allocator_filter::on_alloc (size_t size, size_t alignment)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB19\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
-.SS "\fBvoid\fP vkst::basic_allocator_filter::on_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+Called after an allocation is performed\&. This method is used to log the allocation details (size and alignment) in non-release builds\&. In release builds (\fCNDEBUG\fP defined), no action is taken\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the allocated memory\&. 
+.br
+\fIalignment\fP The alignment of the allocated memory\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB30\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
-.SS "\fBbool\fP vkst::basic_allocator_filter::on_pre_alloc (\fBsize_t\fP size, \fBsize_t\fP alignment)\fC [inline]\fP"
+Definiert in Zeile \fB48\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SS "void vkst::basic_allocator_filter::on_dealloc (size_t size)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB16\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
-.SS "\fBbool\fP vkst::basic_allocator_filter::on_pre_dealloc (\fBsize_t\fP size)\fC [inline]\fP"
+Called after memory is deallocated\&. This method is used to log the deallocation details (size) in non-release builds\&. In release builds (\fCNDEBUG\fP defined), no action is taken\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the deallocated memory\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB29\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+Definiert in Zeile \fB80\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SS "bool vkst::basic_allocator_filter::on_pre_alloc (size_t size, size_t alignment)\fC [inline]\fP"
+
+.PP
+Called before an allocation is performed\&. This method can be used to perform actions before allocating memory, such as validating or modifying allocation parameters\&. By default, it always returns \fCtrue\fP, allowing the allocation to proceed\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the memory to allocate\&. 
+.br
+\fIalignment\fP The alignment of the memory to allocate\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Returns \fCtrue\fP if the allocation is allowed to proceed\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB35\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
+.SS "bool vkst::basic_allocator_filter::on_pre_dealloc (size_t size)\fC [inline]\fP"
+
+.PP
+Called before deallocating memory\&. This method can be used to perform actions before deallocating memory, such as validating or modifying deallocation parameters\&. By default, it always returns \fCtrue\fP, allowing the deallocation to proceed\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the memory to deallocate\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+Returns \fCtrue\fP if the deallocation is allowed to proceed\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB68\fP der Datei \fBvkstAllocatorFilter\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

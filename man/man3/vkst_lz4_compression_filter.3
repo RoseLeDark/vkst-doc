@@ -1,0 +1,128 @@
+.TH "vkst::lz4_compression_filter< TBUFFER >" 3 "vkbst" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vkst::lz4_compression_filter< TBUFFER > \- LZ4-based compression filter\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vkstOpenCLBufferFilter\&.hpp>\fP
+.PP
+Abgeleitet von \fBvkst::compression_filter< TBUFFER >\fP\&.
+.SS "Öffentliche, statische Methoden"
+
+.in +1c
+.ti -1c
+.RI "static uint16_t \fBcompress\fP (const TBUFFER &\fBbuffer\fP, void *compressed, size_t &compressedSize)"
+.br
+.RI "Compress the provided buffer using the LZ4 algorithm\&. "
+.ti -1c
+.RI "static uint16_t \fBdecompress\fP (const void *compressed, const size_t compressedSize, TBUFFER &\fBbuffer\fP)"
+.br
+.RI "Decompress the provided compressed data using the LZ4 algorithm\&. "
+.in -1c
+
+Öffentliche, statische Methoden geerbt von \fBvkst::compression_filter< TBUFFER >\fP
+.in +1c
+.ti -1c
+.RI "static uint16_t \fBcompress\fP (const TBUFFER &\fBbuffer\fP, void *compressed, size_t &compressedSize)"
+.br
+.RI "Compresses the given buffer\&. "
+.ti -1c
+.RI "static uint16_t \fBdecompress\fP (const void *compressed, const size_t compressedSize, TBUFFER &\fBbuffer\fP)"
+.br
+.RI "Decompresses the given compressed buffer\&. "
+.in -1c
+.SS "Statische öffentliche Attribute"
+
+.in +1c
+.ti -1c
+.RI "static constexpr bool \fBcan_compress\fP = true"
+.br
+.RI "LZ4 compression is supported\&. "
+.in -1c
+
+Statische öffentliche Attribute geerbt von \fBvkst::compression_filter< TBUFFER >\fP
+.in +1c
+.ti -1c
+.RI "static constexpr bool \fBcan_compress\fP = false"
+.br
+.RI "Flag indicating if this filter can perform compression (default is false)\&. "
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+
+.SS "template<typename TBUFFER>
+.br
+struct vkst::lz4_compression_filter< TBUFFER >"LZ4-based compression filter\&. 
+
+This filter performs compression and decompression using the LZ4 algorithm\&. It is enabled only if the \fCNO_LZ4_COMPRESSION\fP macro is not defined\&.
+.PP
+\fBTemplate-Parameter\fP
+.RS 4
+\fITBUFFER\fP Type of buffer to compress/decompress\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB62\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "template<typename TBUFFER > static uint16_t \fBvkst::lz4_compression_filter\fP< TBUFFER >::compress (const TBUFFER & buffer, void * compressed, size_t & compressedSize)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Compress the provided buffer using the LZ4 algorithm\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIbuffer\fP The input buffer to be compressed\&. 
+.br
+\fIcompressed\fP Pointer to the destination for the compressed data\&. 
+.br
+\fIcompressedSize\fP The size of the compressed data\&. Set by the function\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+uint16_t Return code, where 0 indicates success and 1 indicates failure\&. 
+.RE
+.PP
+< Return 0 if compression was successful, 1 if it failed
+.PP
+Definiert in Zeile \fB74\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+.SS "template<typename TBUFFER > static uint16_t \fBvkst::lz4_compression_filter\fP< TBUFFER >::decompress (const void * compressed, const size_t compressedSize, TBUFFER & buffer)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Decompress the provided compressed data using the LZ4 algorithm\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIcompressed\fP Pointer to the compressed data\&. 
+.br
+\fIcompressedSize\fP Size of the compressed data\&. 
+.br
+\fIbuffer\fP The destination buffer where the decompressed data will be stored\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+uint16_t Return code, where 0 indicates success and 1 indicates failure\&. 
+.RE
+.PP
+< Return 0 if decompression was successful, 1 if it failed
+.PP
+Definiert in Zeile \fB92\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+.SH "Dokumentation der Felder"
+.PP 
+.SS "template<typename TBUFFER > constexpr bool \fBvkst::lz4_compression_filter\fP< TBUFFER >::can_compress = true\fC [static]\fP, \fC [constexpr]\fP"
+
+.PP
+LZ4 compression is supported\&. 
+.PP
+Definiert in Zeile \fB64\fP der Datei \fBvkstOpenCLBufferFilter\&.hpp\fP\&.
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="de/d3d/structvkst_1_1aligned__as.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="de/d3d/structvkst_1_1aligned__as.html" target="_top" xlink:title="A helper type alias to align a type to its appropriate alignment.">
 <polygon fill="white" stroke="#666666" points="112,-19 0,-19 0,0 112,0 112,-19"/>
 <text text-anchor="middle" x="56" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">vkst::aligned_as&lt; T &gt;</text>
 </a>

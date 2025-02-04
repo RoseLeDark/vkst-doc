@@ -3,18 +3,15 @@
 <area shape="rect" id="Node000002" href="$d0/dd1/vkstAllocatorBase_8hpp.html" title=" " alt="" coords="5,167,204,207"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,43,132,80,117,126,110,167,104,166,112,125,128,78,152,40"/>
 <area shape="rect" id="Node000007" href="$d0/dcf/vkstAllocatorTraits_8hpp.html" title=" " alt="" coords="141,79,340,119"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="194,39,226,77,222,80,190,43"/>
-<area shape="rect" id="Node000003" href="$dd/d2c/vkstAllocator_8hpp.html" title=" " alt="" coords="129,255,296,280"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,213,198,252,195,256,140,217"/>
-<area shape="rect" id="Node000004" href="$da/dc8/vkstBuffer_8hpp.html" title=" " alt="" coords="137,328,288,353"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="215,294,215,328,210,328,210,294"/>
-<area shape="rect" id="Node000005" href="$d4/d2f/libvkst_8hpp.html" title=" " alt="" coords="147,475,278,500"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="194,365,182,383,173,402,171,422,178,441,202,473,198,476,174,444,166,423,167,401,177,380,190,362"/>
-<area shape="rect" id="Node000006" href="$de/d1d/vkstOpenCLBuffer_8hpp.html" title=" " alt="" coords="181,401,380,427"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="235,361,272,399,268,403,231,365"/>
-<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="262,438,226,476,222,473,258,435"/>
-<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="200,128,136,169,133,164,198,124"/>
-<area shape="rect" id="Node000008" href="$d5/d82/vkstMallocAllocator_8hpp.html" title=" " alt="" coords="228,167,413,207"/>
-<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="270,127,305,165,301,168,266,131"/>
-<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="285,217,230,256,227,252,282,213"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="194,39,226,77,222,80,190,43"/>
+<area shape="rect" id="Node000003" href="$d5/d82/vkstMallocAllocator_8hpp.html" title=" " alt="" coords="80,255,265,295"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,216,160,253,156,256,126,219"/>
+<area shape="rect" id="Node000004" href="$dd/d2c/vkstAllocator_8hpp.html" title=" " alt="" coords="89,343,256,368"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="175,308,175,342,170,342,170,308"/>
+<area shape="rect" id="Node000005" href="$da/dc8/vkstBuffer_8hpp.html" title=" " alt="" coords="97,416,248,441"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="175,382,175,416,170,416,170,382"/>
+<area shape="rect" id="Node000006" href="$d4/d2f/libvkst_8hpp.html" title=" " alt="" coords="107,489,238,515"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="175,455,175,489,170,489,170,455"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="200,128,136,169,133,164,198,124"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="238,133,231,169,218,208,189,256,185,253,213,206,225,168,233,132"/>
 </map>

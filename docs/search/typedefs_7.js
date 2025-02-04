@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lock_5ftype_0',['lock_type',['../d5/d9b/classvkst_1_1opencl__buffer.html#a0c08dbe88718c8a854700e2a708cac31',1,'vkst::opencl_buffer']]]
+  ['lock_5ftype_0',['lock_type',['../d5/d9b/classvkst_1_1opencl__buffer.html#a1a6a1c63fe2c25d7dae74ee890ca7ab7',1,'vkst::opencl_buffer']]]
 ];

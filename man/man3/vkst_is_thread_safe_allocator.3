@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::is_thread_safe_allocator< TAlloC >
+vkst::is_thread_safe_allocator< TAlloC > \- Checks whether a given allocator is thread-safe\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -13,11 +14,20 @@ Abgeleitet von std::integral_constant< bool, internal::allocator_traits< TAlloC 
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBclass\fP \fBTAlloC\fP>
+.SS "template<class TAlloC>
 .br
-struct vkst::is_thread_safe_allocator< TAlloC >"
+struct vkst::is_thread_safe_allocator< TAlloC >"Checks whether a given allocator is thread-safe\&. 
+
+This \fCintegral_constant\fP evaluates whether the allocator is thread-safe based on the allocator's traits\&.
 .PP
-Definiert in Zeile \fB31\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+\fBTemplate-Parameter\fP
+.RS 4
+\fITAlloC\fP The allocator type\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB50\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

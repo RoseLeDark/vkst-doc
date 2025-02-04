@@ -8,19 +8,20 @@ include/vkstOpenCLBuffer.hpp
 .PP
 \fC#include <CL/cl\&.h>\fP
 .br
-\fC#include <atomic>\fP
-.br
 \fC#include <mutex>\fP
 .br
-\fC#include <vkstBuffer\&.hpp>\fP
+\fC#include 'vkstOpenCLBufferFilter\&.hpp'\fP
+.br
+\fC#include 'vkstLogging\&.hpp'\fP
 .br
 
 .SS "Datenstrukturen"
 
 .in +1c
 .ti -1c
-.RI "class \fBvkst::opencl_buffer< TBUFFER >\fP"
+.RI "class \fBvkst::opencl_buffer< TBUFFER, TFLAGS >\fP"
 .br
+.RI "A template class representing an OpenCL buffer with customizable flags\&. "
 .in -1c
 .SS "Namensbereiche"
 

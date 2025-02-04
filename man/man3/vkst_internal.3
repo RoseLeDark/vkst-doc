@@ -12,15 +12,19 @@ vkst::internal
 .ti -1c
 .RI "struct \fBalignof_helper\fP"
 .br
+.RI "A helper structure for computing alignment of a given type\&. "
 .ti -1c
 .RI "struct \fBallocator_traits\fP"
 .br
+.RI "Traits for a given allocator type\&. "
 .ti -1c
 .RI "union \fBmax_align\fP"
 .br
+.RI "A union type to determine the maximum alignment\&. "
 .ti -1c
 .RI "struct \fBtype_with_alignment\fP"
 .br
+.RI "A template to enforce alignment for specific sizes\&. "
 .ti -1c
 .RI "struct \fBtype_with_alignment< 1 >\fP"
 .br
@@ -47,64 +51,79 @@ vkst::internal
 
 .in +1c
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(1))) \fBaligned1\fP"
+.RI "struct \fB__attribute__\fP ((aligned(1))) aligned1"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(2))) \fBaligned2\fP"
+.RI "struct \fB__attribute__\fP ((aligned(2))) aligned2"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(4))) \fBaligned4\fP"
+.RI "struct \fB__attribute__\fP ((aligned(4))) aligned4"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(8))) \fBaligned8\fP"
+.RI "struct \fB__attribute__\fP ((aligned(8))) aligned8"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(16))) \fBaligned16\fP"
+.RI "struct \fB__attribute__\fP ((aligned(16))) aligned16"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(32))) \fBaligned32\fP"
+.RI "struct \fB__attribute__\fP ((aligned(32))) aligned32"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fB__attribute__\fP ((\fBaligned\fP(64))) \fBaligned64\fP"
+.RI "struct \fB__attribute__\fP ((aligned(64))) aligned64"
 .br
 .ti -1c
-.RI "\fBconst\fP \fBchar\fP * \fBlevel2string\fP (\fBconst\fP \fBlogging_level\fP \fBlevel\fP)"
+.RI "const char * \fBlevel2string\fP (const \fBlogging_level\fP level)"
 .br
+.RI "Converts a logging level enum to a human-readable string\&. "
 .in -1c
 .SH "Dokumentation der Funktionen"
 .PP 
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(1)))"
+.SS "struct vkst::internal::__attribute__ ((aligned(1)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(16)))"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "struct vkst::internal::__attribute__ ((aligned(16)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(2)))"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "struct vkst::internal::__attribute__ ((aligned(2)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(32)))"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "struct vkst::internal::__attribute__ ((aligned(32)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(4)))"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "struct vkst::internal::__attribute__ ((aligned(4)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(64)))"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "struct vkst::internal::__attribute__ ((aligned(64)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBstruct\fP vkst::internal::__attribute__ ((\fBaligned\fP(8)))"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "struct vkst::internal::__attribute__ ((aligned(8)))"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBconst\fP \fBchar\fP * vkst::internal::level2string (\fBconst\fP \fBlogging_level\fP level)\fC [inline]\fP"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "const char * vkst::internal::level2string (const \fBlogging_level\fP level)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB28\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Converts a logging level enum to a human-readable string\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIlevel\fP The logging level to convert\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A string representation of the logging level\&. 
+.RE
+.PP
+< Default in case of an unknown level\&.
+.PP
+Definiert in Zeile \fB49\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SH "Autor"
 .PP 
 Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

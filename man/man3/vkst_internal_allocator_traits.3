@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::internal::allocator_traits< TAlloC >
+vkst::internal::allocator_traits< TAlloC > \- Traits for a given allocator type\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,72 +13,81 @@ vkst::internal::allocator_traits< TAlloC >
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBallocator_type\fP = \fBTAlloC\fP"
+.RI "using \fBallocator_type\fP = TAlloC"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBvalue_type\fP = \fBtypename\fP allocator_type::value_type"
+.RI "using \fBvalue_type\fP = typename allocator_type::value_type"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBpointer\fP = \fBtypename\fP allocator_type::pointer"
+.RI "using \fBpointer\fP = typename allocator_type::pointer"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBconst_pointer\fP = \fBtypename\fP allocator_type::const_pointer"
+.RI "using \fBconst_pointer\fP = typename allocator_type::const_pointer"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBdifference_type\fP = \fBtypename\fP allocator_type::difference_type"
+.RI "using \fBdifference_type\fP = typename allocator_type::difference_type"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBsize_type\fP = \fBtypename\fP allocator_type::size_type"
+.RI "using \fBsize_type\fP = typename allocator_type::size_type"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBallocator_category\fP = \fBtypename\fP TAlloC::allocator_category"
+.RI "using \fBallocator_category\fP = typename TAlloC::allocator_category"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBis_thread_safe\fP = \fBtypename\fP TAlloC::is_thread_safe"
+.RI "using \fBis_thread_safe\fP = typename TAlloC::is_thread_safe"
 .br
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBtypename\fP \fBTAlloC\fP>
+.SS "template<typename TAlloC>
 .br
-struct vkst::internal::allocator_traits< TAlloC >"
-.PP
-Definiert in Zeile \fB17\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SH "Dokumentation der benutzerdefinierten Datentypen"
-.PP 
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::allocator_category =  \fBtypename\fP TAlloC::allocator_category"
+struct vkst::internal::allocator_traits< TAlloC >"Traits for a given allocator type\&. 
 
+The \fC\fBallocator_traits\fP\fP struct provides type definitions and constants for different allocator types, such as \fCpointer\fP, \fCconst_pointer\fP, \fCdifference_type\fP, and others\&. It is used to query the properties of the allocator, such as the \fCallocator_category\fP and whether the allocator is thread-safe\&.
 .PP
-Definiert in Zeile \fB26\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::allocator_type =  \fBTAlloC\fP"
-
+\fBTemplate-Parameter\fP
+.RS 4
+\fITAlloC\fP The allocator type to query the traits for\&. 
+.RE
 .PP
-Definiert in Zeile \fB18\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::const_pointer =  \fBtypename\fP allocator_type::const_pointer"
-
-.PP
-Definiert in Zeile \fB21\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::difference_type =  \fBtypename\fP allocator_type::difference_type"
-
-.PP
-Definiert in Zeile \fB22\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::is_thread_safe =  \fBtypename\fP TAlloC::is_thread_safe"
 
 .PP
 Definiert in Zeile \fB27\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::pointer =  \fBtypename\fP allocator_type::pointer"
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::allocator_category =  typename TAlloC::allocator_category"
 
 .PP
-Definiert in Zeile \fB20\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::size_type =  \fBtypename\fP allocator_type::size_type"
+Definiert in Zeile \fB36\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::allocator_type =  TAlloC"
 
 .PP
-Definiert in Zeile \fB23\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTAlloC\fP > \fBusing\fP \fBvkst::internal::allocator_traits\fP< \fBTAlloC\fP >::value_type =  \fBtypename\fP allocator_type::value_type"
+Definiert in Zeile \fB28\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::const_pointer =  typename allocator_type::const_pointer"
 
 .PP
-Definiert in Zeile \fB19\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+Definiert in Zeile \fB31\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::difference_type =  typename allocator_type::difference_type"
+
+.PP
+Definiert in Zeile \fB32\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::is_thread_safe =  typename TAlloC::is_thread_safe"
+
+.PP
+Definiert in Zeile \fB37\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::pointer =  typename allocator_type::pointer"
+
+.PP
+Definiert in Zeile \fB30\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::size_type =  typename allocator_type::size_type"
+
+.PP
+Definiert in Zeile \fB33\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<typename TAlloC > using \fBvkst::internal::allocator_traits\fP< TAlloC >::value_type =  typename allocator_type::value_type"
+
+.PP
+Definiert in Zeile \fB29\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

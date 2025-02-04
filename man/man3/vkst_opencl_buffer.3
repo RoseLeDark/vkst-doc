@@ -1,8 +1,9 @@
-.TH "vkst::opencl_buffer< TBUFFER >" 3 "vkbst" \" -*- nroff -*-
+.TH "vkst::opencl_buffer< TBUFFER, TFLAGS >" 3 "vkbst" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-vkst::opencl_buffer< TBUFFER >
+vkst::opencl_buffer< TBUFFER, TFLAGS > \- A template class representing an OpenCL buffer with customizable flags\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,60 +13,100 @@ vkst::opencl_buffer< TBUFFER >
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBbuffer_type\fP = \fBTBUFFER\fP"
+.RI "using \fBbuffer_type\fP = TBUFFER"
 .br
+.RI "The type of the buffer used in this class\&. "
 .ti -1c
-.RI "\fBusing\fP \fBlock_type\fP = \fBTLOCKTYPE\fP"
+.RI "using \fBlock_type\fP = std::mutex"
 .br
+.RI "Type of the lock used to synchronize access to the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBself_type\fP = \fBopencl_buffer\fP< \fBTVALUE\fP, \fBTLOCKTYPE\fP, \fBTLOCKTYPE\fP >"
+.RI "using \fBself_type\fP = \fBopencl_buffer\fP< \fBbuffer_type\fP, TFLAGS >"
 .br
+.RI "Alias for the type of this class\&. "
 .ti -1c
-.RI "\fBusing\fP \fBpointer\fP = \fBtypename\fP \fBTBUFFER::pointer\fP"
+.RI "using \fBpointer\fP = typename TBUFFER::pointer"
 .br
+.RI "The pointer type used by the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBreference\fP = \fBtypename\fP TBUFFER::reference"
+.RI "using \fBreference\fP = typename TBUFFER::reference"
 .br
+.RI "The reference type used by the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBsize_type\fP = \fBtypename\fP \fBTBUFFER::size_type\fP"
+.RI "using \fBsize_type\fP = typename TBUFFER::size_type"
 .br
+.RI "The size type used by the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBconst_pointer\fP = \fBtypename\fP \fBTBUFFER::const_pointer\fP"
+.RI "using \fBconst_pointer\fP = typename TBUFFER::const_pointer"
 .br
+.RI "The constant pointer type used by the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBconst_reference\fP = \fBtypename\fP TBUFFER::const_reference"
+.RI "using \fBconst_reference\fP = typename TBUFFER::const_reference"
 .br
+.RI "The constant reference type used by the buffer\&. "
+.ti -1c
+.RI "using \fBvalue_type\fP = typename TBUFFER::value_type"
+.br
+.RI "The value type used by the buffer\&. "
+.ti -1c
+.RI "using \fBflag_type\fP = cl_mem_flags"
+.br
+.RI "Type representing the OpenCL memory flags\&. "
+.ti -1c
+.RI "using \fBcompress_type\fP = \fBcompression_filter\fP< TBUFFER >"
+.br
+.RI "The compression filter type used for the buffer\&. "
 .in -1c
 .SS "Öffentliche Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBopencl_buffer\fP (\fBbuffer_type\fP &\fBbuffer\fP, \fBcl_context\fP \fBcontext\fP, \fBbool\fP \fBreadOnly\fP)"
+.RI "\fBopencl_buffer\fP (\fBbuffer_type\fP &\fBbuffer\fP, cl_context context)"
+.br
+.RI "Constructor for the \fBopencl_buffer\fP class\&. "
+.ti -1c
+.RI "\fBopencl_buffer\fP (const \fBself_type\fP &other) noexcept=delete"
 .br
 .ti -1c
-.RI "\fBopencl_buffer\fP (\fBconst\fP \fBself_type\fP &\fBother\fP) \fBnoexcept\fP=\fBdelete\fP"
+.RI "\fBself_type\fP & \fBoperator=\fP (const \fBself_type\fP &)=delete"
 .br
 .ti -1c
-.RI "\fBself_type\fP & \fBoperator=\fP (\fBconst\fP \fBself_type\fP &)=\fBdelete\fP"
+.RI "\fBself_type\fP & \fBoperator=\fP (const \fBself_type\fP &) volatile=delete"
 .br
 .ti -1c
-.RI "\fBself_type\fP & \fBoperator=\fP (\fBconst\fP \fBself_type\fP &) \fBvolatile\fP=\fBdelete\fP"
+.RI "bool \fBassign_to_gpu\fP (cl_command_queue queue, bool write2Device=true)"
 .br
+.RI "Transfers data from the buffer to the GPU\&. "
 .ti -1c
-.RI "\fBbool\fP \fBassign_to_gpu\fP (\fBcl_command_queue\fP queue, \fBbool\fP \fBwrite2Device\fP=\fBtrue\fP)"
+.RI "bool \fBrequire\fP (cl_command_queue queue, bool readDevice)"
 .br
+.RI "Reads data from the GPU and updates the buffer\&. "
 .ti -1c
-.RI "\fBbool\fP \fBrequire\fP (\fBcl_command_queue\fP queue, \fBbool\fP \fBreadDevice\fP)"
+.RI "bool \fBis_flag\fP (\fBflag_type\fP flag) const"
 .br
+.RI "Checks if the given flag is set in the buffer's flags\&. "
 .ti -1c
-.RI "\fBcl_mem\fP \fBoperator cl_mem\fP () \fBconst\fP"
+.RI "bool \fBcan_read\fP ()"
 .br
+.RI "Determines if the buffer is readable\&. "
+.ti -1c
+.RI "bool \fBcan_write\fP ()"
+.br
+.RI "Determines if the buffer is writable\&. "
+.ti -1c
+.RI "void \fBadd_flag\fP (\fBflag_type\fP flag)"
+.br
+.RI "Adds a flag to the buffer's flags\&. "
+.ti -1c
+.RI "void \fBremove_flag\fP (\fBflag_type\fP flag)"
+.br
+.RI "Removes a flag from the buffer's flags\&. "
 .in -1c
 .SS "Geschützte Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBvirtual\fP \fBvoid\fP \fBcreate_internal_gpu_buffer\fP ()"
+.RI "void \fBcreate_internal_gpu_buffer\fP ()"
 .br
 .in -1c
 .SS "Geschützte Attribute"
@@ -74,124 +115,292 @@ vkst::opencl_buffer< TBUFFER >
 .ti -1c
 .RI "\fBbuffer_type\fP & \fBm_refBuffer\fP"
 .br
+.RI "Reference to the buffer being managed\&. "
 .ti -1c
-.RI "\fBcl_context\fP \fBm_cContext\fP"
+.RI "cl_context \fBm_cContext\fP"
 .br
-.ti -1c
-.RI "\fBbool\fP \fBm_bReadOnly\fP"
-.br
+.RI "The OpenCL context associated with the buffer\&. "
 .ti -1c
 .RI "\fBlock_type\fP \fBm_lock\fP"
 .br
+.RI "Mutex lock to ensure thread safety\&. "
 .ti -1c
-.RI "\fBcl_mem\fP \fBm_clBuffer\fP"
+.RI "cl_mem \fBm_clBuffer\fP"
 .br
+.RI "The OpenCL memory buffer object\&. "
+.ti -1c
+.RI "bool \fBm_bHostPtr\fP"
+.br
+.RI "Flag indicating whether the buffer is using a host pointer\&. The \fCm_bHostPtr\fP flag indicates whether the OpenCL buffer is created using a pointer that is accessible on the host side (as opposed to having a separate device memory allocation)\&. "
+.ti -1c
+.RI "\fBflag_type\fP \fBm_fFlags\fP"
+.br
+.RI "The flags that describe buffer permissions and characteristics\&. These flags define how the buffer is used in OpenCL operations\&. For example, flags like \fCCL_MEM_READ_WRITE\fP, \fCCL_MEM_READ_ONLY\fP, \fCCL_MEM_WRITE_ONLY\fP, etc\&. determine whether the buffer can be read from, written to, or both\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBtypename\fP \fBTBUFFER\fP>
+.SS "template<typename TBUFFER, cl_mem_flags TFLAGS = CL_MEM_READ_WRITE>
 .br
-class vkst::opencl_buffer< TBUFFER >"
+class vkst::opencl_buffer< TBUFFER, TFLAGS >"A template class representing an OpenCL buffer with customizable flags\&. 
+
+
 .PP
 \fBTemplate-Parameter\fP
 .RS 4
-\fITVALUE\fP 
+\fITBUFFER\fP The type of the buffer (e\&.g\&., a custom buffer type)\&. 
 .br
-\fITLOCKTYPE\fP 
+\fITFLAGS\fP The OpenCL memory flags to be used for the buffer (default: CL_MEM_READ_WRITE)\&.
+.RE
+.PP
+This class provides functionality to create and manage an OpenCL buffer, including operations such as transferring data to/from the buffer and supporting compression\&. 
+.PP
+Definiert in Zeile \fB25\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::buffer_type =  TBUFFER"
+
+.PP
+The type of the buffer used in this class\&. 
+.PP
+Definiert in Zeile \fB28\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::compress_type =  \fBcompression_filter\fP<TBUFFER>"
+
+.PP
+The compression filter type used for the buffer\&. 
+.PP
+Definiert in Zeile \fB58\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::const_pointer =  typename TBUFFER::const_pointer"
+
+.PP
+The constant pointer type used by the buffer\&. 
+.PP
+Definiert in Zeile \fB46\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::const_reference =  typename TBUFFER::const_reference"
+
+.PP
+The constant reference type used by the buffer\&. 
+.PP
+Definiert in Zeile \fB49\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::flag_type =  cl_mem_flags"
+
+.PP
+Type representing the OpenCL memory flags\&. 
+.PP
+Definiert in Zeile \fB55\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::lock_type =  std::mutex"
+
+.PP
+Type of the lock used to synchronize access to the buffer\&. 
+.PP
+Definiert in Zeile \fB31\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::pointer =  typename TBUFFER::pointer"
+
+.PP
+The pointer type used by the buffer\&. 
+.PP
+Definiert in Zeile \fB37\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::reference =  typename TBUFFER::reference"
+
+.PP
+The reference type used by the buffer\&. 
+.PP
+Definiert in Zeile \fB40\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::self_type =  \fBopencl_buffer\fP<\fBbuffer_type\fP, TFLAGS>"
+
+.PP
+Alias for the type of this class\&. 
+.PP
+Definiert in Zeile \fB34\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::size_type =  typename TBUFFER::size_type"
+
+.PP
+The size type used by the buffer\&. 
+.PP
+Definiert in Zeile \fB43\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> using \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::value_type =  typename TBUFFER::value_type"
+
+.PP
+The value type used by the buffer\&. 
+.PP
+Definiert in Zeile \fB52\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::opencl_buffer (\fBbuffer_type\fP & buffer, cl_context context)\fC [inline]\fP"
+
+.PP
+Constructor for the \fBopencl_buffer\fP class\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIbuffer\fP The buffer to be wrapped in this OpenCL buffer\&. 
 .br
-\fITALLOCATOR\fP 
+\fIcontext\fP The OpenCL context in which the buffer will be created\&. 
 .RE
 .PP
 
 .PP
-Definiert in Zeile \fB21\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SH "Dokumentation der benutzerdefinierten Datentypen"
-.PP 
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::buffer_type =  \fBTBUFFER\fP"
-
-.PP
-Definiert in Zeile \fB23\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::const_pointer =  \fBtypename\fP \fBTBUFFER::const_pointer\fP"
-
-.PP
-Definiert in Zeile \fB30\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::const_reference =  \fBtypename\fP TBUFFER::const_reference"
-
-.PP
-Definiert in Zeile \fB31\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::lock_type =  \fBTLOCKTYPE\fP"
-
-.PP
-Definiert in Zeile \fB24\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::pointer =  \fBtypename\fP \fBTBUFFER::pointer\fP"
-
-.PP
-Definiert in Zeile \fB27\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::reference =  \fBtypename\fP TBUFFER::reference"
-
-.PP
-Definiert in Zeile \fB28\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::self_type =  \fBopencl_buffer\fP<\fBTVALUE\fP,\fBTLOCKTYPE\fP,\fBTLOCKTYPE\fP>"
-
-.PP
-Definiert in Zeile \fB25\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBusing\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::size_type =  \fBtypename\fP \fBTBUFFER::size_type\fP"
-
-.PP
-Definiert in Zeile \fB29\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SH "Beschreibung der Konstruktoren und Destruktoren"
-.PP 
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::opencl_buffer (\fBbuffer_type\fP & buffer, \fBcl_context\fP context, \fBbool\fP readOnly)\fC [inline]\fP"
-
-.PP
-Definiert in Zeile \fB33\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::opencl_buffer (\fBconst\fP \fBself_type\fP & other)\fC [delete]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB65\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::opencl_buffer (const \fBself_type\fP & other)\fC [delete]\fP, \fC [noexcept]\fP"
 
 .SH "Dokumentation der Elementfunktionen"
 .PP 
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBbool\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::assign_to_gpu (\fBcl_command_queue\fP queue, \fBbool\fP write2Device = \fC\fBtrue\fP\fP)\fC [inline]\fP"
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> void \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::add_flag (\fBflag_type\fP flag)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB42\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBvirtual\fP \fBvoid\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::create_internal_gpu_buffer ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Adds a flag to the buffer's flags\&. This function adds a specified flag to the current buffer's flags\&. The buffer's flags are updated to include the provided flag\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIflag\fP The flag to be added to the current buffer's flags (e\&.g\&., \fCCL_MEM_READ_ONLY\fP)\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB77\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBcl_mem\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >\fB::operator\fP \fBcl_mem\fP () const\fC [inline]\fP"
+Definiert in Zeile \fB247\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> bool \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::assign_to_gpu (cl_command_queue queue, bool write2Device = \fCtrue\fP)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB74\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBself_type\fP & \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >\fB::operator\fP= (\fBconst\fP \fBself_type\fP &) volatile\fC [delete]\fP"
-
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBself_type\fP & \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >\fB::operator\fP= (\fBconst\fP \fBself_type\fP &)\fC [delete]\fP"
-
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBbool\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::require (\fBcl_command_queue\fP queue, \fBbool\fP readDevice)\fC [inline]\fP"
+Transfers data from the buffer to the GPU\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIqueue\fP The OpenCL command queue used for the write operation\&. 
+.br
+\fIwrite2Device\fP Flag to specify if the data should be written to the device\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+True if the transfer was successful, false otherwise\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB57\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+Definiert in Zeile \fB82\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> bool \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::can_read ()\fC [inline]\fP"
+
+.PP
+Determines if the buffer is readable\&. This function checks if the buffer has either \fCCL_MEM_READ_WRITE\fP or \fCCL_MEM_READ_ONLY\fP flags set, indicating that the buffer is available for reading\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+\fCtrue\fP if the buffer can be read from, otherwise \fCfalse\fP\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB227\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> bool \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::can_write ()\fC [inline]\fP"
+
+.PP
+Determines if the buffer is writable\&. This function checks if the buffer has either \fCCL_MEM_READ_WRITE\fP or \fCCL_MEM_WRITE_ONLY\fP flags set, indicating that the buffer is available for writing\&.
+.PP
+\fBRückgabe\fP
+.RS 4
+\fCtrue\fP if the buffer can be written to, otherwise \fCfalse\fP\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB237\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> void \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::create_internal_gpu_buffer ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definiert in Zeile \fB265\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> bool \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::is_flag (\fBflag_type\fP flag) const\fC [inline]\fP"
+
+.PP
+Checks if the given flag is set in the buffer's flags\&. This function checks if a specific flag (such as read or write permission) is set in the current buffer's flags\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIflag\fP The flag to check (e\&.g\&., \fCCL_MEM_READ_ONLY\fP, \fCCL_MEM_WRITE_ONLY\fP)\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+\fCtrue\fP if the flag is set, otherwise \fCfalse\fP\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB217\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBself_type\fP & \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::operator= (const \fBself_type\fP &) volatile\fC [delete]\fP"
+
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBself_type\fP & \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::operator= (const \fBself_type\fP &)\fC [delete]\fP"
+
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> void \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::remove_flag (\fBflag_type\fP flag)\fC [inline]\fP"
+
+.PP
+Removes a flag from the buffer's flags\&. This function removes a specified flag from the current buffer's flags\&. The buffer's flags are updated to exclude the provided flag\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIflag\fP The flag to be removed from the current buffer's flags (e\&.g\&., \fCCL_MEM_READ_ONLY\fP)\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB260\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> bool \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::require (cl_command_queue queue, bool readDevice)\fC [inline]\fP"
+
+.PP
+Reads data from the GPU and updates the buffer\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIqueue\fP The OpenCL command queue used for the read operation\&. 
+.br
+\fIreadDevice\fP Flag to specify if the data should be read from the device\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+True if the operation was successful, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB134\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
 .SH "Dokumentation der Felder"
 .PP 
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBbool\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::m_bReadOnly\fC [protected]\fP"
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> bool \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::m_bHostPtr\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB87\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBcl_context\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::m_cContext\fC [protected]\fP"
+Flag indicating whether the buffer is using a host pointer\&. The \fCm_bHostPtr\fP flag indicates whether the OpenCL buffer is created using a pointer that is accessible on the host side (as opposed to having a separate device memory allocation)\&. 
+.PP
+Definiert in Zeile \fB308\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> cl_context \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::m_cContext\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB86\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBcl_mem\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::m_clBuffer\fC [protected]\fP"
+The OpenCL context associated with the buffer\&. 
+.PP
+Definiert in Zeile \fB294\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> cl_mem \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::m_clBuffer\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB89\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBlock_type\fP \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::m_lock\fC [protected]\fP"
+The OpenCL memory buffer object\&. 
+.PP
+Definiert in Zeile \fB302\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBflag_type\fP \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::m_fFlags\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB88\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTBUFFER\fP > \fBbuffer_type\fP& \fBvkst::opencl_buffer\fP< \fBTBUFFER\fP >::m_refBuffer\fC [protected]\fP"
+The flags that describe buffer permissions and characteristics\&. These flags define how the buffer is used in OpenCL operations\&. For example, flags like \fCCL_MEM_READ_WRITE\fP, \fCCL_MEM_READ_ONLY\fP, \fCCL_MEM_WRITE_ONLY\fP, etc\&. determine whether the buffer can be read from, written to, or both\&. 
+.PP
+Definiert in Zeile \fB315\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBlock_type\fP \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::m_lock\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB85\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+Mutex lock to ensure thread safety\&. 
+.PP
+Definiert in Zeile \fB298\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
+.SS "template<typename TBUFFER , cl_mem_flags TFLAGS = CL_MEM_READ_WRITE> \fBbuffer_type\fP& \fBvkst::opencl_buffer\fP< TBUFFER, TFLAGS >::m_refBuffer\fC [protected]\fP"
+
+.PP
+Reference to the buffer being managed\&. 
+.PP
+Definiert in Zeile \fB290\fP der Datei \fBvkstOpenCLBuffer\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

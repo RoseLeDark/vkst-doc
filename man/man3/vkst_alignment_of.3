@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::alignment_of< T >
+vkst::alignment_of< T > \- A template to get the alignment of a type\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -18,14 +19,23 @@ vkst::alignment_of< T >
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBtypename\fP T>
+.SS "template<typename T>
 .br
-struct vkst::alignment_of< T >"
+struct vkst::alignment_of< T >"A template to get the alignment of a type\&. 
+
+This template provides the alignment of any type \fCT\fP\&. It uses the \fCalignof_helper\fP structure to calculate the offset of the \fCy\fP member, which is aligned according to the alignment of \fCT\fP\&.
 .PP
-Definiert in Zeile \fB80\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+\fBTemplate-Parameter\fP
+.RS 4
+\fIT\fP The type to get the alignment for\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB143\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 .SH "Dokumentation der Aufzählungstypen"
 .PP 
-.SS "template<\fBtypename\fP T > \fBanonymous\fP \fBenum\fP"
+.SS "template<typename T > anonymous enum"
 
 .PP
 \fBAufzählungswerte\fP
@@ -33,7 +43,7 @@ Definiert in Zeile \fB80\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 .TP
 \fB\fIres \fP\fP
 .PP
-Definiert in Zeile \fB81\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+Definiert in Zeile \fB144\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

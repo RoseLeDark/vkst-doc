@@ -125,19 +125,17 @@ $(document).ready(function(){initNavTree('dd/d2c/vkstAllocator_8hpp.html','../..
   <div class="headertitle"><div class="title">vkstAllocator.hpp-Dateireferenz</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;config.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d0/dd1/vkstAllocatorBase_8hpp_source.html">Allocator/vkstAllocatorBase.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d5/d82/vkstMallocAllocator_8hpp_source.html">Allocator/vkstMallocAllocator.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d82/vkstMallocAllocator_8hpp_source.html">Allocator/vkstMallocAllocator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d58/vkstAllocatorMaximalFilter_8hpp_source.html">Allocator/vkstAllocatorMaximalFilter.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include-Abhängigkeitsdiagramm für vkstAllocator.hpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/df2/vkstAllocator_8hpp__incl.svg" width="100%" height="558"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/df2/vkstAllocator_8hpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d09/vkstAllocator_8hpp__dep__incl.svg" width="262" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d09/vkstAllocator_8hpp__dep__incl.svg" width="178" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../dd/d2c/vkstAllocator_8hpp_source.html">gehe zum Quellcode dieser Datei</a></p>
@@ -149,8 +147,13 @@ Namensbereiche</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typdefinitionen</h2></td></tr>
-<tr class="memitem:a43508b98f612f64ddce1c78d2bb80d28" id="r_a43508b98f612f64ddce1c78d2bb80d28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbb/namespacevkst.html#a43508b98f612f64ddce1c78d2bb80d28">vkst::default_allocator</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">malloc_allocator</a>&lt; <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">basic_allocator_maximal_filter</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">LIBVKST_CONFIG_MAX_MEMORY_USE</a> &gt; &gt;</td></tr>
-<tr class="separator:a43508b98f612f64ddce1c78d2bb80d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fd9c89b55db69eb99968626575fcab" id="r_a93fd9c89b55db69eb99968626575fcab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbb/namespacevkst.html#a93fd9c89b55db69eb99968626575fcab">vkst::default_allocator</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">malloc_allocator</a>&lt; <a class="el" href="../../d7/d44/classvkst_1_1basic__allocator__filter.html">basic_allocator_filter</a> &gt;</td></tr>
+<tr class="memdesc:a93fd9c89b55db69eb99968626575fcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default allocator that uses the malloc_allocator with a basic memory filter.  <br /></td></tr>
+<tr class="separator:a93fd9c89b55db69eb99968626575fcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e546cd4df5ef837ea393d3c4879738" id="r_a24e546cd4df5ef837ea393d3c4879738"><td class="memTemplParams" colspan="2">template&lt;size_t TMaxAlloc&gt; </td></tr>
+<tr class="memitem:a24e546cd4df5ef837ea393d3c4879738"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/dbb/namespacevkst.html#a24e546cd4df5ef837ea393d3c4879738">vkst::default_limmeted_allocator</a> = <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">malloc_allocator</a>&lt; <a class="el" href="../../d2/dcd/classvkst_1_1basic__allocator__maximal__filter.html">basic_allocator_maximal_filter</a>&lt; TMaxAlloc &gt; &gt;</td></tr>
+<tr class="memdesc:a24e546cd4df5ef837ea393d3c4879738"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default allocator with a maximum allocation size limit.  <br /></td></tr>
+<tr class="separator:a24e546cd4df5ef837ea393d3c4879738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

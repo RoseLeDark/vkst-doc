@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::is_pod< T >
+vkst::is_pod< T > \- A type trait to check if a type is a Plain Old Data (POD) type\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -13,11 +14,20 @@ Abgeleitet von std::integral_constant< bool, __is_pod(T)>\&.
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBtypename\fP T>
+.SS "template<typename T>
 .br
-struct vkst::is_pod< T >"
+struct vkst::is_pod< T >"A type trait to check if a type is a Plain Old Data (POD) type\&. 
+
+This struct is used to check whether a type \fCT\fP is a POD type, which is a type that can be trivially copied or assigned without requiring a constructor, destructor, or copy assignment operator\&.
 .PP
-Definiert in Zeile \fB67\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+\fBTemplate-Parameter\fP
+.RS 4
+\fIT\fP The type to check\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB122\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

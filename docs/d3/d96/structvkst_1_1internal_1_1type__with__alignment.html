@@ -125,17 +125,28 @@ $(document).ready(function(){initNavTree('d3/d96/structvkst_1_1internal_1_1type_
 </div><!--header-->
 <div class="contents">
 
+<p>A template to enforce alignment for specific sizes.  
+ <a href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Öffentliche Typen</h2></td></tr>
-<tr class="memitem:a47fec4dac0156bf5df7d254cbdbbd5f9" id="r_a47fec4dac0156bf5df7d254cbdbbd5f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typedef</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html#a47fec4dac0156bf5df7d254cbdbbd5f9">err_invalid_alignment</a>[<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">N</a> &gt; 0 ? -1 :1]</td></tr>
+<tr class="memitem:a47fec4dac0156bf5df7d254cbdbbd5f9" id="r_a47fec4dac0156bf5df7d254cbdbbd5f9"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html#a47fec4dac0156bf5df7d254cbdbbd5f9">err_invalid_alignment</a>[N &gt; 0 ? -1 :1]</td></tr>
 <tr class="separator:a47fec4dac0156bf5df7d254cbdbbd5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> N&gt;<br />
-struct vkst::internal::type_with_alignment&lt; N &gt;</div>
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00043">43</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;size_t N&gt;<br />
+struct vkst::internal::type_with_alignment&lt; N &gt;</div><p>A template to enforce alignment for specific sizes. </p>
+<p>This template defines a type with a specific alignment (1, 2, 4, 8, 16, 32, or 64 bytes). It ensures that the alignment requirements for various types are met for the specified sizes.</p>
+<dl class="tparams"><dt>Template-Parameter</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The alignment size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00083">83</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentation der benutzerdefinierten Datentypen</h2>
 <a id="a47fec4dac0156bf5df7d254cbdbbd5f9" name="a47fec4dac0156bf5df7d254cbdbbd5f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47fec4dac0156bf5df7d254cbdbbd5f9">&#9670;&#160;</a></span>err_invalid_alignment</h2>
@@ -143,15 +154,15 @@ struct vkst::internal::type_with_alignment&lt; N &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">size_t</a> N&gt; </div>
+template&lt;size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typedef</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">char</a> <a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html">vkst::internal::type_with_alignment</a>&lt; <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">N</a> &gt;::err_invalid_alignment[<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">N</a> &gt; 0 ? -1 :1]</td>
+          <td class="memname">typedef char <a class="el" href="../../d3/d96/structvkst_1_1internal_1_1type__with__alignment.html">vkst::internal::type_with_alignment</a>&lt; N &gt;::err_invalid_alignment[N &gt; 0 ? -1 :1]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00044">44</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00084">84</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 
 </div>
 </div>

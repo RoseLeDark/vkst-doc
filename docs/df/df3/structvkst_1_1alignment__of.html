@@ -125,6 +125,9 @@ $(document).ready(function(){initNavTree('df/df3/structvkst_1_1alignment__of.htm
 </div><!--header-->
 <div class="contents">
 
+<p>A template to get the alignment of a type.  
+ <a href="../../df/df3/structvkst_1_1alignment__of.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -134,9 +137,17 @@ $(document).ready(function(){initNavTree('df/df3/structvkst_1_1alignment__of.htm
 <tr class="separator:aeac49ed857d3eb0f1a2c2499bbf86b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T&gt;<br />
-struct vkst::alignment_of&lt; T &gt;</div>
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00080">80</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct vkst::alignment_of&lt; T &gt;</div><p>A template to get the alignment of a type. </p>
+<p>This template provides the alignment of any type <code>T</code>. It uses the <code>alignof_helper</code> structure to calculate the offset of the <code>y</code> member, which is aligned according to the alignment of <code>T</code>.</p>
+<dl class="tparams"><dt>Template-Parameter</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to get the alignment for. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00143">143</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Aufzählungstypen</h2>
 <a id="aeac49ed857d3eb0f1a2c2499bbf86b40" name="aeac49ed857d3eb0f1a2c2499bbf86b40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeac49ed857d3eb0f1a2c2499bbf86b40">&#9670;&#160;</a></span>anonymous enum</h2>
@@ -144,10 +155,10 @@ struct vkst::alignment_of&lt; T &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">typename</a> T &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">anonymous</a> <a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a387021982d9bca49d4a7db4f">enum</a></td>
+          <td class="memname">anonymous enum</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -155,7 +166,7 @@ template&lt;<a class="el" href="../../d1/dbb/namespacevkst.html#aecca4c6a3870219
 <tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="aeac49ed857d3eb0f1a2c2499bbf86b40a23ec6e20b95bdf1012783dc92f068263" name="aeac49ed857d3eb0f1a2c2499bbf86b40a23ec6e20b95bdf1012783dc92f068263"></a>res&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00081">81</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html#l00144">144</a> der Datei <a class="el" href="../../d0/d1f/vkstAlignment_8hpp_source.html">vkstAlignment.hpp</a>.</p>
 
 </div>
 </div>

@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >
+vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR > \- A templated buffer class for managing dynamic arrays of values\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,79 +13,92 @@ vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBself_type\fP = \fBbuffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >"
+.RI "using \fBself_type\fP = \fBbuffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >"
 .br
+.RI "Type alias for the current buffer type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBvalue_type\fP = \fBTVALUE\fP __attribute__((\fB__vector_size__\fP(\fBTALIGNMENT\fP), \fB__aligned__\fP(\fBTALIGNMENT\fP)))"
+.RI "using \fBvalue_type\fP = TVALUE __attribute__((__vector_size__(TALIGNMENT), __aligned__(TALIGNMENT)))"
 .br
+.RI "Type alias for the value type stored in the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBallocator\fP = \fBTALLOCATOR\fP"
+.RI "using \fBallocator\fP = TALLOCATOR"
 .br
+.RI "Type alias for the allocator used\&. "
 .ti -1c
-.RI "\fBusing\fP \fBpointer\fP = \fBvalue_type\fP *"
+.RI "using \fBpointer\fP = \fBvalue_type\fP *"
 .br
+.RI "Type alias for a pointer to a value of the buffer type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBreference\fP = \fBvalue_type\fP &"
+.RI "using \fBreference\fP = \fBvalue_type\fP &"
 .br
+.RI "Type alias for a reference to a value of the buffer type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBsize_type\fP = \fBsize_t\fP"
+.RI "using \fBsize_type\fP = size_t"
 .br
+.RI "Type alias for the size type of the buffer\&. "
 .ti -1c
-.RI "\fBusing\fP \fBconst_reference\fP = \fBconst\fP \fBvalue_type\fP &"
+.RI "using \fBconst_reference\fP = const \fBvalue_type\fP &"
 .br
+.RI "Type alias for a const reference to a value of the buffer type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBconst_pointer\fP = \fBconst\fP \fBvalue_type\fP *"
+.RI "using \fBconst_pointer\fP = const \fBvalue_type\fP *"
 .br
+.RI "Type alias for a const pointer to a value of the buffer type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBiterator_category\fP = std::random_access_iterator_tag"
+.RI "using \fBiterator_category\fP = std::random_access_iterator_tag"
 .br
+.RI "Type alias for the iterator category\&. "
 .ti -1c
-.RI "\fBusing\fP \fBdifference_type\fP = \fBptrdiff_t\fP"
+.RI "using \fBdifference_type\fP = ptrdiff_t"
 .br
+.RI "Type alias for the difference type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBiterator\fP = \fBpointer\fP"
+.RI "using \fBiterator\fP = \fBpointer\fP"
 .br
+.RI "Type alias for the iterator type\&. "
 .ti -1c
-.RI "\fBusing\fP \fBconst_iterator\fP = \fBconst\fP \fBvalue_type\fP *"
+.RI "using \fBconst_iterator\fP = const \fBvalue_type\fP *"
 .br
+.RI "Type alias for a const iterator type\&. "
 .in -1c
 .SS "Öffentliche Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBbuffer\fP (\fBsize_type\fP \fBsize\fP) \fBnoexcept\fP"
+.RI "\fBbuffer\fP (\fBsize_type\fP size) noexcept"
 .br
-.RI "Consructs and allocates the Buffer\&. "
+.RI "Constructs and allocates a buffer with the given size\&. "
 .ti -1c
-.RI "\fBbuffer\fP (\fBpointer\fP \fBbuffer\fP, \fBsize_type\fP \fBsize\fP) \fBnoexcept\fP"
+.RI "\fBbuffer\fP (\fBpointer\fP \fBbuffer\fP, \fBsize_type\fP size) noexcept"
 .br
-.RI "Consructs the buffer from a given memory pointer\&. "
+.RI "Constructs a buffer from an existing memory pointer\&. "
 .ti -1c
-.RI "\fBbuffer\fP (\fBconst_pointer\fP \fBbuffer\fP, \fBsize_type\fP \fBsize\fP) \fBnoexcept\fP"
+.RI "\fBbuffer\fP (\fBconst_pointer\fP \fBbuffer\fP, \fBsize_type\fP size) noexcept"
 .br
-.RI "Consructs and allocates the Buffer\&. copies the contents of the supplied memory into the buffer\&. "
+.RI "Constructs and allocates a buffer, copying contents from another buffer\&. "
 .ti -1c
-.RI "\fBbuffer\fP (\fBconst\fP \fBself_type\fP &\fBother\fP) \fBnoexcept\fP=\fBdelete\fP"
-.br
-.ti -1c
-.RI "\fBself_type\fP & \fBoperator=\fP (\fBconst\fP \fBself_type\fP &)=\fBdelete\fP"
+.RI "\fBbuffer\fP (const \fBself_type\fP &other) noexcept=delete"
 .br
 .ti -1c
-.RI "\fBself_type\fP & \fBoperator=\fP (\fBconst\fP \fBself_type\fP &) \fBvolatile\fP=\fBdelete\fP"
+.RI "\fBself_type\fP & \fBoperator=\fP (const \fBself_type\fP &)=delete"
 .br
 .ti -1c
-.RI "\fB~buffer\fP () \fBnoexcept\fP"
+.RI "\fBself_type\fP & \fBoperator=\fP (const \fBself_type\fP &) volatile=delete"
+.br
+.ti -1c
+.RI "\fB~buffer\fP () noexcept"
 .br
 .RI "Deconstrut the buffer\&. Is allocated the memory by buffer, then deallocated it\&. "
 .ti -1c
-.RI "\fBself_type\fP * \fBcopy\fP (\fBsize_t\fP \fBsize\fP)"
+.RI "\fBself_type\fP * \fBcopy\fP (size_t size)"
 .br
+.RI "Copies the current buffer to a new buffer of the given size\&. "
 .ti -1c
 .RI "\fBiterator\fP \fBbegin\fP ()"
 .br
 .RI "Get the iterator to the beginning of the buffer\&. "
 .ti -1c
-.RI "\fBconst_iterator\fP \fBbegin\fP () \fBconst\fP"
+.RI "\fBconst_iterator\fP \fBbegin\fP () const"
 .br
 .RI "Get the iterator to the beginning of the buffer\&. "
 .ti -1c
@@ -92,94 +106,98 @@ vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >
 .br
 .RI "Get the iterator to end of the buffer\&. "
 .ti -1c
-.RI "\fBconst_iterator\fP \fBend\fP () \fBconst\fP"
+.RI "\fBconst_iterator\fP \fBend\fP () const"
 .br
 .RI "Get the iterator to end of the buffer\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBappend\fP (\fBconst_pointer\fP \fBpBuffer\fP, std::size_t \fBsBufferSize\fP)"
+.RI "void \fBappend\fP (\fBconst_pointer\fP pBuffer, std::size_t sBufferSize)"
 .br
 .RI "Resizes this buffer and appends the given data\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBappend\fP (\fBvalue_type\fP \fBvalue\fP)"
+.RI "void \fBappend\fP (\fBvalue_type\fP value)"
 .br
 .RI "Resizes this buffer and appends the given data\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBappend\fP (\fBconst\fP \fBself_type\fP &\fBrefBuffer\fP)"
+.RI "void \fBappend\fP (const \fBself_type\fP &refBuffer)"
 .br
 .RI "Resizes this buffer and appends the given data\&. "
 .ti -1c
-.RI "\fBbool\fP \fBresize\fP (\fBsize_type\fP \fBnewSize\fP, \fBbool\fP \fBbReserve\fP=\fBtrue\fP)"
+.RI "bool \fBresize\fP (\fBsize_type\fP newSize, bool bReserve=true)"
 .br
 .RI "Resizes the buffer capacity and size\&. "
 .ti -1c
-.RI "\fBbool\fP \fBchange_size\fP (\fBsize_type\fP \fBnewSize\fP, \fBbool\fP \fBbReserve\fP=\fBtrue\fP)"
+.RI "bool \fBchange_size\fP (\fBsize_type\fP newSize, bool bReserve=true)"
 .br
 .RI "Change the buffer size\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBassign\fP (\fBconst_pointer\fP \fBpBuffer\fP, \fBsize_type\fP \fBsize\fP)"
+.RI "void \fBassign\fP (\fBconst_pointer\fP pBuffer, \fBsize_type\fP size)"
 .br
 .RI "Assigns the argument buffer to this buffer\&. "
 .ti -1c
-.RI "\fBvoid\fP \fBclear\fP ()"
+.RI "void \fBclear\fP ()"
 .br
 .RI "Clear the used content\&. "
 .ti -1c
-.RI "\fBbool\fP \fBis_equel\fP (\fBconst\fP \fBbuffer\fP &\fBother\fP) \fBconst\fP"
+.RI "bool \fBis_equel\fP (const \fBbuffer\fP &other) const"
 .br
 .RI "Is the given buffer equel with this? "
 .ti -1c
-.RI "\fBconstexpr\fP \fBbool\fP \fBis_empty\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "constexpr bool \fBis_empty\fP () const noexcept"
 .br
 .RI "is the buffer empty? "
 .ti -1c
-.RI "\fBpointer\fP * \fBget_raw\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "\fBpointer\fP * \fBget_raw\fP () const noexcept"
 .br
 .ti -1c
-.RI "\fBconstexpr\fP \fBbool\fP \fBis_full\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "constexpr bool \fBis_full\fP () const noexcept"
 .br
 .RI "is the buffer full? "
 .ti -1c
-.RI "\fBconstexpr\fP \fBsize_type\fP \fBget_size\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "constexpr \fBsize_type\fP \fBget_size\fP () const noexcept"
 .br
 .RI "Get the allocated memory size in elements\&. "
 .ti -1c
-.RI "\fBconstexpr\fP \fBsize_type\fP \fBget_size_bytes\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "constexpr \fBsize_type\fP \fBget_size_bytes\fP () const noexcept"
 .br
 .RI "Get the allocated memory size in bytes\&. "
 .ti -1c
-.RI "\fBconstexpr\fP \fBsize_type\fP \fBget_used\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "constexpr \fBsize_type\fP \fBget_used\fP () const noexcept"
 .br
 .RI "Get the used size of the buffer in elements\&. "
 .ti -1c
-.RI "\fBconstexpr\fP \fBsize_type\fP \fBget_used_bytes\fP () \fBconst\fP \fBnoexcept\fP"
+.RI "constexpr \fBsize_type\fP \fBget_used_bytes\fP () const noexcept"
 .br
 .RI "Get the used size of the buffer in bytes\&. "
 .ti -1c
-.RI "\fBbool\fP \fBoperator==\fP (\fBconst\fP \fBbuffer\fP &\fBother\fP) \fBconst\fP"
+.RI "bool \fBoperator==\fP (const \fBbuffer\fP &other) const"
 .br
 .RI "Compare operator\&. "
 .ti -1c
-.RI "\fBbool\fP \fBoperator!=\fP (\fBconst\fP \fBbuffer\fP &\fBother\fP) \fBconst\fP"
+.RI "bool \fBoperator!=\fP (const \fBbuffer\fP &other) const"
 .br
 .RI "Not compare operator\&. "
 .ti -1c
-.RI "\fBreference\fP \fBoperator[]\fP (\fBsize_type\fP \fBindex\fP)"
+.RI "\fBreference\fP \fBoperator[]\fP (\fBsize_type\fP index)"
+.br
+.RI "Access operator to get an element at a specific index\&. "
+.ti -1c
+.RI "\fBconst_reference\fP \fBoperator[]\fP (\fBsize_type\fP index) const"
+.br
+.RI "Access operator to get a constant element at a specific index\&. "
+.ti -1c
+.RI "\fBpointer\fP \fBoperator=\fP (\fBpointer\fP other) noexcept"
 .br
 .ti -1c
-.RI "\fBconst_reference\fP \fBoperator[]\fP (\fBsize_type\fP \fBindex\fP) \fBconst\fP"
+.RI "\fBpointer\fP \fBoperator=\fP (\fBpointer\fP other) volatile noexcept"
 .br
 .ti -1c
-.RI "\fBpointer\fP \fBoperator=\fP (\fBpointer\fP \fBother\fP) \fBnoexcept\fP"
+.RI "void \fBis_locked\fP (const bool value)"
 .br
+.RI "Sets or gets the 'locked' state of the buffer (whether it's on the device or in RAM)\&. "
 .ti -1c
-.RI "\fBpointer\fP \fBoperator=\fP (\fBpointer\fP \fBother\fP) \fBvolatile\fP \fBnoexcept\fP"
+.RI "bool \fBis_locked\fP () const"
 .br
-.ti -1c
-.RI "\fBvoid\fP \fBis_locked\fP (\fBconst\fP \fBbool\fP \fBvalue\fP)"
-.br
-.ti -1c
-.RI "\fBbool\fP \fBis_locked\fP () \fBconst\fP"
-.br
+.RI "Gets the 'locked' state of the buffer\&. "
 .in -1c
 .SS "Geschützte Attribute"
 
@@ -187,134 +205,263 @@ vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >
 .ti -1c
 .RI "\fBpointer\fP \fBm_pRawBuffer\fP"
 .br
+.RI "Raw pointer to the buffer's data\&. "
 .ti -1c
 .RI "\fBsize_type\fP \fBm_sSize\fP"
 .br
+.RI "The total allocated size of the buffer in elements\&. "
 .ti -1c
 .RI "\fBsize_type\fP \fBm_sUsed\fP"
 .br
+.RI "The number of elements currently used in the buffer\&. "
 .ti -1c
-.RI "\fBbool\fP \fBm_bOwnMem\fP"
+.RI "bool \fBm_bOwnMem\fP"
 .br
+.RI "Flag indicating whether the buffer owns the allocated memory\&. "
 .ti -1c
 .RI "\fBallocator\fP \fBm_allocator\fP"
 .br
+.RI "The allocator used for memory allocation and deallocation\&. "
 .ti -1c
-.RI "std::atomic< \fBbool\fP > \fBm_is2Device\fP"
+.RI "std::atomic< bool > \fBm_is2Device\fP"
 .br
+.RI "Atomic flag indicating whether the buffer is stored on a device\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBtypename\fP \fBTVALUE\fP, \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP = vkst::default_allocator>
+.SS "template<typename TVALUE, char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR = default_allocator>
 .br
-class vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >"
+class vkst::buffer< TVALUE, TALIGNMENT, TALLOCATOR >"A templated buffer class for managing dynamic arrays of values\&. 
+
+This class provides functionality to allocate, resize, and manage buffers in memory\&. It supports appending elements, clearing the buffer, and copying data from another buffer\&.
 .PP
-Definiert in Zeile \fB12\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+\fBTemplate-Parameter\fP
+.RS 4
+\fITVALUE\fP The type of elements stored in the buffer\&. 
+.br
+\fITALIGNMENT\fP The alignment of the buffer (default is the alignment of \fCTVALUE\fP)\&. 
+.br
+\fITALLOCATOR\fP The allocator used for memory allocation (default is \fCdefault_allocator\fP)\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB23\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
 .SH "Dokumentation der benutzerdefinierten Datentypen"
 .PP 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::allocator =  \fBTALLOCATOR\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::allocator =  TALLOCATOR"
 
 .PP
-Definiert in Zeile \fB16\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::const_iterator =  \fBconst\fP \fBvalue_type\fP*"
-
-.PP
-Definiert in Zeile \fB27\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::const_pointer =  \fBconst\fP \fBvalue_type\fP*"
-
-.PP
-Definiert in Zeile \fB22\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::const_reference =  \fBconst\fP \fBvalue_type\fP&"
-
-.PP
-Definiert in Zeile \fB21\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::difference_type =  \fBptrdiff_t\fP"
-
-.PP
-Definiert in Zeile \fB25\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::iterator =  \fBpointer\fP"
-
-.PP
-Definiert in Zeile \fB26\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::iterator_category =  std::random_access_iterator_tag"
-
-.PP
-Definiert in Zeile \fB24\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::pointer =  \fBvalue_type\fP*"
-
-.PP
-Definiert in Zeile \fB17\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::reference =  \fBvalue_type\fP&"
-
-.PP
-Definiert in Zeile \fB18\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::self_type =  \fBbuffer\fP<\fBTVALUE\fP,\fBTALIGNMENT\fP, \fBTALLOCATOR\fP>"
-
-.PP
-Definiert in Zeile \fB14\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::size_type =  \fBsize_t\fP"
-
-.PP
-Definiert in Zeile \fB19\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBusing\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::value_type =  \fBTVALUE\fP __attribute__((\fB__vector_size__\fP(\fBTALIGNMENT\fP), \fB__aligned__\fP(\fBTALIGNMENT\fP)))"
-
-.PP
-Definiert in Zeile \fB15\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SH "Beschreibung der Konstruktoren und Destruktoren"
-.PP 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::buffer (\fBsize_type\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
-
-.PP
-Consructs and allocates the Buffer\&. 
-.PP
-Definiert in Zeile \fB32\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::buffer (\fBpointer\fP buffer, \fBsize_type\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
-
-.PP
-Consructs the buffer from a given memory pointer\&. 
-.PP
-\fBParameter\fP
-.RS 4
-\fIsize\fP The size of the buffer 
-.br
-\fIbuffer\fP The using pointer for this buffer 
-.RE
+Type alias for the allocator used\&. 
 .PP
 \fBZu beachten\fP
 .RS 4
-This pointer not deallocated, from buffer on deconstruction 
+The allocator defines the memory management strategy\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB39\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::const_iterator =  const \fBvalue_type\fP*"
+
+.PP
+Type alias for a const iterator type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used to iterate through the buffer in a read-only manner\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB86\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::const_pointer =  const \fBvalue_type\fP*"
+
+.PP
+Type alias for a const pointer to a value of the buffer type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used to access the elements in the buffer in a read-only manner\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB65\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::const_reference =  const \fBvalue_type\fP&"
+
+.PP
+Type alias for a const reference to a value of the buffer type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used to access the elements in the buffer in a read-only manner\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB60\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::difference_type =  ptrdiff_t"
+
+.PP
+Type alias for the difference type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Represents the difference between two iterators in the buffer\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB76\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::iterator =  \fBpointer\fP"
+
+.PP
+Type alias for the iterator type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used to iterate through the buffer\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB81\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::iterator_category =  std::random_access_iterator_tag"
+
+.PP
+Type alias for the iterator category\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Specifies that the iterator supports random access\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB71\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::pointer =  \fBvalue_type\fP*"
+
+.PP
+Type alias for a pointer to a value of the buffer type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used to access the stored elements in the buffer\&. 
 .RE
 .PP
 
 .PP
 Definiert in Zeile \fB44\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::buffer (\fBconst_pointer\fP buffer, \fBsize_type\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::reference =  \fBvalue_type\fP&"
 
 .PP
-Consructs and allocates the Buffer\&. copies the contents of the supplied memory into the buffer\&. 
+Type alias for a reference to a value of the buffer type\&. 
 .PP
-\fBParameter\fP
+\fBZu beachten\fP
 .RS 4
-\fIsize\fP The size of the buffer 
-.br
-\fIbuffer\fP The using pointer for this buffer 
+Used to access the elements in the buffer\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB49\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::self_type =  \fBbuffer\fP<TVALUE,TALIGNMENT, TALLOCATOR>"
+
+.PP
+Type alias for the current buffer type\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used to define the buffer type in various methods\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB29\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::size_type =  size_t"
+
+.PP
+Type alias for the size type of the buffer\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+Used for specifying the size of the buffer\&. 
 .RE
 .PP
 
 .PP
 Definiert in Zeile \fB54\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::buffer (\fBconst\fP \fBself_type\fP & other)\fC [delete]\fP, \fC [noexcept]\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> using \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::value_type =  TVALUE __attribute__((__vector_size__(TALIGNMENT), __aligned__(TALIGNMENT)))"
 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::~\fBbuffer\fP ()\fC [inline]\fP, \fC [noexcept]\fP"
+.PP
+Type alias for the value type stored in the buffer\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+The value type is aligned according to the specified alignment\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB34\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::buffer (\fBsize_type\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Constructs and allocates a buffer with the given size\&. This constructor initializes a buffer with the specified size, allocating memory for it\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the buffer (in elements)\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB95\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::buffer (\fBpointer\fP buffer, \fBsize_type\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Constructs a buffer from an existing memory pointer\&. This constructor initializes a buffer with an external memory pointer\&. The memory is not deallocated when the buffer is destroyed\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIbuffer\fP The existing pointer to the memory\&. 
+.br
+\fIsize\fP The size of the buffer (in elements)\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB110\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::buffer (\fBconst_pointer\fP buffer, \fBsize_type\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Constructs and allocates a buffer, copying contents from another buffer\&. This constructor creates a buffer and copies the data from an existing buffer into it\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIbuffer\fP The existing pointer to the data\&. 
+.br
+\fIsize\fP The size of the buffer (in elements)\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB122\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::buffer (const \fBself_type\fP & other)\fC [delete]\fP, \fC [noexcept]\fP"
+
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::~\fBbuffer\fP ()\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Deconstrut the buffer\&. Is allocated the memory by buffer, then deallocated it\&. 
 .PP
-Definiert in Zeile \fB67\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+Definiert in Zeile \fB135\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
 .SH "Dokumentation der Elementfunktionen"
 .PP 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvoid\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::append (\fBconst\fP \fBself_type\fP & refBuffer)\fC [inline]\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> void \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::append (const \fBself_type\fP & refBuffer)\fC [inline]\fP"
 
 .PP
 Resizes this buffer and appends the given data\&. 
@@ -326,8 +473,8 @@ Resizes this buffer and appends the given data\&.
 .PP
 
 .PP
-Definiert in Zeile \fB128\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvoid\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::append (\fBconst_pointer\fP pBuffer, std::size_t sBufferSize)\fC [inline]\fP"
+Definiert in Zeile \fB203\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> void \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::append (\fBconst_pointer\fP pBuffer, std::size_t sBufferSize)\fC [inline]\fP"
 
 .PP
 Resizes this buffer and appends the given data\&. 
@@ -341,8 +488,8 @@ Resizes this buffer and appends the given data\&.
 .PP
 
 .PP
-Definiert in Zeile \fB107\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvoid\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::append (\fBvalue_type\fP value)\fC [inline]\fP"
+Definiert in Zeile \fB182\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> void \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::append (\fBvalue_type\fP value)\fC [inline]\fP"
 
 .PP
 Resizes this buffer and appends the given data\&. 
@@ -354,8 +501,8 @@ Resizes this buffer and appends the given data\&.
 .PP
 
 .PP
-Definiert in Zeile \fB119\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvoid\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::assign (\fBconst_pointer\fP pBuffer, \fBsize_type\fP size)\fC [inline]\fP"
+Definiert in Zeile \fB194\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> void \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::assign (\fBconst_pointer\fP pBuffer, \fBsize_type\fP size)\fC [inline]\fP"
 
 .PP
 Assigns the argument buffer to this buffer\&. 
@@ -367,8 +514,8 @@ If necessary, resizes the buffer\&.
 .PP
 
 .PP
-Definiert in Zeile \fB194\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBiterator\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::begin ()\fC [inline]\fP"
+Definiert in Zeile \fB269\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBiterator\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::begin ()\fC [inline]\fP"
 
 .PP
 Get the iterator to the beginning of the buffer\&. 
@@ -380,8 +527,8 @@ The iterator to the beginning of the buffer\&.
 .PP
 
 .PP
-Definiert in Zeile \fB82\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconst_iterator\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::begin () const\fC [inline]\fP"
+Definiert in Zeile \fB157\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBconst_iterator\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::begin () const\fC [inline]\fP"
 
 .PP
 Get the iterator to the beginning of the buffer\&. 
@@ -393,8 +540,8 @@ The iterator to the beginning of the buffer\&.
 .PP
 
 .PP
-Definiert in Zeile \fB88\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::change_size (\fBsize_type\fP newSize, \fBbool\fP bReserve = \fC\fBtrue\fP\fP)\fC [inline]\fP"
+Definiert in Zeile \fB163\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::change_size (\fBsize_type\fP newSize, bool bReserve = \fCtrue\fP)\fC [inline]\fP"
 
 .PP
 Change the buffer size\&. 
@@ -413,18 +560,32 @@ Externally memory can not change\&.
 .PP
 
 .PP
-Definiert in Zeile \fB170\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvoid\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::clear ()\fC [inline]\fP"
+Definiert in Zeile \fB245\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> void \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::clear ()\fC [inline]\fP"
 
 .PP
 Clear the used content\&. 
 .PP
-Definiert in Zeile \fB207\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBself_type\fP * \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::copy (\fBsize_t\fP size)\fC [inline]\fP"
+Definiert in Zeile \fB282\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBself_type\fP * \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::copy (size_t size)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB72\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBiterator\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::end ()\fC [inline]\fP"
+Copies the current buffer to a new buffer of the given size\&. This method returns a new buffer containing the current buffer's data\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the new buffer\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A pointer to the newly created buffer\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB147\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBiterator\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::end ()\fC [inline]\fP"
 
 .PP
 Get the iterator to end of the buffer\&. 
@@ -436,8 +597,8 @@ The iterator to end of the buffer\&.
 .PP
 
 .PP
-Definiert in Zeile \fB94\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconst_iterator\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::end () const\fC [inline]\fP"
+Definiert in Zeile \fB169\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBconst_iterator\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::end () const\fC [inline]\fP"
 
 .PP
 Get the iterator to end of the buffer\&. 
@@ -449,12 +610,12 @@ The iterator to end of the buffer\&.
 .PP
 
 .PP
-Definiert in Zeile \fB100\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBpointer\fP * \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::get_raw () const\fC [inline]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB175\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBpointer\fP * \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::get_raw () const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB230\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconstexpr\fP \fBsize_type\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::get_size () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB307\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> constexpr \fBsize_type\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::get_size () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
 Get the allocated memory size in elements\&. 
@@ -466,8 +627,8 @@ The allocated memory size in elements\&.
 .PP
 
 .PP
-Definiert in Zeile \fB240\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconstexpr\fP \fBsize_type\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::get_size_bytes () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB317\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> constexpr \fBsize_type\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::get_size_bytes () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
 Get the allocated memory size in bytes\&. 
@@ -479,8 +640,8 @@ The allocated memory size in bytes\&.
 .PP
 
 .PP
-Definiert in Zeile \fB246\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconstexpr\fP \fBsize_type\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::get_used () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB323\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> constexpr \fBsize_type\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::get_used () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
 Get the used size of the buffer in elements\&. 
@@ -492,8 +653,8 @@ The used size of the buffer in elements\&.
 .PP
 
 .PP
-Definiert in Zeile \fB252\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconstexpr\fP \fBsize_type\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::get_used_bytes () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB329\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> constexpr \fBsize_type\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::get_used_bytes () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
 Get the used size of the buffer in bytes\&. 
@@ -505,8 +666,8 @@ The used size of the buffer in bytes\&.
 .PP
 
 .PP
-Definiert in Zeile \fB258\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconstexpr\fP \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::is_empty () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB335\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> constexpr bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::is_empty () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
 is the buffer empty? 
@@ -518,8 +679,8 @@ If true then is the buffer empty and if false then not\&.
 .PP
 
 .PP
-Definiert in Zeile \fB228\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::is_equel (\fBconst\fP \fBbuffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP > & other) const\fC [inline]\fP"
+Definiert in Zeile \fB305\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::is_equel (const \fBbuffer\fP< TVALUE, TALIGNMENT, TALLOCATOR > & other) const\fC [inline]\fP"
 
 .PP
 Is the given buffer equel with this? 
@@ -536,8 +697,8 @@ true The given buffer is equel with this, false when not\&.
 .PP
 
 .PP
-Definiert in Zeile \fB216\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconstexpr\fP \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::is_full () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB293\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> constexpr bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::is_full () const\fC [inline]\fP, \fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
 is the buffer full? 
@@ -549,48 +710,94 @@ If true then is the buffer full and if false then not\&.
 .PP
 
 .PP
-Definiert in Zeile \fB235\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::is_locked () const\fC [inline]\fP"
+Definiert in Zeile \fB312\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::is_locked () const\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB293\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBvoid\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::is_locked (\fBconst\fP \fBbool\fP value)\fC [inline]\fP"
+Gets the 'locked' state of the buffer\&. 
+.PP
+\fBRückgabe\fP
+.RS 4
+true if the buffer is locked to device memory, false if it's in RAM\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB292\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator!\fP= (\fBconst\fP \fBbuffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP > & other) const\fC [inline]\fP"
+Definiert in Zeile \fB401\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> void \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::is_locked (const bool value)\fC [inline]\fP"
+
+.PP
+Sets or gets the 'locked' state of the buffer (whether it's on the device or in RAM)\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIvalue\fP If true, locks the buffer to device memory; if false, locks it to RAM\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB384\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator!= (const \fBbuffer\fP< TVALUE, TALIGNMENT, TALLOCATOR > & other) const\fC [inline]\fP"
 
 .PP
 Not compare operator\&. 
 .PP
-Definiert in Zeile \fB269\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBself_type\fP & \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP= (\fBconst\fP \fBself_type\fP &) volatile\fC [delete]\fP"
+Definiert in Zeile \fB346\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBself_type\fP & \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator= (const \fBself_type\fP &) volatile\fC [delete]\fP"
 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBself_type\fP & \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP= (\fBconst\fP \fBself_type\fP &)\fC [delete]\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBself_type\fP & \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator= (const \fBself_type\fP &)\fC [delete]\fP"
 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBpointer\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP= (\fBpointer\fP other)\fC [inline]\fP, \fC [noexcept]\fP"
-
-.PP
-Definiert in Zeile \fB285\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBpointer\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP= (\fBpointer\fP other) volatile\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBpointer\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator= (\fBpointer\fP other)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB289\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP== (\fBconst\fP \fBbuffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP > & other) const\fC [inline]\fP"
+Definiert in Zeile \fB372\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBpointer\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator= (\fBpointer\fP other) volatile\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definiert in Zeile \fB376\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator== (const \fBbuffer\fP< TVALUE, TALIGNMENT, TALLOCATOR > & other) const\fC [inline]\fP"
 
 .PP
 Compare operator\&. 
 .PP
-Definiert in Zeile \fB263\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBreference\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP[] (\fBsize_type\fP index)\fC [inline]\fP"
+Definiert in Zeile \fB340\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBreference\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator[] (\fBsize_type\fP index)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB273\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBconst_reference\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >\fB::operator\fP[] (\fBsize_type\fP index) const\fC [inline]\fP"
+Access operator to get an element at a specific index\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIindex\fP The index of the element to access\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A reference to the element at the given index\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB279\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::resize (\fBsize_type\fP newSize, \fBbool\fP bReserve = \fC\fBtrue\fP\fP)\fC [inline]\fP"
+Definiert in Zeile \fB355\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBconst_reference\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::operator[] (\fBsize_type\fP index) const\fC [inline]\fP"
+
+.PP
+Access operator to get a constant element at a specific index\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIindex\fP The index of the element to access\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A constant reference to the element at the given index\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB366\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::resize (\fBsize_type\fP newSize, bool bReserve = \fCtrue\fP)\fC [inline]\fP"
 
 .PP
 Resizes the buffer capacity and size\&. 
@@ -609,33 +816,92 @@ Externally memory can not resize\&.
 .PP
 
 .PP
-Definiert in Zeile \fB139\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+Definiert in Zeile \fB214\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
 .SH "Dokumentation der Felder"
 .PP 
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBallocator\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::m_allocator\fC [protected]\fP"
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBallocator\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::m_allocator\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB342\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBbool\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::m_bOwnMem\fC [protected]\fP"
+The allocator used for memory allocation and deallocation\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+The allocator defines how memory is managed for this buffer\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB341\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> std::atomic<\fBbool\fP> \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::m_is2Device\fC [protected]\fP"
+Definiert in Zeile \fB475\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> bool \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::m_bOwnMem\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB343\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBpointer\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::m_pRawBuffer\fC [protected]\fP"
+Flag indicating whether the buffer owns the allocated memory\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+If true, the buffer is responsible for freeing the memory\&. If false, the memory is externally managed\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB336\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBsize_type\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::m_sSize\fC [protected]\fP"
+Definiert in Zeile \fB469\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> std::atomic<bool> \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::m_is2Device\fC [protected]\fP"
 
 .PP
-Definiert in Zeile \fB338\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
-.SS "template<\fBtypename\fP \fBTVALUE\fP , \fBchar\fP TALIGNMENT = alignment_of<TVALUE>::res, \fBclass\fP \fBTALLOCATOR\fP  = vkst::default_allocator> \fBsize_type\fP \fBvkst::buffer\fP< \fBTVALUE\fP, \fBTALIGNMENT\fP, \fBTALLOCATOR\fP >::m_sUsed\fC [protected]\fP"
+Atomic flag indicating whether the buffer is stored on a device\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+This flag is used to track whether the buffer is in device memory (e\&.g\&., GPU memory) or system memory (e\&.g\&., RAM)\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB339\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+Definiert in Zeile \fB481\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBpointer\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::m_pRawBuffer\fC [protected]\fP"
+
+.PP
+Raw pointer to the buffer's data\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+This pointer holds the actual memory allocated for the buffer\&. 
+.RE
+.PP
+\fBWarnung\fP
+.RS 4
+The pointer may point to device memory, so be careful when accessing it\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB451\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBsize_type\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::m_sSize\fC [protected]\fP"
+
+.PP
+The total allocated size of the buffer in elements\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+This is the capacity of the buffer\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB457\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
+.SS "template<typename TVALUE , char TALIGNMENT = alignment_of<TVALUE>::res, class TALLOCATOR  = default_allocator> \fBsize_type\fP \fBvkst::buffer\fP< TVALUE, TALIGNMENT, TALLOCATOR >::m_sUsed\fC [protected]\fP"
+
+.PP
+The number of elements currently used in the buffer\&. 
+.PP
+\fBZu beachten\fP
+.RS 4
+This is the actual size of the buffer, which may be smaller than the allocated size\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB463\fP der Datei \fBvkstBuffer\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

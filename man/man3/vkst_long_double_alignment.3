@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::long_double_alignment< Target, check >
+vkst::long_double_alignment< Target, check > \- Adjusts the alignment of a type based on the target alignment\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,23 +13,34 @@ vkst::long_double_alignment< Target, check >
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBtype\fP = \fBlong\fP \fBdouble\fP"
+.RI "using \fBtype\fP = long double"
 .br
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBsize_t\fP Target, \fBbool\fP check>
+.SS "template<size_t Target, bool check>
 .br
-struct vkst::long_double_alignment< Target, check >"
+struct vkst::long_double_alignment< Target, check >"Adjusts the alignment of a type based on the target alignment\&. 
+
+This set of templates ensures that a type's alignment satisfies the specified target alignment\&. It will fallback to types with larger alignments if necessary\&.
 .PP
-Definiert in Zeile \fB100\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SH "Dokumentation der benutzerdefinierten Datentypen"
-.PP 
-.SS "template<\fBsize_t\fP Target, \fBbool\fP check> \fBusing\fP \fBvkst::long_double_alignment\fP< \fBTarget\fP, \fBcheck\fP >::type =  \fBlong\fP \fBdouble\fP"
+\fBTemplate-Parameter\fP
+.RS 4
+\fITarget\fP The target alignment\&. 
+.br
+\fIcheck\fP A boolean value used to check if the alignment of a type is sufficient\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB100\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+Definiert in Zeile \fB171\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "template<size_t Target, bool check> using \fBvkst::long_double_alignment\fP< Target, check >::type =  long double"
+
+.PP
+Definiert in Zeile \fB171\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

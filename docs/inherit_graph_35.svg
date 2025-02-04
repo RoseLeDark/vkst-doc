@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="df/dcc/structvkst_1_1long__double__alignment_3_01Target_00_01false_01_4.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="d3/ddf/structvkst_1_1long__double__alignment.html" target="_top" xlink:title="Adjusts the alignment of a type based on the target alignment.">
 <polygon fill="white" stroke="#666666" points="140,-30 0,-30 0,0 140,0 140,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">vkst::long_double_alignment</text>
-<text text-anchor="middle" x="70" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; Target, false &gt;</text>
+<text text-anchor="middle" x="70" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; Target, check &gt;</text>
 </a>
 </g>
 </g>

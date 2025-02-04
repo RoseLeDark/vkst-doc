@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-vkst::allocator_traits< TAllocator > \- The default specialization of the \fBallocator_traits\fP for a allocator\&. Any specialization must provide the same interface\&.  
+vkst::allocator_traits< TAllocator > \- Default specialization of \fC\fBallocator_traits\fP\fP for a given allocator\&.  
 
 .SH SYNOPSIS
 .br
@@ -13,92 +13,216 @@ vkst::allocator_traits< TAllocator > \- The default specialization of the \fBall
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBallocator_type\fP = \fBtypename\fP \fBinternal::allocator_traits\fP< \fBTAllocator\fP >::allocator_type"
+.RI "using \fBallocator_type\fP = typename \fBinternal::allocator_traits\fP< TAllocator >::allocator_type"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBpointer\fP = \fBtypename\fP \fBinternal::allocator_traits\fP< \fBTAllocator\fP >::pointer"
+.RI "using \fBpointer\fP = typename \fBinternal::allocator_traits\fP< TAllocator >::pointer"
 .br
 .ti -1c
-.RI "\fBusing\fP \fBsize_type\fP = \fBtypename\fP \fBinternal::allocator_traits\fP< \fBTAllocator\fP >::size_type"
+.RI "using \fBsize_type\fP = typename \fBinternal::allocator_traits\fP< TAllocator >::size_type"
 .br
 .in -1c
 .SS "Öffentliche, statische Methoden"
 
 .in +1c
 .ti -1c
-.RI "\fBstatic\fP \fBpointer\fP \fBallocate_node\fP (\fBallocator_type\fP &\fBstate\fP, \fBsize_type\fP \fBsize\fP, \fBsize_type\fP \fBalignment\fP)"
+.RI "static \fBpointer\fP \fBallocate_node\fP (\fBallocator_type\fP &state, \fBsize_type\fP size, \fBsize_type\fP alignment)"
 .br
+.RI "Allocates a node with the specified size and alignment\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBpointer\fP \fBallocate_array\fP (\fBallocator_type\fP &\fBstate\fP, \fBsize_type\fP \fBcount\fP, \fBsize_type\fP \fBsize\fP, \fBsize_type\fP \fBalignment\fP)"
+.RI "static \fBpointer\fP \fBallocate_array\fP (\fBallocator_type\fP &state, \fBsize_type\fP count, \fBsize_type\fP size, \fBsize_type\fP alignment)"
 .br
+.RI "Allocates an array with the specified count, size, and alignment\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBvoid\fP \fBdeallocate_node\fP (\fBallocator_type\fP &\fBstate\fP, \fBpointer\fP \fBnode\fP, \fBsize_type\fP \fBsize\fP) \fBnoexcept\fP"
+.RI "static void \fBdeallocate_node\fP (\fBallocator_type\fP &state, \fBpointer\fP node, \fBsize_type\fP size) noexcept"
 .br
+.RI "Deallocates a node\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBvoid\fP \fBdeallocate_array\fP (\fBallocator_type\fP &\fBstate\fP, \fBpointer\fP \fBnode\fP, \fBsize_type\fP \fBcount\fP, \fBsize_type\fP \fBsize\fP) \fBnoexcept\fP"
+.RI "static void \fBdeallocate_array\fP (\fBallocator_type\fP &state, \fBpointer\fP node, \fBsize_type\fP count, \fBsize_type\fP size) noexcept"
 .br
+.RI "Deallocates an array\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBsize_type\fP \fBmax_node_size\fP (\fBconst\fP \fBallocator_type\fP &\fBstate\fP)"
+.RI "static \fBsize_type\fP \fBmax_node_size\fP (const \fBallocator_type\fP &state)"
 .br
+.RI "Returns the maximum size of a node that can be allocated\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBsize_type\fP \fBmax_array_size\fP (\fBconst\fP \fBallocator_type\fP &\fBstate\fP)"
+.RI "static \fBsize_type\fP \fBmax_array_size\fP (const \fBallocator_type\fP &state)"
 .br
+.RI "Returns the maximum size of an array that can be allocated\&. "
 .ti -1c
-.RI "\fBstatic\fP \fBsize_type\fP \fBmax_alignment\fP (\fBconst\fP \fBallocator_type\fP &\fBstate\fP)"
+.RI "static \fBsize_type\fP \fBmax_alignment\fP (const \fBallocator_type\fP &state)"
 .br
+.RI "Returns the maximum alignment that the allocator can handle\&. "
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBclass\fP \fBTAllocator\fP>
+.SS "template<class TAllocator>
 .br
-class vkst::allocator_traits< TAllocator >"The default specialization of the \fBallocator_traits\fP for a allocator\&. Any specialization must provide the same interface\&. 
+class vkst::allocator_traits< TAllocator >"Default specialization of \fC\fBallocator_traits\fP\fP for a given allocator\&. 
+
+This template provides methods for allocating and deallocating nodes and arrays, as well as querying the maximum node size, array size, and alignment\&.
 .PP
-Definiert in Zeile \fB64\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+\fBTemplate-Parameter\fP
+.RS 4
+\fITAllocator\fP The allocator type\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB132\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
 .SH "Dokumentation der benutzerdefinierten Datentypen"
 .PP 
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBusing\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::allocator_type =  \fBtypename\fP \fBinternal::allocator_traits\fP<\fBTAllocator\fP>::allocator_type"
+.SS "template<class TAllocator > using \fBvkst::allocator_traits\fP< TAllocator >::allocator_type =  typename \fBinternal::allocator_traits\fP<TAllocator>::allocator_type"
 
 .PP
-Definiert in Zeile \fB66\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBusing\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::pointer =  \fBtypename\fP \fBinternal::allocator_traits\fP<\fBTAllocator\fP>::pointer"
+Definiert in Zeile \fB134\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > using \fBvkst::allocator_traits\fP< TAllocator >::pointer =  typename \fBinternal::allocator_traits\fP<TAllocator>::pointer"
 
 .PP
-Definiert in Zeile \fB67\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBusing\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::size_type =  \fBtypename\fP \fBinternal::allocator_traits\fP<\fBTAllocator\fP>::size_type"
+Definiert in Zeile \fB135\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > using \fBvkst::allocator_traits\fP< TAllocator >::size_type =  typename \fBinternal::allocator_traits\fP<TAllocator>::size_type"
 
 .PP
-Definiert in Zeile \fB68\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+Definiert in Zeile \fB136\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
 .SH "Dokumentation der Elementfunktionen"
 .PP 
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBpointer\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::allocate_array (\fBallocator_type\fP & state, \fBsize_type\fP count, \fBsize_type\fP size, \fBsize_type\fP alignment)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<class TAllocator > static \fBpointer\fP \fBvkst::allocator_traits\fP< TAllocator >::allocate_array (\fBallocator_type\fP & state, \fBsize_type\fP count, \fBsize_type\fP size, \fBsize_type\fP alignment)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
-Definiert in Zeile \fB74\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBpointer\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::allocate_node (\fBallocator_type\fP & state, \fBsize_type\fP size, \fBsize_type\fP alignment)\fC [inline]\fP, \fC [static]\fP"
+Allocates an array with the specified count, size, and alignment\&. Calls the allocator's \fCallocate\fP method to allocate an array\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.br
+\fIcount\fP The number of elements in the array\&. 
+.br
+\fIsize\fP The size of each element\&. 
+.br
+\fIalignment\fP The alignment of the array\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A pointer to the allocated array\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB70\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBvoid\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::deallocate_array (\fBallocator_type\fP & state, \fBpointer\fP node, \fBsize_type\fP count, \fBsize_type\fP size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB162\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > static \fBpointer\fP \fBvkst::allocator_traits\fP< TAllocator >::allocate_node (\fBallocator_type\fP & state, \fBsize_type\fP size, \fBsize_type\fP alignment)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
-Definiert in Zeile \fB82\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBvoid\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::deallocate_node (\fBallocator_type\fP & state, \fBpointer\fP node, \fBsize_type\fP size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
+Allocates a node with the specified size and alignment\&. Calls the allocator's \fCallocate\fP method to allocate a node\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.br
+\fIsize\fP The size of the node to allocate\&. 
+.br
+\fIalignment\fP The alignment of the node\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A pointer to the allocated node\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB79\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBsize_type\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::max_alignment (\fBconst\fP \fBallocator_type\fP & state)\fC [inline]\fP, \fC [static]\fP"
+Definiert in Zeile \fB148\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > static void \fBvkst::allocator_traits\fP< TAllocator >::deallocate_array (\fBallocator_type\fP & state, \fBpointer\fP node, \fBsize_type\fP count, \fBsize_type\fP size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB93\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBsize_type\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::max_array_size (\fBconst\fP \fBallocator_type\fP & state)\fC [inline]\fP, \fC [static]\fP"
+Deallocates an array\&. Calls the allocator's \fCdeallocate\fP method to deallocate an array\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.br
+\fInode\fP The pointer to the array to deallocate\&. 
+.br
+\fIcount\fP The number of elements in the array\&. 
+.br
+\fIsize\fP The size of each element in the array\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB90\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAllocator\fP > \fBstatic\fP \fBsize_type\fP \fBvkst::allocator_traits\fP< \fBTAllocator\fP >::max_node_size (\fBconst\fP \fBallocator_type\fP & state)\fC [inline]\fP, \fC [static]\fP"
+Definiert in Zeile \fB188\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > static void \fBvkst::allocator_traits\fP< TAllocator >::deallocate_node (\fBallocator_type\fP & state, \fBpointer\fP node, \fBsize_type\fP size)\fC [inline]\fP, \fC [static]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB87\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+Deallocates a node\&. Calls the allocator's \fCdeallocate\fP method to deallocate a node\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.br
+\fInode\fP The pointer to the node to deallocate\&. 
+.br
+\fIsize\fP The size of the node\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB175\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > static \fBsize_type\fP \fBvkst::allocator_traits\fP< TAllocator >::max_alignment (const \fBallocator_type\fP & state)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Returns the maximum alignment that the allocator can handle\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The maximum alignment\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB216\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > static \fBsize_type\fP \fBvkst::allocator_traits\fP< TAllocator >::max_array_size (const \fBallocator_type\fP & state)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Returns the maximum size of an array that can be allocated\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The maximum size of an array\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB207\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAllocator > static \fBsize_type\fP \fBvkst::allocator_traits\fP< TAllocator >::max_node_size (const \fBallocator_type\fP & state)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Returns the maximum size of a node that can be allocated\&. 
+.PP
+\fBParameter\fP
+.RS 4
+\fIstate\fP The allocator instance\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The maximum size of a node\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB198\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

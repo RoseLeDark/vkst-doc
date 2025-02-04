@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="d9/d40/classvkst_1_1basic__allocator.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="d9/d40/classvkst_1_1basic__allocator.html" target="_top" xlink:title="The basic allocator for all allocator implementations in this library.">
 <polygon fill="white" stroke="#666666" points="111,-30 0,-30 0,0 111,0 111,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">vkst::basic_allocator</text>
 <text text-anchor="middle" x="55.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TAllocator, TFilter &gt;</text>

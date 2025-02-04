@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::internal::type_with_alignment< N >
+vkst::internal::type_with_alignment< N > \- A template to enforce alignment for specific sizes\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,23 +13,32 @@ vkst::internal::type_with_alignment< N >
 
 .in +1c
 .ti -1c
-.RI "\fBtypedef\fP \fBchar\fP \fBerr_invalid_alignment\fP[\fBN\fP > 0 ? \-1 :1]"
+.RI "typedef char \fBerr_invalid_alignment\fP[N > 0 ? \-1 :1]"
 .br
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBsize_t\fP N>
+.SS "template<size_t N>
 .br
-struct vkst::internal::type_with_alignment< N >"
+struct vkst::internal::type_with_alignment< N >"A template to enforce alignment for specific sizes\&. 
+
+This template defines a type with a specific alignment (1, 2, 4, 8, 16, 32, or 64 bytes)\&. It ensures that the alignment requirements for various types are met for the specified sizes\&.
 .PP
-Definiert in Zeile \fB43\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SH "Dokumentation der benutzerdefinierten Datentypen"
-.PP 
-.SS "template<\fBsize_t\fP N> \fBtypedef\fP \fBchar\fP \fBvkst::internal::type_with_alignment\fP< \fBN\fP >::err_invalid_alignment[\fBN\fP > 0 ? \-1 :1]"
+\fBTemplate-Parameter\fP
+.RS 4
+\fIN\fP The alignment size\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB44\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+Definiert in Zeile \fB83\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "template<size_t N> typedef char \fBvkst::internal::type_with_alignment\fP< N >::err_invalid_alignment[N > 0 ? \-1 :1]"
+
+.PP
+Definiert in Zeile \fB84\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

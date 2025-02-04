@@ -19,9 +19,11 @@ vkst
 .ti -1c
 .RI "struct \fBaligned_as\fP"
 .br
+.RI "A helper type alias to align a type to its appropriate alignment\&. "
 .ti -1c
 .RI "struct \fBalignment_of\fP"
 .br
+.RI "A template to get the alignment of a type\&. "
 .ti -1c
 .RI "struct \fBalignment_of< void >\fP"
 .br
@@ -37,28 +39,36 @@ vkst
 .ti -1c
 .RI "class \fBallocator_traits\fP"
 .br
-.RI "The default specialization of the \fBallocator_traits\fP for a allocator\&. Any specialization must provide the same interface\&. "
+.RI "Default specialization of \fC\fBallocator_traits\fP\fP for a given allocator\&. "
 .ti -1c
 .RI "class \fBbasic_allocator\fP"
 .br
+.RI "The basic allocator for all allocator implementations in this library\&. "
 .ti -1c
 .RI "class \fBbasic_allocator_filter\fP"
 .br
 .ti -1c
 .RI "class \fBbasic_allocator_maximal_filter\fP"
 .br
+.RI "A memory allocator that enforces a maximum allocation limit during the program's runtime\&. "
 .ti -1c
 .RI "class \fBbasic_malloc_allocator\fP"
 .br
+.RI "A basic allocator that uses malloc and free for memory management\&. "
 .ti -1c
 .RI "class \fBbuffer\fP"
 .br
+.RI "A templated buffer class for managing dynamic arrays of values\&. "
 .ti -1c
 .RI "struct \fBchar_alignment\fP"
 .br
 .ti -1c
 .RI "struct \fBchar_alignment< Target, false >\fP"
 .br
+.ti -1c
+.RI "struct \fBcompression_filter\fP"
+.br
+.RI "A default compression filter that doesn't actually perform any compression or decompression\&. "
 .ti -1c
 .RI "struct \fBdouble_alignment\fP"
 .br
@@ -74,6 +84,7 @@ vkst
 .ti -1c
 .RI "struct \fBis_pod\fP"
 .br
+.RI "A type trait to check if a type is a Plain Old Data (POD) type\&. "
 .ti -1c
 .RI "struct \fBis_pod< internal::aligned1 >\fP"
 .br
@@ -98,9 +109,11 @@ vkst
 .ti -1c
 .RI "struct \fBis_thread_safe_allocator\fP"
 .br
+.RI "Checks whether a given allocator is thread-safe\&. "
 .ti -1c
 .RI "class \fBlogging\fP"
 .br
+.RI "A singleton class for logging messages at various levels\&. "
 .ti -1c
 .RI "struct \fBlong_alignment\fP"
 .br
@@ -110,6 +123,7 @@ vkst
 .ti -1c
 .RI "struct \fBlong_double_alignment\fP"
 .br
+.RI "Adjusts the alignment of a type based on the target alignment\&. "
 .ti -1c
 .RI "struct \fBlong_double_alignment< Target, false >\fP"
 .br
@@ -120,11 +134,16 @@ vkst
 .RI "struct \fBlong_long_alignment< Target, false >\fP"
 .br
 .ti -1c
+.RI "struct \fBlz4_compression_filter\fP"
+.br
+.RI "LZ4-based compression filter\&. "
+.ti -1c
 .RI "struct \fBnodeleter_allocator_tag\fP"
 .br
 .ti -1c
 .RI "class \fBopencl_buffer\fP"
 .br
+.RI "A template class representing an OpenCL buffer with customizable flags\&. "
 .ti -1c
 .RI "struct \fBshort_alignment\fP"
 .br
@@ -139,14 +158,21 @@ vkst
 
 .in +1c
 .ti -1c
-.RI "template<\fBclass\fP \fBTFilter\fP > \fBusing\fP \fBmalloc_allocator\fP = \fBbasic_allocator\fP< \fBbasic_malloc_allocator\fP, \fBTFilter\fP >"
+.RI "template<class TFilter > using \fBmalloc_allocator\fP = \fBbasic_allocator\fP< \fBbasic_malloc_allocator\fP, TFilter >"
 .br
+.RI "A wrapper for the \fBbasic_malloc_allocator\fP with a filter for allocation events\&. "
 .ti -1c
-.RI "\fBusing\fP \fBmax_align_t\fP = \fBuintptr_t\fP"
+.RI "using \fBmax_align_t\fP = uintptr_t"
 .br
+.RI "Defines the maximum alignment type and value\&. "
 .ti -1c
-.RI "\fBusing\fP \fBdefault_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_maximal_filter\fP< \fBLIBVKST_CONFIG_MAX_MEMORY_USE\fP > >"
+.RI "using \fBdefault_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_filter\fP >"
 .br
+.RI "A default allocator that uses the malloc_allocator with a basic memory filter\&. "
+.ti -1c
+.RI "template<size_t TMaxAlloc> using \fBdefault_limmeted_allocator\fP = \fBmalloc_allocator\fP< \fBbasic_allocator_maximal_filter\fP< TMaxAlloc > >"
+.br
+.RI "A default allocator with a maximum allocation size limit\&. "
 .in -1c
 .SS "Aufzählungen"
 
@@ -154,167 +180,439 @@ vkst
 .ti -1c
 .RI "enum class \fBlogging_level\fP { \fBDebug\fP = 0, \fBInfo\fP, \fBWarn\fP, \fBError\fP, \fBCritical\fP }"
 .br
+.RI "Enum representing different logging levels\&. "
 .in -1c
 .SS "Funktionen"
 
 .in +1c
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::std_allocator_tag\fP)"
+.RI "template<class TAlloC > void * \fBallocate\fP (const TAlloC &alloc, size_t size, size_t alignment, \fBvkst::std_allocator_tag\fP)"
+.br
+.RI "Allocates memory using a given allocator with a \fC\fBstd_allocator_tag\fP\fP\&. "
+.ti -1c
+.RI "template<class TAlloC > void * \fBallocate\fP (const TAlloC &alloc, size_t size, size_t alignment, \fBvkst::nodeleter_allocator_tag\fP)"
+.br
+.RI "Allocates memory using a given allocator with a \fC\fBnodeleter_allocator_tag\fP\fP\&. "
+.ti -1c
+.RI "template<class TAlloC > void * \fBdeallocate\fP (const TAlloC &alloc, void *address, size_t size, \fBvkst::std_allocator_tag\fP)"
+.br
+.RI "Deallocates memory using a given allocator with a \fC\fBstd_allocator_tag\fP\fP\&. "
+.ti -1c
+.RI "template<class TAlloC > void * \fBdeallocate\fP (const TAlloC &alloc, void *address, size_t size, \fBvkst::nodeleter_allocator_tag\fP)"
+.br
+.RI "Deallocates memory using a given allocator with a \fC\fBnodeleter_allocator_tag\fP\fP\&. "
+.ti -1c
+.RI "size_t \fBnlz_base\fP (uint64_t x)"
+.br
+.RI "Calculates the number of leading zero bits in a 64-bit value\&. "
+.ti -1c
+.RI "size_t \fBnlz\fP (uint64_t x)"
+.br
+.RI "Calculates the number of leading zero bits minus one\&. "
+.ti -1c
+.RI "template<class integral > constexpr bool \fBis_aligned\fP (integral x, size_t a) noexcept"
+.br
+.RI "Checks if an integer or pointer is aligned to a given boundary\&. "
+.ti -1c
+.RI "bool \fBis_aligned\fP (const volatile void *p, size_t a)"
 .br
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBsize_t\fP \fBsize\fP, \fBsize_t\fP \fBalignment\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.RI "template<class integral > constexpr integral \fBalign_up\fP (integral x, size_t a) noexcept"
+.br
+.RI "Aligns a given integral value upwards to the nearest boundary\&. "
+.ti -1c
+.RI "template<class pointer > pointer \fBalign_up_ptr\fP (pointer p, size_t a)"
+.br
+.RI "Aligns a given pointer upwards to the nearest boundary\&. "
+.ti -1c
+.RI "template<class integral > constexpr integral \fBalign_down\fP (integral x, size_t a) noexcept"
+.br
+.RI "Aligns a given integral value downwards to the nearest boundary\&. "
+.ti -1c
+.RI "template<class pointer > pointer \fBalign_down_ptr\fP (pointer p, size_t a)"
 .br
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBdeallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::std_allocator_tag\fP)"
+.RI "constexpr bool \fBis_aligvalid\fP (size_t alignment) noexcept"
 .br
+.RI "Checks if a given alignment is valid\&. "
 .ti -1c
-.RI "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * \fBdeallocate\fP (\fBconst\fP \fBTAlloC\fP &\fBalloc\fP, \fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBsize\fP, \fBvkst::nodeleter_allocator_tag\fP)"
+.RI "size_t \fBalig_offset\fP (void *address, size_t alignment) noexcept"
 .br
+.RI "Computes the offset needed to align a given address\&. "
 .ti -1c
-.RI "\fBsize_t\fP \fBnlz_base\fP (\fBuint64_t\fP x)"
+.RI "size_t \fBalignment_for\fP (const size_t size) noexcept"
 .br
-.ti -1c
-.RI "\fBsize_t\fP \fBnlz\fP (\fBuint64_t\fP x)"
-.br
-.ti -1c
-.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBbool\fP \fBis_aligned\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
-.br
-.ti -1c
-.RI "\fBbool\fP \fBis_aligned\fP (\fBconst\fP \fBvolatile\fP \fBvoid\fP *\fBp\fP, \fBsize_t\fP \fBa\fP)"
-.br
-.ti -1c
-.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP \fBalign_up\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
-.br
-.ti -1c
-.RI "template<\fBclass\fP pointer > pointer \fBalign_up_ptr\fP (pointer \fBp\fP, \fBsize_t\fP \fBa\fP)"
-.br
-.ti -1c
-.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP \fBalign_down\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
-.br
-.ti -1c
-.RI "template<\fBclass\fP pointer > pointer \fBalign_down_ptr\fP (pointer \fBp\fP, \fBsize_t\fP \fBa\fP)"
-.br
-.ti -1c
-.RI "\fBconstexpr\fP \fBbool\fP \fBis_aligvalid\fP (\fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
-.br
-.RI "is a valid alignment, i\&.e\&. a power of two not zero "
-.ti -1c
-.RI "\fBsize_t\fP \fBalig_offset\fP (\fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
-.br
-.ti -1c
-.RI "\fBsize_t\fP \fBalignment_for\fP (\fBconst\fP \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
-.br
+.RI "Computes the alignment required for a given size\&. "
 .in -1c
 .SS "Variablen"
 
 .in +1c
 .ti -1c
-.RI "\fBconstexpr\fP \fBsize_t\fP \fBmax_alignment\fP = \fBalignof\fP(\fBmax_align_t\fP)"
+.RI "constexpr size_t \fBmax_alignment\fP = alignof(\fBmax_align_t\fP)"
 .br
 .in -1c
 .SH "Dokumentation der benutzerdefinierten Typen"
 .PP 
-.SS "\fBusing\fP \fBvkst::default_allocator\fP = \fBtypedef\fP \fBmalloc_allocator\fP<\fBbasic_allocator_maximal_filter\fP<\fBLIBVKST_CONFIG_MAX_MEMORY_USE\fP> >"
+.SS "using \fBvkst::default_allocator\fP = typedef \fBmalloc_allocator\fP<\fBbasic_allocator_filter\fP>"
 
 .PP
-Definiert in Zeile \fB13\fP der Datei \fBvkstAllocator\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTFilter\fP > \fBusing\fP \fBvkst::malloc_allocator\fP = \fBtypedef\fP \fBbasic_allocator\fP<\fBbasic_malloc_allocator\fP, \fBTFilter\fP>"
+A default allocator that uses the malloc_allocator with a basic memory filter\&. This alias defines a default allocator using the \fCmalloc_allocator\fP template with the \fC\fBbasic_allocator_filter\fP\fP for memory management\&. It is a basic allocator that doesn't impose any specific memory limits or constraints\&. 
+.PP
+Definiert in Zeile \fB16\fP der Datei \fBvkstAllocator\&.hpp\fP\&.
+.SS "template<size_t TMaxAlloc> using \fBvkst::default_limmeted_allocator\fP = typedef \fBmalloc_allocator\fP<\fBbasic_allocator_maximal_filter\fP<TMaxAlloc> >"
 
 .PP
-Definiert in Zeile \fB36\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
-.SS "\fBusing\fP \fBvkst::max_align_t\fP = \fBtypedef\fP \fBuintptr_t\fP"
+A default allocator with a maximum allocation size limit\&. This template alias defines a default allocator using the \fCmalloc_allocator\fP template, but with a memory filter that enforces a maximum allocation limit (\fCTMaxAlloc\fP)\&. The allocator will restrict allocations to the specified size, preventing the total memory usage from exceeding the limit during the program's runtime\&.
+.PP
+\fBTemplate-Parameter\fP
+.RS 4
+\fITMaxAlloc\fP The maximum memory size (in bytes) that the allocator can allocate\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB13\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+Definiert in Zeile \fB29\fP der Datei \fBvkstAllocator\&.hpp\fP\&.
+.SS "template<class TFilter > using \fBvkst::malloc_allocator\fP = typedef \fBbasic_allocator\fP<\fBbasic_malloc_allocator\fP, TFilter>"
+
+.PP
+A wrapper for the \fBbasic_malloc_allocator\fP with a filter for allocation events\&. This alias provides an easy-to-use wrapper that associates a memory filter with the \fBbasic_malloc_allocator\fP\&. The filter can be used to log or modify allocation/deallocation behavior, or impose limits on allocation sizes\&.
+.PP
+\fBTemplate-Parameter\fP
+.RS 4
+\fITFilter\fP The filter class that provides hooks for allocation and deallocation events\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB109\fP der Datei \fBvkstMallocAllocator\&.hpp\fP\&.
+.SS "using \fBvkst::max_align_t\fP = typedef uintptr_t"
+
+.PP
+Defines the maximum alignment type and value\&. The type \fCmax_align_t\fP is defined as \fCuintptr_t\fP and \fCmax_alignment\fP is the alignment of \fCmax_align_t\fP\&. This provides the maximum alignment value used within the system\&. 
+.PP
+Definiert in Zeile \fB19\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 .SH "Dokumentation der Aufzählungstypen"
 .PP 
-.SS "\fBenum\fP \fBclass\fP \fBvkst::logging_level\fP\fC [strong]\fP"
+.SS "enum class \fBvkst::logging_level\fP\fC [strong]\fP"
+
+.PP
+Enum representing different logging levels\&. The logging levels control the verbosity and type of messages logged\&.
+.IP "\(bu" 2
+\fCDebug\fP: Used for detailed information, typically useful for debugging\&.
+.IP "\(bu" 2
+\fCInfo\fP: General informational messages\&.
+.IP "\(bu" 2
+\fCWarn\fP: Indicates a potential issue that doesn't interrupt execution\&.
+.IP "\(bu" 2
+\fCError\fP: Represents an error that affects functionality but allows continued operation\&.
+.IP "\(bu" 2
+\fCCritical\fP: Critical errors that likely lead to application termination\&. 
+.PP
 
 .PP
 \fBAufzählungswerte\fP
 .in +1c
 .TP
 \fB\fIDebug \fP\fP
+Detailed debug information\&. 
 .TP
 \fB\fIInfo \fP\fP
+General information\&. 
 .TP
 \fB\fIWarn \fP\fP
+Warning about potential issues\&. 
 .TP
 \fB\fIError \fP\fP
+Errors that affect functionality\&. 
 .TP
 \fB\fICritical \fP\fP
+Critical errors that lead to failure\&. 
 .PP
-Definiert in Zeile \fB19\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB34\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SH "Dokumentation der Funktionen"
 .PP 
-.SS "\fBsize_t\fP vkst::alig_offset (\fBvoid\fP * address, \fBsize_t\fP alignment)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "size_t vkst::alig_offset (void * address, size_t alignment)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB168\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP vkst::align_down (\fBintegral\fP x, \fBsize_t\fP a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+Computes the offset needed to align a given address\&. This function computes the offset required to align a pointer (address) to the specified alignment boundary\&. If the address is already aligned, the offset will be 0\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIaddress\fP The address to align\&. 
+.br
+\fIalignment\fP The alignment boundary\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The offset needed to align the address\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB151\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "template<\fBclass\fP pointer > pointer vkst::align_down_ptr (pointer p, \fBsize_t\fP a)"
+Definiert in Zeile \fB298\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<class integral > constexpr integral vkst::align_down (integral x, size_t a)\fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB155\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP vkst::align_up (\fBintegral\fP x, \fBsize_t\fP a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+Aligns a given integral value downwards to the nearest boundary\&. This function aligns an integral value downwards to the previous multiple of the given alignment \fCa\fP\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIx\fP The value to align\&. 
+.br
+\fIa\fP The alignment boundary\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The aligned value\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB142\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "template<\fBclass\fP pointer > pointer vkst::align_up_ptr (pointer p, \fBsize_t\fP a)"
+Definiert in Zeile \fB267\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<class pointer > pointer vkst::align_down_ptr (pointer p, size_t a)"
 
 .PP
-Definiert in Zeile \fB146\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBsize_t\fP vkst::alignment_for (\fBconst\fP \fBsize_t\fP size)\fC [inline]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB271\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<class integral > constexpr integral vkst::align_up (integral x, size_t a)\fC [constexpr]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB175\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::allocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBsize_t\fP size, \fBsize_t\fP alignment, \fBvkst::nodeleter_allocator_tag\fP)\fC [inline]\fP"
+Aligns a given integral value upwards to the nearest boundary\&. This function aligns an integral value upwards to the next multiple of the given alignment \fCa\fP\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIx\fP The value to align\&. 
+.br
+\fIa\fP The alignment boundary\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The aligned value\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB42\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::allocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBsize_t\fP size, \fBsize_t\fP alignment, \fBvkst::std_allocator_tag\fP)\fC [inline]\fP"
+Definiert in Zeile \fB239\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<class pointer > pointer vkst::align_up_ptr (pointer p, size_t a)"
 
 .PP
-Definiert in Zeile \fB36\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::deallocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBvoid\fP * address, \fBsize_t\fP size, \fBvkst::nodeleter_allocator_tag\fP)\fC [inline]\fP"
+Aligns a given pointer upwards to the nearest boundary\&. This function aligns a pointer upwards to the next multiple of the given alignment \fCa\fP\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIp\fP The pointer to align\&. 
+.br
+\fIa\fP The alignment boundary\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The aligned pointer\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB53\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBTAlloC\fP > \fBvoid\fP * vkst::deallocate (\fBconst\fP \fBTAlloC\fP & alloc, \fBvoid\fP * address, \fBsize_t\fP size, \fBvkst::std_allocator_tag\fP)\fC [inline]\fP"
+Definiert in Zeile \fB253\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "size_t vkst::alignment_for (const size_t size)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-Definiert in Zeile \fB47\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
-.SS "\fBbool\fP vkst::is_aligned (\fBconst\fP \fBvolatile\fP \fBvoid\fP * p, \fBsize_t\fP a)\fC [inline]\fP"
+Computes the alignment required for a given size\&. This function calculates the minimum alignment needed for a type based on its size\&. It ensures that the alignment is at least the size of the type, and ensures that it does not exceed the maximum alignment\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIsize\fP The size of the type\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The required alignment\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB137\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBbool\fP vkst::is_aligned (\fBintegral\fP x, \fBsize_t\fP a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+Definiert in Zeile \fB315\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<class TAlloC > void * vkst::allocate (const TAlloC & alloc, size_t size, size_t alignment, \fBvkst::nodeleter_allocator_tag\fP)\fC [inline]\fP"
 
 .PP
-Definiert in Zeile \fB134\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBconstexpr\fP \fBbool\fP vkst::is_aligvalid (\fBsize_t\fP alignment)\fC [constexpr]\fP, \fC [noexcept]\fP"
+Allocates memory using a given allocator with a \fC\fBnodeleter_allocator_tag\fP\fP\&. Similar to \fCallocate\fP with \fC\fBstd_allocator_tag\fP\fP, but intended for allocators that do not require deallocation of the allocated memory\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIalloc\fP The allocator instance\&. 
+.br
+\fIsize\fP The size of the memory to allocate\&. 
+.br
+\fIalignment\fP The alignment requirement for the allocation\&. 
+.br
+\fItag\fP The tag for distinguishing between allocator categories\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A pointer to the allocated memory\&. 
+.RE
+.PP
 
 .PP
-is a valid alignment, i\&.e\&. a power of two not zero 
+Definiert in Zeile \fB84\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAlloC > void * vkst::allocate (const TAlloC & alloc, size_t size, size_t alignment, \fBvkst::std_allocator_tag\fP)\fC [inline]\fP"
+
 .PP
-Definiert in Zeile \fB163\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBsize_t\fP vkst::nlz (\fBuint64_t\fP x)\fC [inline]\fP"
+Allocates memory using a given allocator with a \fC\fBstd_allocator_tag\fP\fP\&. This function calls the allocator's \fCallocate\fP method with the specified size and alignment\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIalloc\fP The allocator instance\&. 
+.br
+\fIsize\fP The size of the memory to allocate\&. 
+.br
+\fIalignment\fP The alignment requirement for the allocation\&. 
+.br
+\fItag\fP The tag for distinguishing between allocator categories\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+A pointer to the allocated memory\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB66\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAlloC > void * vkst::deallocate (const TAlloC & alloc, void * address, size_t size, \fBvkst::nodeleter_allocator_tag\fP)\fC [inline]\fP"
+
+.PP
+Deallocates memory using a given allocator with a \fC\fBnodeleter_allocator_tag\fP\fP\&. This function does nothing for the deallocation, as the \fC\fBnodeleter_allocator_tag\fP\fP is used for allocators that do not require memory deallocation\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIalloc\fP The allocator instance\&. 
+.br
+\fIaddress\fP The address of the memory to deallocate\&. 
+.br
+\fIsize\fP The size of the memory to deallocate\&. 
+.br
+\fItag\fP The tag for distinguishing between allocator categories\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The original memory address\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB117\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "template<class TAlloC > void * vkst::deallocate (const TAlloC & alloc, void * address, size_t size, \fBvkst::std_allocator_tag\fP)\fC [inline]\fP"
+
+.PP
+Deallocates memory using a given allocator with a \fC\fBstd_allocator_tag\fP\fP\&. This function calls the allocator's \fCdeallocate\fP method to release the memory\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIalloc\fP The allocator instance\&. 
+.br
+\fIaddress\fP The address of the memory to deallocate\&. 
+.br
+\fIsize\fP The size of the memory to deallocate\&. 
+.br
+\fItag\fP The tag for distinguishing between allocator categories\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The deallocated memory address\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB100\fP der Datei \fBvkstAllocatorTraits\&.hpp\fP\&.
+.SS "bool vkst::is_aligned (const volatile void * p, size_t a)\fC [inline]\fP"
+
+.PP
+Definiert in Zeile \fB225\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "template<class integral > constexpr bool vkst::is_aligned (integral x, size_t a)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Checks if an integer or pointer is aligned to a given boundary\&. This function checks whether a given integral value or pointer is aligned to the specified boundary \fCa\fP\&. It returns \fCtrue\fP if the value is aligned and \fCfalse\fP otherwise\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIx\fP The value to check\&. 
+.br
+\fIa\fP The alignment boundary\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+\fCtrue\fP if aligned, \fCfalse\fP otherwise\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB222\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "constexpr bool vkst::is_aligvalid (size_t alignment)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Checks if a given alignment is valid\&. This function checks whether the provided alignment is a power of two and not zero\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIalignment\fP The alignment value to check\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+\fCtrue\fP if valid, \fCfalse\fP otherwise\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB284\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "size_t vkst::nlz (uint64_t x)\fC [inline]\fP"
+
+.PP
+Calculates the number of leading zero bits minus one\&. This helper function is similar to \fCnlz_base\fP, but returns the result of \fCnlz_base(x) - 1\fP\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIx\fP The 64-bit value for which to compute the leading zeros minus one\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The number of leading zero bits minus one in the value\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB45\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SS "size_t vkst::nlz_base (uint64_t x)\fC [inline]\fP"
+
+.PP
+Calculates the number of leading zero bits in a 64-bit value\&. This helper function computes the number of leading zeros in a 64-bit unsigned integer\&. The result is the number of bits that are zero before the first 1 bit in the binary representation of the input value\&.
+.PP
+\fBParameter\fP
+.RS 4
+\fIx\fP The 64-bit value for which to compute the leading zeros\&. 
+.RE
+.PP
+\fBRückgabe\fP
+.RS 4
+The number of leading zero bits in the value\&. 
+.RE
+.PP
+
+.PP
+Definiert in Zeile \fB32\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Variablen-Dokumentation"
+.PP 
+.SS "constexpr size_t vkst::max_alignment = alignof(\fBmax_align_t\fP)\fC [constexpr]\fP"
 
 .PP
 Definiert in Zeile \fB20\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SS "\fBsize_t\fP vkst::nlz_base (\fBuint64_t\fP x)\fC [inline]\fP"
-
-.PP
-Definiert in Zeile \fB16\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SH "Variablen-Dokumentation"
-.PP 
-.SS "\fBconstexpr\fP \fBsize_t\fP vkst::max_alignment = \fBalignof\fP(\fBmax_align_t\fP)\fC [constexpr]\fP"
-
-.PP
-Definiert in Zeile \fB14\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 .SH "Autor"
 .PP 
 Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.

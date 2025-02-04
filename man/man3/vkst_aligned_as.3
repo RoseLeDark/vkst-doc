@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-vkst::aligned_as< T >
+vkst::aligned_as< T > \- A helper type alias to align a type to its appropriate alignment\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -12,23 +13,32 @@ vkst::aligned_as< T >
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBres\fP = \fBtypename\fP \fBinternal::type_with_alignment\fP< \fBalignment_of\fP< T >::res >"
+.RI "using \fBres\fP = typename \fBinternal::type_with_alignment\fP< \fBalignment_of\fP< T >::res >"
 .br
 .in -1c
 .SH "Ausführliche Beschreibung"
 .PP 
 
-.SS "template<\fBtypename\fP T>
+.SS "template<typename T>
 .br
-struct vkst::aligned_as< T >"
+struct vkst::aligned_as< T >"A helper type alias to align a type to its appropriate alignment\&. 
+
+This alias ensures that the type \fCT\fP is aligned correctly according to its \fC\fBalignment_of\fP\fP\&.
 .PP
-Definiert in Zeile \fB129\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
-.SH "Dokumentation der benutzerdefinierten Datentypen"
-.PP 
-.SS "template<\fBtypename\fP T > \fBusing\fP \fBvkst::aligned_as\fP< T >::res =  \fBtypename\fP \fBinternal::type_with_alignment\fP<\fBalignment_of\fP<T>::res>"
+\fBTemplate-Parameter\fP
+.RS 4
+\fIT\fP The type to align\&. 
+.RE
+.PP
 
 .PP
-Definiert in Zeile \fB130\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+Definiert in Zeile \fB207\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
+.SH "Dokumentation der benutzerdefinierten Datentypen"
+.PP 
+.SS "template<typename T > using \fBvkst::aligned_as\fP< T >::res =  typename \fBinternal::type_with_alignment\fP<\fBalignment_of\fP<T>::res>"
+
+.PP
+Definiert in Zeile \fB208\fP der Datei \fBvkstAlignment\&.hpp\fP\&.
 
 .SH "Autor"
 .PP 

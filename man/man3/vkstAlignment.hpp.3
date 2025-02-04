@@ -23,9 +23,11 @@ include/vkstAlignment.hpp
 .ti -1c
 .RI "struct \fBvkst::internal::alignof_helper< T >\fP"
 .br
+.RI "A helper structure for computing alignment of a given type\&. "
 .ti -1c
 .RI "struct \fBvkst::internal::type_with_alignment< N >\fP"
 .br
+.RI "A template to enforce alignment for specific sizes\&. "
 .ti -1c
 .RI "struct \fBvkst::internal::type_with_alignment< 1 >\fP"
 .br
@@ -50,9 +52,11 @@ include/vkstAlignment.hpp
 .ti -1c
 .RI "union \fBvkst::internal::max_align\fP"
 .br
+.RI "A union type to determine the maximum alignment\&. "
 .ti -1c
 .RI "struct \fBvkst::is_pod< T >\fP"
 .br
+.RI "A type trait to check if a type is a Plain Old Data (POD) type\&. "
 .ti -1c
 .RI "struct \fBvkst::is_pod< internal::aligned1 >\fP"
 .br
@@ -77,6 +81,7 @@ include/vkstAlignment.hpp
 .ti -1c
 .RI "struct \fBvkst::alignment_of< T >\fP"
 .br
+.RI "A template to get the alignment of a type\&. "
 .ti -1c
 .RI "struct \fBvkst::alignment_of< void >\fP"
 .br
@@ -92,6 +97,7 @@ include/vkstAlignment.hpp
 .ti -1c
 .RI "struct \fBvkst::long_double_alignment< Target, check >\fP"
 .br
+.RI "Adjusts the alignment of a type based on the target alignment\&. "
 .ti -1c
 .RI "struct \fBvkst::long_double_alignment< Target, false >\fP"
 .br
@@ -134,6 +140,7 @@ include/vkstAlignment.hpp
 .ti -1c
 .RI "struct \fBvkst::aligned_as< T >\fP"
 .br
+.RI "A helper type alias to align a type to its appropriate alignment\&. "
 .in -1c
 .SS "Namensbereiche"
 
@@ -149,73 +156,82 @@ include/vkstAlignment.hpp
 
 .in +1c
 .ti -1c
-.RI "\fBusing\fP \fBvkst::max_align_t\fP = \fBuintptr_t\fP"
+.RI "using \fBvkst::max_align_t\fP = uintptr_t"
 .br
+.RI "Defines the maximum alignment type and value\&. "
 .in -1c
 .SS "Funktionen"
 
 .in +1c
 .ti -1c
-.RI "\fBsize_t\fP \fBvkst::nlz_base\fP (\fBuint64_t\fP x)"
+.RI "size_t \fBvkst::nlz_base\fP (uint64_t x)"
+.br
+.RI "Calculates the number of leading zero bits in a 64-bit value\&. "
+.ti -1c
+.RI "size_t \fBvkst::nlz\fP (uint64_t x)"
+.br
+.RI "Calculates the number of leading zero bits minus one\&. "
+.ti -1c
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(1))) aligned1"
 .br
 .ti -1c
-.RI "\fBsize_t\fP \fBvkst::nlz\fP (\fBuint64_t\fP x)"
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(2))) aligned2"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(1))) \fBaligned1\fP"
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(4))) aligned4"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(2))) \fBaligned2\fP"
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(8))) aligned8"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(4))) \fBaligned4\fP"
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(16))) aligned16"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(8))) \fBaligned8\fP"
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(32))) aligned32"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(16))) \fBaligned16\fP"
+.RI "struct \fBvkst::internal::__attribute__\fP ((aligned(64))) aligned64"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(32))) \fBaligned32\fP"
+.RI "template<class integral > constexpr bool \fBvkst::is_aligned\fP (integral x, size_t a) noexcept"
+.br
+.RI "Checks if an integer or pointer is aligned to a given boundary\&. "
+.ti -1c
+.RI "bool \fBvkst::is_aligned\fP (const volatile void *p, size_t a)"
 .br
 .ti -1c
-.RI "\fBstruct\fP \fBvkst::internal::__attribute__\fP ((\fBaligned\fP(64))) \fBaligned64\fP"
+.RI "template<class integral > constexpr integral \fBvkst::align_up\fP (integral x, size_t a) noexcept"
+.br
+.RI "Aligns a given integral value upwards to the nearest boundary\&. "
+.ti -1c
+.RI "template<class pointer > pointer \fBvkst::align_up_ptr\fP (pointer p, size_t a)"
+.br
+.RI "Aligns a given pointer upwards to the nearest boundary\&. "
+.ti -1c
+.RI "template<class integral > constexpr integral \fBvkst::align_down\fP (integral x, size_t a) noexcept"
+.br
+.RI "Aligns a given integral value downwards to the nearest boundary\&. "
+.ti -1c
+.RI "template<class pointer > pointer \fBvkst::align_down_ptr\fP (pointer p, size_t a)"
 .br
 .ti -1c
-.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBbool\fP \fBvkst::is_aligned\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
+.RI "constexpr bool \fBvkst::is_aligvalid\fP (size_t alignment) noexcept"
 .br
+.RI "Checks if a given alignment is valid\&. "
 .ti -1c
-.RI "\fBbool\fP \fBvkst::is_aligned\fP (\fBconst\fP \fBvolatile\fP \fBvoid\fP *\fBp\fP, \fBsize_t\fP \fBa\fP)"
+.RI "size_t \fBvkst::alig_offset\fP (void *address, size_t alignment) noexcept"
 .br
+.RI "Computes the offset needed to align a given address\&. "
 .ti -1c
-.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP \fBvkst::align_up\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
+.RI "size_t \fBvkst::alignment_for\fP (const size_t size) noexcept"
 .br
-.ti -1c
-.RI "template<\fBclass\fP pointer > pointer \fBvkst::align_up_ptr\fP (pointer \fBp\fP, \fBsize_t\fP \fBa\fP)"
-.br
-.ti -1c
-.RI "template<\fBclass\fP \fBintegral\fP > \fBconstexpr\fP \fBintegral\fP \fBvkst::align_down\fP (\fBintegral\fP x, \fBsize_t\fP \fBa\fP) \fBnoexcept\fP"
-.br
-.ti -1c
-.RI "template<\fBclass\fP pointer > pointer \fBvkst::align_down_ptr\fP (pointer \fBp\fP, \fBsize_t\fP \fBa\fP)"
-.br
-.ti -1c
-.RI "\fBconstexpr\fP \fBbool\fP \fBvkst::is_aligvalid\fP (\fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
-.br
-.RI "is a valid alignment, i\&.e\&. a power of two not zero "
-.ti -1c
-.RI "\fBsize_t\fP \fBvkst::alig_offset\fP (\fBvoid\fP *\fBaddress\fP, \fBsize_t\fP \fBalignment\fP) \fBnoexcept\fP"
-.br
-.ti -1c
-.RI "\fBsize_t\fP \fBvkst::alignment_for\fP (\fBconst\fP \fBsize_t\fP \fBsize\fP) \fBnoexcept\fP"
-.br
+.RI "Computes the alignment required for a given size\&. "
 .in -1c
 .SS "Variablen"
 
 .in +1c
 .ti -1c
-.RI "\fBconstexpr\fP \fBsize_t\fP \fBvkst::max_alignment\fP = \fBalignof\fP(\fBmax_align_t\fP)"
+.RI "constexpr size_t \fBvkst::max_alignment\fP = alignof(\fBmax_align_t\fP)"
 .br
 .in -1c
 .SH "Autor"

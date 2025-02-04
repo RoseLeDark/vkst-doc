@@ -19,6 +19,7 @@ include/vkstLogging.hpp
 .ti -1c
 .RI "class \fBvkst::logging\fP"
 .br
+.RI "A singleton class for logging messages at various levels\&. "
 .in -1c
 .SS "Namensbereiche"
 
@@ -58,40 +59,42 @@ include/vkstLogging.hpp
 .ti -1c
 .RI "enum class \fBvkst::logging_level\fP { \fBvkst::Debug\fP = 0, \fBvkst::Info\fP, \fBvkst::Warn\fP, \fBvkst::Error\fP, \fBvkst::Critical\fP }"
 .br
+.RI "Enum representing different logging levels\&. "
 .in -1c
 .SS "Funktionen"
 
 .in +1c
 .ti -1c
-.RI "\fBconst\fP \fBchar\fP * \fBvkst::internal::level2string\fP (\fBconst\fP \fBlogging_level\fP \fBlevel\fP)"
+.RI "const char * \fBvkst::internal::level2string\fP (const \fBlogging_level\fP level)"
 .br
+.RI "Converts a logging level enum to a human-readable string\&. "
 .in -1c
 .SH "Makro-Dokumentation"
 .PP 
 .SS "#define LIBVKST_CONFIG_LOGGING_WARN_LEVEL   1"
 
 .PP
-Definiert in Zeile \fB9\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB12\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SS "#define VKST_LOG_CRITICAL(MSG)   \fBvkst::logging::instance\fP()\&.critical(MSG, (__FILE__), __builtin_FUNCTION())"
 
 .PP
-Definiert in Zeile \fB16\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB20\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SS "#define VKST_LOG_DEBUG(MSG)   \fBvkst::logging::instance\fP()\&.debug(MSG, (__FILE__), __builtin_FUNCTION())"
 
 .PP
-Definiert in Zeile \fB12\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB16\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SS "#define VKST_LOG_ERROR(MSG)   \fBvkst::logging::instance\fP()\&.error(MSG, (__FILE__), __builtin_FUNCTION())"
 
 .PP
-Definiert in Zeile \fB15\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB19\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SS "#define VKST_LOG_INFO(MSG)   \fBvkst::logging::instance\fP()\&.info(MSG, (__FILE__), __builtin_FUNCTION())"
 
 .PP
-Definiert in Zeile \fB13\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB17\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SS "#define VKST_LOG_WARN(MSG)   \fBvkst::logging::instance\fP()\&.warn(MSG, (__FILE__), __builtin_FUNCTION())"
 
 .PP
-Definiert in Zeile \fB14\fP der Datei \fBvkstLogging\&.hpp\fP\&.
+Definiert in Zeile \fB18\fP der Datei \fBvkstLogging\&.hpp\fP\&.
 .SH "Autor"
 .PP 
 Automatisch erzeugt von Doxygen für vkbst aus dem Quellcode\&.
